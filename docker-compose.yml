@@ -1,0 +1,57 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: tbg_postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-tbg}
+      POSTGRES_USER: ${POSTGRES_USER:-tbg}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-tbg}
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-tbg}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    container_name: tbg_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  api:
+    build: .
+    container_name: tbg_api
+    ports:
+      - "8001:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-tbg}:${POSTGRES_PASSWORD:-tbg}@postgres/${POSTGRES_DB:-tbg}
+      REDIS_URL: redis://redis:6379
+      GEMINI_API_KEY: ${GEMINI_API_KEY}
+      GROQ_API_KEY: ${GROQ_API_KEY}
+      API_SECRET_KEY: ${API_SECRET_KEY}
+    volumes:
+      - ./:/app
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  redis_data:

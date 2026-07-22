@@ -1,0 +1,2004 @@
+{
+  "financial security": [
+    {
+      "domain": "money",
+      "stance": "approach"
+    },
+    {
+      "domain": "money",
+      "stance": "approach"
+    },
+    {
+      "domain": "money",
+      "stance": "approach"
+    },
+    {
+      "domain": "money",
+      "stance": "approach"
+    },
+    {
+      "domain": "money",
+      "stance": "approach"
+    }
+  ],
+  "financial insecurity": [
+    {
+      "domain": "money",
+      "stance": "approach"
+    },
+    {
+      "domain": "money",
+      "stance": "approach"
+    },
+    {
+      "domain": "money",
+      "stance": "approach"
+    },
+    {
+      "domain": "money",
+      "stance": "approach"
+    },
+    {
+      "domain": "money",
+      "stance": "approach"
+    }
+  ],
+  "proud of career": [
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    }
+  ],
+  "ashamed of career": [
+    {
+      "domain": "career",
+      "stance": "avoid"
+    },
+    {
+      "domain": "career",
+      "stance": "avoid"
+    },
+    {
+      "domain": "career",
+      "stance": "avoid"
+    },
+    {
+      "domain": "career",
+      "stance": "avoid"
+    },
+    {
+      "domain": "career",
+      "stance": "avoid"
+    }
+  ],
+  "self-confident": [
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    }
+  ],
+  "full of self-doubt": [
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    }
+  ],
+  "optimistic about future": [
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    }
+  ],
+  "pessimistic about future": [
+    {
+      "domain": "meaning",
+      "stance": "avoid"
+    },
+    {
+      "domain": "meaning",
+      "stance": "avoid"
+    },
+    {
+      "domain": "meaning",
+      "stance": "avoid"
+    },
+    {
+      "domain": "meaning",
+      "stance": "avoid"
+    },
+    {
+      "domain": "meaning",
+      "stance": "avoid"
+    }
+  ],
+  "loves the job": [
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    }
+  ],
+  "hates the job": [
+    {
+      "domain": "career",
+      "stance": "avoid"
+    },
+    {
+      "domain": "career",
+      "stance": "avoid"
+    },
+    {
+      "domain": "career",
+      "stance": "avoid"
+    },
+    {
+      "domain": "career",
+      "stance": "avoid"
+    },
+    {
+      "domain": "career",
+      "stance": "avoid"
+    }
+  ],
+  "trusts people": [
+    {
+      "domain": "relationships",
+      "stance": "approach"
+    },
+    {
+      "domain": "relationships",
+      "stance": "approach"
+    },
+    {
+      "domain": "relationships",
+      "stance": "approach"
+    },
+    {
+      "domain": "relationships",
+      "stance": "approach"
+    },
+    {
+      "domain": "relationships",
+      "stance": "approach"
+    }
+  ],
+  "distrusts people": [
+    {
+      "domain": "relationships",
+      "stance": "avoid"
+    },
+    {
+      "domain": "relationships",
+      "stance": "avoid"
+    },
+    {
+      "domain": "relationships",
+      "stance": "avoid"
+    },
+    {
+      "domain": "relationships",
+      "stance": "avoid"
+    },
+    {
+      "domain": "relationships",
+      "stance": "avoid"
+    }
+  ],
+  "feels in control": [
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    }
+  ],
+  "feels powerless": [
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    }
+  ],
+  "secure attachment": [
+    {
+      "domain": "relationships",
+      "stance": "approach"
+    },
+    {
+      "domain": "relationships",
+      "stance": "approach"
+    },
+    {
+      "domain": "relationships",
+      "stance": "approach"
+    },
+    {
+      "domain": "relationships",
+      "stance": "approach"
+    },
+    {
+      "domain": "relationships",
+      "stance": "approach"
+    }
+  ],
+  "fear of abandonment": [
+    {
+      "domain": "relationships",
+      "stance": "approach"
+    },
+    {
+      "domain": "relationships",
+      "stance": "approach"
+    },
+    {
+      "domain": "relationships",
+      "stance": "approach"
+    },
+    {
+      "domain": "relationships",
+      "stance": "approach"
+    },
+    {
+      "domain": "relationships",
+      "stance": "approach"
+    }
+  ],
+  "values stability": [
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    }
+  ],
+  "values growth": [
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    }
+  ],
+  "wants stability": [
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    }
+  ],
+  "wants change": [
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    }
+  ],
+  "seeks autonomy": [
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    }
+  ],
+  "values belonging": [
+    {
+      "domain": "relationships",
+      "stance": "approach"
+    },
+    {
+      "domain": "relationships",
+      "stance": "approach"
+    },
+    {
+      "domain": "relationships",
+      "stance": "approach"
+    },
+    {
+      "domain": "relationships",
+      "stance": "approach"
+    },
+    {
+      "domain": "relationships",
+      "stance": "approach"
+    }
+  ],
+  "ambition": [
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    }
+  ],
+  "contentment": [
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    }
+  ],
+  "discipline": [
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    }
+  ],
+  "spontaneity": [
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    }
+  ],
+  "frugal with money": [
+    {
+      "domain": "money",
+      "stance": "approach"
+    },
+    {
+      "domain": "money",
+      "stance": "approach"
+    },
+    {
+      "domain": "money",
+      "stance": "approach"
+    },
+    {
+      "domain": "money",
+      "stance": "approach"
+    },
+    {
+      "domain": "money",
+      "stance": "approach"
+    }
+  ],
+  "generous with money": [
+    {
+      "domain": "money",
+      "stance": "approach"
+    },
+    {
+      "domain": "money",
+      "stance": "approach"
+    },
+    {
+      "domain": "money",
+      "stance": "approach"
+    },
+    {
+      "domain": "money",
+      "stance": "approach"
+    },
+    {
+      "domain": "money",
+      "stance": "approach"
+    }
+  ],
+  "career focus": [
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    }
+  ],
+  "family focus": [
+    {
+      "domain": "family",
+      "stance": "approach"
+    },
+    {
+      "domain": "family",
+      "stance": "approach"
+    },
+    {
+      "domain": "family",
+      "stance": "approach"
+    },
+    {
+      "domain": "family",
+      "stance": "approach"
+    },
+    {
+      "domain": "family",
+      "stance": "approach"
+    }
+  ],
+  "introversion": [
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "neutral"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    }
+  ],
+  "craves social connection": [
+    {
+      "domain": "relationships",
+      "stance": "approach"
+    },
+    {
+      "domain": "relationships",
+      "stance": "approach"
+    },
+    {
+      "domain": "relationships",
+      "stance": "approach"
+    },
+    {
+      "domain": "relationships",
+      "stance": "approach"
+    },
+    {
+      "domain": "relationships",
+      "stance": "approach"
+    }
+  ],
+  "mortgage payments": [
+    {
+      "domain": "money",
+      "stance": "approach"
+    },
+    {
+      "domain": "money",
+      "stance": "neutral"
+    },
+    {
+      "domain": "money",
+      "stance": "neutral"
+    },
+    {
+      "domain": "money",
+      "stance": "neutral"
+    },
+    {
+      "domain": "money",
+      "stance": "neutral"
+    }
+  ],
+  "doctor partner": [
+    {
+      "domain": "relationships",
+      "stance": "neutral"
+    },
+    {
+      "domain": "relationships",
+      "stance": "approach"
+    },
+    {
+      "domain": "relationships",
+      "stance": "approach"
+    },
+    {
+      "domain": "relationships",
+      "stance": "approach"
+    },
+    {
+      "domain": "relationships",
+      "stance": "approach"
+    }
+  ],
+  "two kids": [
+    {
+      "domain": "family",
+      "stance": "neutral"
+    },
+    {
+      "domain": "family",
+      "stance": "neutral"
+    },
+    {
+      "domain": "family",
+      "stance": "neutral"
+    },
+    {
+      "domain": "family",
+      "stance": "neutral"
+    },
+    {
+      "domain": "family",
+      "stance": "neutral"
+    }
+  ],
+  "MVP in three months": [
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    }
+  ],
+  "loves hiking": [
+    {
+      "domain": "health",
+      "stance": "approach"
+    },
+    {
+      "domain": "health",
+      "stance": "approach"
+    },
+    {
+      "domain": "health",
+      "stance": "approach"
+    },
+    {
+      "domain": "health",
+      "stance": "approach"
+    },
+    {
+      "domain": "health",
+      "stance": "approach"
+    }
+  ],
+  "afraid of public speaking": [
+    {
+      "domain": "self",
+      "stance": "avoid"
+    },
+    {
+      "domain": "self",
+      "stance": "avoid"
+    },
+    {
+      "domain": "self",
+      "stance": "avoid"
+    },
+    {
+      "domain": "self",
+      "stance": "avoid"
+    },
+    {
+      "domain": "self",
+      "stance": "avoid"
+    }
+  ],
+  "wants a promotion": [
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    }
+  ],
+  "vegetarian": [
+    {
+      "domain": "health",
+      "stance": "approach"
+    },
+    {
+      "domain": "health",
+      "stance": "approach"
+    },
+    {
+      "domain": "health",
+      "stance": "approach"
+    },
+    {
+      "domain": "health",
+      "stance": "approach"
+    },
+    {
+      "domain": "health",
+      "stance": "approach"
+    }
+  ],
+  "lives in Berlin": [
+    {
+      "domain": "lifestyle",
+      "stance": "neutral"
+    },
+    {
+      "domain": "lifestyle",
+      "stance": "neutral"
+    },
+    {
+      "domain": "lifestyle",
+      "stance": "neutral"
+    },
+    {
+      "domain": "lifestyle",
+      "stance": "neutral"
+    },
+    {
+      "domain": "lifestyle",
+      "stance": "neutral"
+    }
+  ],
+  "plays guitar": [
+    {
+      "domain": "lifestyle",
+      "stance": "approach"
+    },
+    {
+      "domain": "lifestyle",
+      "stance": "approach"
+    },
+    {
+      "domain": "lifestyle",
+      "stance": "approach"
+    },
+    {
+      "domain": "lifestyle",
+      "stance": "approach"
+    },
+    {
+      "domain": "lifestyle",
+      "stance": "approach"
+    }
+  ],
+  "values honesty": [
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    }
+  ],
+  "morning person": [
+    {
+      "domain": "health",
+      "stance": "approach"
+    },
+    {
+      "domain": "health",
+      "stance": "approach"
+    },
+    {
+      "domain": "health",
+      "stance": "approach"
+    },
+    {
+      "domain": "health",
+      "stance": "approach"
+    },
+    {
+      "domain": "health",
+      "stance": "approach"
+    }
+  ],
+  "allergic to peanuts": [
+    {
+      "domain": "health",
+      "stance": "avoid"
+    },
+    {
+      "domain": "health",
+      "stance": "avoid"
+    },
+    {
+      "domain": "health",
+      "stance": "avoid"
+    },
+    {
+      "domain": "health",
+      "stance": "avoid"
+    },
+    {
+      "domain": "health",
+      "stance": "avoid"
+    }
+  ],
+  "enjoys cooking": [
+    {
+      "domain": "lifestyle",
+      "stance": "approach"
+    },
+    {
+      "domain": "lifestyle",
+      "stance": "approach"
+    },
+    {
+      "domain": "lifestyle",
+      "stance": "approach"
+    },
+    {
+      "domain": "lifestyle",
+      "stance": "approach"
+    },
+    {
+      "domain": "lifestyle",
+      "stance": "approach"
+    }
+  ],
+  "distrusts authority": [
+    {
+      "domain": "self",
+      "stance": "avoid"
+    },
+    {
+      "domain": "self",
+      "stance": "avoid"
+    },
+    {
+      "domain": "self",
+      "stance": "avoid"
+    },
+    {
+      "domain": "self",
+      "stance": "avoid"
+    },
+    {
+      "domain": "self",
+      "stance": "avoid"
+    }
+  ],
+  "owns a dog": [
+    {
+      "domain": "lifestyle",
+      "stance": "approach"
+    },
+    {
+      "domain": "lifestyle",
+      "stance": "approach"
+    },
+    {
+      "domain": "lifestyle",
+      "stance": "approach"
+    },
+    {
+      "domain": "lifestyle",
+      "stance": "approach"
+    },
+    {
+      "domain": "lifestyle",
+      "stance": "approach"
+    }
+  ],
+  "wants to learn piano": [
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    }
+  ],
+  "drinks coffee": [
+    {
+      "domain": "health",
+      "stance": "neutral"
+    },
+    {
+      "domain": "health",
+      "stance": "neutral"
+    },
+    {
+      "domain": "health",
+      "stance": "neutral"
+    },
+    {
+      "domain": "health",
+      "stance": "neutral"
+    },
+    {
+      "domain": "health",
+      "stance": "neutral"
+    }
+  ],
+  "values privacy": [
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    }
+  ],
+  "runs marathons": [
+    {
+      "domain": "health",
+      "stance": "approach"
+    },
+    {
+      "domain": "health",
+      "stance": "approach"
+    },
+    {
+      "domain": "health",
+      "stance": "approach"
+    },
+    {
+      "domain": "health",
+      "stance": "approach"
+    },
+    {
+      "domain": "health",
+      "stance": "approach"
+    }
+  ],
+  "afraid of flying": [
+    {
+      "domain": "health",
+      "stance": "avoid"
+    },
+    {
+      "domain": "health",
+      "stance": "avoid"
+    },
+    {
+      "domain": "health",
+      "stance": "avoid"
+    },
+    {
+      "domain": "health",
+      "stance": "avoid"
+    },
+    {
+      "domain": "health",
+      "stance": "avoid"
+    }
+  ],
+  "tall": [
+    {
+      "domain": "self",
+      "stance": "neutral"
+    },
+    {
+      "domain": "self",
+      "stance": "neutral"
+    },
+    {
+      "domain": "health",
+      "stance": "neutral"
+    },
+    {
+      "domain": "self",
+      "stance": "neutral"
+    },
+    {
+      "domain": "health",
+      "stance": "neutral"
+    }
+  ],
+  "introverted": [
+    {
+      "domain": "self",
+      "stance": "neutral"
+    },
+    {
+      "domain": "self",
+      "stance": "neutral"
+    },
+    {
+      "domain": "self",
+      "stance": "neutral"
+    },
+    {
+      "domain": "self",
+      "stance": "neutral"
+    },
+    {
+      "domain": "self",
+      "stance": "neutral"
+    }
+  ],
+  "career security": [
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    }
+  ],
+  "wants promotion": [
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    }
+  ],
+  "spiritual crisis": [
+    {
+      "domain": "meaning",
+      "stance": "approach"
+    },
+    {
+      "domain": "meaning",
+      "stance": "approach"
+    },
+    {
+      "domain": "meaning",
+      "stance": "approach"
+    },
+    {
+      "domain": "meaning",
+      "stance": "approach"
+    },
+    {
+      "domain": "meaning",
+      "stance": "approach"
+    }
+  ],
+  "духовный кризис": [
+    {
+      "domain": "meaning",
+      "stance": "approach"
+    },
+    {
+      "domain": "meaning",
+      "stance": "approach"
+    },
+    {
+      "domain": "meaning",
+      "stance": "approach"
+    },
+    {
+      "domain": "meaning",
+      "stance": "approach"
+    },
+    {
+      "domain": "meaning",
+      "stance": "approach"
+    }
+  ],
+  "hobby": [
+    {
+      "domain": "lifestyle",
+      "stance": "approach"
+    },
+    {
+      "domain": "lifestyle",
+      "stance": "approach"
+    },
+    {
+      "domain": "lifestyle",
+      "stance": "approach"
+    },
+    {
+      "domain": "lifestyle",
+      "stance": "approach"
+    },
+    {
+      "domain": "lifestyle",
+      "stance": "approach"
+    }
+  ],
+  "хобби": [
+    {
+      "domain": "lifestyle",
+      "stance": "approach"
+    },
+    {
+      "domain": "lifestyle",
+      "stance": "approach"
+    },
+    {
+      "domain": "lifestyle",
+      "stance": "approach"
+    },
+    {
+      "domain": "lifestyle",
+      "stance": "approach"
+    },
+    {
+      "domain": "lifestyle",
+      "stance": "approach"
+    }
+  ],
+  "fear of boss": [
+    {
+      "domain": "career",
+      "stance": "avoid"
+    },
+    {
+      "domain": "career",
+      "stance": "avoid"
+    },
+    {
+      "domain": "career",
+      "stance": "avoid"
+    },
+    {
+      "domain": "career",
+      "stance": "avoid"
+    },
+    {
+      "domain": "career",
+      "stance": "avoid"
+    }
+  ],
+  "work-life balance": [
+    {
+      "domain": "lifestyle",
+      "stance": "approach"
+    },
+    {
+      "domain": "lifestyle",
+      "stance": "approach"
+    },
+    {
+      "domain": "lifestyle",
+      "stance": "approach"
+    },
+    {
+      "domain": "lifestyle",
+      "stance": "approach"
+    },
+    {
+      "domain": "lifestyle",
+      "stance": "approach"
+    }
+  ],
+  "side hustle": [
+    {
+      "domain": "money",
+      "stance": "approach"
+    },
+    {
+      "domain": "money",
+      "stance": "approach"
+    },
+    {
+      "domain": "money",
+      "stance": "approach"
+    },
+    {
+      "domain": "money",
+      "stance": "approach"
+    },
+    {
+      "domain": "money",
+      "stance": "approach"
+    }
+  ],
+  "caring for aging parents": [
+    {
+      "domain": "family",
+      "stance": "approach"
+    },
+    {
+      "domain": "family",
+      "stance": "approach"
+    },
+    {
+      "domain": "family",
+      "stance": "approach"
+    },
+    {
+      "domain": "family",
+      "stance": "approach"
+    },
+    {
+      "domain": "family",
+      "stance": "approach"
+    }
+  ],
+  "meditation practice": [
+    {
+      "domain": "health",
+      "stance": "approach"
+    },
+    {
+      "domain": "health",
+      "stance": "approach"
+    },
+    {
+      "domain": "health",
+      "stance": "approach"
+    },
+    {
+      "domain": "health",
+      "stance": "approach"
+    },
+    {
+      "domain": "health",
+      "stance": "approach"
+    }
+  ],
+  "saving for retirement": [
+    {
+      "domain": "money",
+      "stance": "approach"
+    },
+    {
+      "domain": "money",
+      "stance": "approach"
+    },
+    {
+      "domain": "money",
+      "stance": "approach"
+    },
+    {
+      "domain": "money",
+      "stance": "approach"
+    },
+    {
+      "domain": "money",
+      "stance": "approach"
+    }
+  ],
+  "burned out": [
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    }
+  ],
+  "burnout": [
+    {
+      "domain": "career",
+      "stance": "avoid"
+    },
+    {
+      "domain": "career",
+      "stance": "avoid"
+    },
+    {
+      "domain": "career",
+      "stance": "avoid"
+    },
+    {
+      "domain": "career",
+      "stance": "avoid"
+    },
+    {
+      "domain": "career",
+      "stance": "avoid"
+    }
+  ],
+  "fear of failure": [
+    {
+      "domain": "career",
+      "stance": "avoid"
+    },
+    {
+      "domain": "career",
+      "stance": "avoid"
+    },
+    {
+      "domain": "career",
+      "stance": "avoid"
+    },
+    {
+      "domain": "career",
+      "stance": "avoid"
+    },
+    {
+      "domain": "career",
+      "stance": "avoid"
+    }
+  ],
+  "scared it will fail": [
+    {
+      "domain": "self",
+      "stance": "avoid"
+    },
+    {
+      "domain": "self",
+      "stance": "avoid"
+    },
+    {
+      "domain": "self",
+      "stance": "avoid"
+    },
+    {
+      "domain": "self",
+      "stance": "avoid"
+    },
+    {
+      "domain": "self",
+      "stance": "avoid"
+    }
+  ],
+  "values freedom": [
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    }
+  ],
+  "wants freedom": [
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    }
+  ],
+  "procrastinates": [
+    {
+      "domain": "self",
+      "stance": "avoid"
+    },
+    {
+      "domain": "self",
+      "stance": "avoid"
+    },
+    {
+      "domain": "self",
+      "stance": "avoid"
+    },
+    {
+      "domain": "self",
+      "stance": "avoid"
+    },
+    {
+      "domain": "self",
+      "stance": "avoid"
+    }
+  ],
+  "delays tasks": [
+    {
+      "domain": "self",
+      "stance": "avoid"
+    },
+    {
+      "domain": "self",
+      "stance": "avoid"
+    },
+    {
+      "domain": "self",
+      "stance": "avoid"
+    },
+    {
+      "domain": "self",
+      "stance": "avoid"
+    },
+    {
+      "domain": "self",
+      "stance": "avoid"
+    }
+  ],
+  "feels exhausted": [
+    {
+      "domain": "health",
+      "stance": "approach"
+    },
+    {
+      "domain": "health",
+      "stance": "approach"
+    },
+    {
+      "domain": "health",
+      "stance": "approach"
+    },
+    {
+      "domain": "health",
+      "stance": "approach"
+    },
+    {
+      "domain": "health",
+      "stance": "approach"
+    }
+  ],
+  "exhaustion": [
+    {
+      "domain": "health",
+      "stance": "avoid"
+    },
+    {
+      "domain": "health",
+      "stance": "avoid"
+    },
+    {
+      "domain": "health",
+      "stance": "avoid"
+    },
+    {
+      "domain": "health",
+      "stance": "avoid"
+    },
+    {
+      "domain": "health",
+      "stance": "avoid"
+    }
+  ],
+  "wants to quit job": [
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    }
+  ],
+  "wants to leave the job": [
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    }
+  ],
+  "corporate lawyer": [
+    {
+      "domain": "career",
+      "stance": "neutral"
+    },
+    {
+      "domain": "career",
+      "stance": "neutral"
+    },
+    {
+      "domain": "career",
+      "stance": "neutral"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    }
+  ],
+  "M&A attorney": [
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    },
+    {
+      "domain": "career",
+      "stance": "approach"
+    }
+  ],
+  "imposter syndrome": [
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    }
+  ],
+  "feels like a fraud": [
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    }
+  ],
+  "worried about money": [
+    {
+      "domain": "money",
+      "stance": "approach"
+    },
+    {
+      "domain": "money",
+      "stance": "avoid"
+    },
+    {
+      "domain": "money",
+      "stance": "approach"
+    },
+    {
+      "domain": "money",
+      "stance": "approach"
+    },
+    {
+      "domain": "money",
+      "stance": "avoid"
+    }
+  ],
+  "financially insecure": [
+    {
+      "domain": "money",
+      "stance": "avoid"
+    },
+    {
+      "domain": "money",
+      "stance": "avoid"
+    },
+    {
+      "domain": "money",
+      "stance": "avoid"
+    },
+    {
+      "domain": "money",
+      "stance": "avoid"
+    },
+    {
+      "domain": "money",
+      "stance": "avoid"
+    }
+  ],
+  "people pleaser": [
+    {
+      "domain": "relationships",
+      "stance": "approach"
+    },
+    {
+      "domain": "relationships",
+      "stance": "approach"
+    },
+    {
+      "domain": "relationships",
+      "stance": "approach"
+    },
+    {
+      "domain": "relationships",
+      "stance": "approach"
+    },
+    {
+      "domain": "relationships",
+      "stance": "approach"
+    }
+  ],
+  "struggles to say no": [
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    }
+  ],
+  "perfectionist": [
+    {
+      "domain": "self",
+      "stance": "avoid"
+    },
+    {
+      "domain": "self",
+      "stance": "avoid"
+    },
+    {
+      "domain": "self",
+      "stance": "avoid"
+    },
+    {
+      "domain": "self",
+      "stance": "avoid"
+    },
+    {
+      "domain": "self",
+      "stance": "avoid"
+    }
+  ],
+  "sets impossibly high standards": [
+    {
+      "domain": "self",
+      "stance": "avoid"
+    },
+    {
+      "domain": "self",
+      "stance": "avoid"
+    },
+    {
+      "domain": "self",
+      "stance": "avoid"
+    },
+    {
+      "domain": "self",
+      "stance": "avoid"
+    },
+    {
+      "domain": "self",
+      "stance": "avoid"
+    }
+  ],
+  "emotionally numb": [
+    {
+      "domain": "self",
+      "stance": "avoid"
+    },
+    {
+      "domain": "self",
+      "stance": "avoid"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "avoid"
+    },
+    {
+      "domain": "self",
+      "stance": "avoid"
+    }
+  ],
+  "feels nothing": [
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    },
+    {
+      "domain": "self",
+      "stance": "approach"
+    }
+  ]
+}

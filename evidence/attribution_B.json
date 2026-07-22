@@ -1,0 +1,3414 @@
+{
+  "variant": "B",
+  "turns": [
+    {
+      "turn": 1,
+      "user": "This whole community fundraiser is a fraud. Why should I smile and write a check? My runway's thin enough as it is.",
+      "raw_facts": [
+        {
+          "label": "finances are tight",
+          "category": "finances",
+          "confidence": 0.82,
+          "source": "explicit",
+          "type": "state",
+          "domain": "money",
+          "stance": "avoid"
+        },
+        {
+          "label": "distrusts community fundraiser",
+          "category": "values",
+          "confidence": 0.8,
+          "source": "explicit",
+          "type": "state",
+          "domain": "other",
+          "stance": "avoid"
+        },
+        {
+          "label": "resents social pressure to donate",
+          "category": "relationships",
+          "confidence": 0.75,
+          "source": "explicit",
+          "type": "state",
+          "domain": "relationships",
+          "stance": "avoid"
+        },
+        {
+          "label": "values financial self-preservation",
+          "category": "values",
+          "confidence": 0.62,
+          "source": "inferred",
+          "type": "value",
+          "domain": "money",
+          "stance": "approach"
+        }
+      ],
+      "raw_edges": [
+        {
+          "source": "finances are tight",
+          "target": "resents social pressure to donate",
+          "relation": "causes",
+          "confidence": 0.72
+        },
+        {
+          "source": "distrusts community fundraiser",
+          "target": "resents social pressure to donate",
+          "relation": "supports",
+          "confidence": 0.75
+        },
+        {
+          "source": "resents social pressure to donate",
+          "target": "values financial self-preservation",
+          "relation": "supports",
+          "confidence": 0.6
+        }
+      ],
+      "prov": [
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "finances are tight",
+            "causes",
+            "resents social pressure to donate"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "distrusts community fundraiser",
+            "supports",
+            "resents social pressure to donate"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "resents social pressure to donate",
+            "supports",
+            "values financial self-preservation"
+          ]
+        }
+      ],
+      "delta": {
+        "contradict": [],
+        "strong": [],
+        "reinforce": [],
+        "edges": [
+          [
+            "finances are tight",
+            "causes",
+            "resents social pressure to donate"
+          ],
+          [
+            "distrusts community fundraiser",
+            "supports",
+            "resents social pressure to donate"
+          ],
+          [
+            "resents social pressure to donate",
+            "supports",
+            "values financial self-preservation"
+          ]
+        ],
+        "new_nodes": [
+          "finances are tight",
+          "distrusts community fundraiser",
+          "resents social pressure to donate",
+          "values financial self-preservation"
+        ]
+      },
+      "engine": {
+        "finances are tight": {
+          "conf": 0.82,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        },
+        "distrusts community fundraiser": {
+          "conf": 0.8,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        },
+        "resents social pressure to donate": {
+          "conf": 0.902,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        },
+        "values financial self-preservation": {
+          "conf": 0.724,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        }
+      }
+    },
+    {
+      "turn": 2,
+      "user": "Every do-gooder in that room raising a glass to 'community' should choke on their canapés. Sentiment is for people who can't read a balance sheet.",
+      "raw_facts": [
+        {
+          "label": "distrusts community fundraiser",
+          "category": "values",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "value",
+          "domain": "relationships",
+          "stance": "avoid"
+        },
+        {
+          "label": "resents social pressure to donate",
+          "category": "relationships",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "state",
+          "domain": "relationships",
+          "stance": "avoid"
+        },
+        {
+          "label": "values financial self-preservation",
+          "category": "values",
+          "confidence": 0.82,
+          "source": "explicit",
+          "type": "value",
+          "domain": "money",
+          "stance": "approach"
+        },
+        {
+          "label": "dismisses emotional reasoning as weakness",
+          "category": "values",
+          "confidence": 0.8,
+          "source": "explicit",
+          "type": "value",
+          "domain": "self",
+          "stance": "avoid"
+        },
+        {
+          "label": "identifies as rational over sentimental",
+          "category": "identity",
+          "confidence": 0.72,
+          "source": "inferred",
+          "type": "value",
+          "domain": "self",
+          "stance": "approach"
+        }
+      ],
+      "raw_edges": [
+        {
+          "source": "identifies as rational over sentimental",
+          "target": "distrusts community fundraiser",
+          "relation": "supports",
+          "confidence": 0.72
+        },
+        {
+          "source": "dismisses emotional reasoning as weakness",
+          "target": "resents social pressure to donate",
+          "relation": "supports",
+          "confidence": 0.74
+        },
+        {
+          "source": "values financial self-preservation",
+          "target": "dismisses emotional reasoning as weakness",
+          "relation": "supports",
+          "confidence": 0.68
+        },
+        {
+          "source": "identifies as rational over sentimental",
+          "target": "resents social pressure to donate",
+          "relation": "motivates",
+          "confidence": 0.65
+        }
+      ],
+      "prov": [
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "distrusts community fundraiser"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "resents social pressure to donate"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "values financial self-preservation"
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "identifies as rational over sentimental",
+            "supports",
+            "distrusts community fundraiser"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "dismisses emotional reasoning as weakness",
+            "supports",
+            "resents social pressure to donate"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "values financial self-preservation",
+            "supports",
+            "dismisses emotional reasoning as weakness"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "identifies as rational over sentimental",
+            "motivates",
+            "resents social pressure to donate"
+          ]
+        }
+      ],
+      "delta": {
+        "contradict": [],
+        "strong": [],
+        "reinforce": [
+          "distrusts community fundraiser",
+          "resents social pressure to donate",
+          "values financial self-preservation"
+        ],
+        "edges": [
+          [
+            "identifies as rational over sentimental",
+            "supports",
+            "distrusts community fundraiser"
+          ],
+          [
+            "dismisses emotional reasoning as weakness",
+            "supports",
+            "resents social pressure to donate"
+          ],
+          [
+            "values financial self-preservation",
+            "supports",
+            "dismisses emotional reasoning as weakness"
+          ],
+          [
+            "identifies as rational over sentimental",
+            "motivates",
+            "resents social pressure to donate"
+          ]
+        ],
+        "new_nodes": [
+          "dismisses emotional reasoning as weakness",
+          "identifies as rational over sentimental"
+        ]
+      },
+      "engine": {
+        "finances are tight": {
+          "conf": 0.82,
+          "prev": 0.82,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "distrusts community fundraiser": {
+          "conf": 0.92,
+          "prev": 0.8,
+          "delta": 0.12,
+          "spark": false,
+          "new": false
+        },
+        "resents social pressure to donate": {
+          "conf": 0.92,
+          "prev": 0.902,
+          "delta": 0.018,
+          "spark": false,
+          "new": false
+        },
+        "values financial self-preservation": {
+          "conf": 0.876,
+          "prev": 0.724,
+          "delta": 0.153,
+          "spark": false,
+          "new": false
+        },
+        "dismisses emotional reasoning as weakness": {
+          "conf": 0.845,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        },
+        "identifies as rational over sentimental": {
+          "conf": 0.65,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "user": "There are shelters. There are food banks. If the people I laid off would rather sink, let them — it thins the dead weight out of the market. Their troubles aren't on my ledger. My ledger is my ledger.",
+      "raw_facts": [
+        {
+          "label": "denies responsibility for laid-off workers",
+          "category": "values",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "value",
+          "domain": "meaning",
+          "stance": "avoid"
+        },
+        {
+          "label": "views layoffs as market selection",
+          "category": "values",
+          "confidence": 0.82,
+          "source": "explicit",
+          "type": "value",
+          "domain": "career",
+          "stance": "neutral"
+        },
+        {
+          "label": "values financial self-preservation",
+          "category": "values",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "value",
+          "domain": "money",
+          "stance": "approach"
+        },
+        {
+          "label": "dismisses emotional reasoning as weakness",
+          "category": "values",
+          "confidence": 0.83,
+          "source": "explicit",
+          "type": "value",
+          "domain": "self",
+          "stance": "avoid"
+        },
+        {
+          "label": "identifies as rational over sentimental",
+          "category": "identity",
+          "confidence": 0.82,
+          "source": "explicit",
+          "type": "value",
+          "domain": "self",
+          "stance": "approach"
+        },
+        {
+          "label": "others' suffering is not his concern",
+          "category": "values",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "value",
+          "domain": "relationships",
+          "stance": "avoid"
+        },
+        {
+          "label": "deflects guilt onto social safety nets",
+          "category": "values",
+          "confidence": 0.62,
+          "source": "inferred",
+          "type": "value",
+          "domain": "meaning",
+          "stance": "avoid"
+        }
+      ],
+      "raw_edges": [
+        {
+          "source": "identifies as rational over sentimental",
+          "target": "denies responsibility for laid-off workers",
+          "relation": "supports",
+          "confidence": 0.78
+        },
+        {
+          "source": "values financial self-preservation",
+          "target": "denies responsibility for laid-off workers",
+          "relation": "motivates",
+          "confidence": 0.75
+        },
+        {
+          "source": "dismisses emotional reasoning as weakness",
+          "target": "others' suffering is not his concern",
+          "relation": "supports",
+          "confidence": 0.8
+        },
+        {
+          "source": "deflects guilt onto social safety nets",
+          "target": "denies responsibility for laid-off workers",
+          "relation": "supports",
+          "confidence": 0.65
+        },
+        {
+          "source": "views layoffs as market selection",
+          "target": "denies responsibility for laid-off workers",
+          "relation": "supports",
+          "confidence": 0.77
+        },
+        {
+          "source": "others' suffering is not his concern",
+          "target": "resents social pressure to donate",
+          "relation": "supports",
+          "confidence": 0.6
+        }
+      ],
+      "prov": [
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "values financial self-preservation"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "dismisses emotional reasoning as weakness"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "identifies as rational over sentimental"
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "identifies as rational over sentimental",
+            "supports",
+            "denies responsibility for laid-off workers"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "values financial self-preservation",
+            "motivates",
+            "denies responsibility for laid-off workers"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "dismisses emotional reasoning as weakness",
+            "supports",
+            "others' suffering is not his concern"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "deflects guilt onto social safety nets",
+            "supports",
+            "denies responsibility for laid-off workers"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "views layoffs as market selection",
+            "supports",
+            "denies responsibility for laid-off workers"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "others' suffering is not his concern",
+            "supports",
+            "resents social pressure to donate"
+          ]
+        }
+      ],
+      "delta": {
+        "contradict": [],
+        "strong": [],
+        "reinforce": [
+          "values financial self-preservation",
+          "dismisses emotional reasoning as weakness",
+          "identifies as rational over sentimental"
+        ],
+        "edges": [
+          [
+            "identifies as rational over sentimental",
+            "supports",
+            "denies responsibility for laid-off workers"
+          ],
+          [
+            "values financial self-preservation",
+            "motivates",
+            "denies responsibility for laid-off workers"
+          ],
+          [
+            "dismisses emotional reasoning as weakness",
+            "supports",
+            "others' suffering is not his concern"
+          ],
+          [
+            "deflects guilt onto social safety nets",
+            "supports",
+            "denies responsibility for laid-off workers"
+          ],
+          [
+            "views layoffs as market selection",
+            "supports",
+            "denies responsibility for laid-off workers"
+          ],
+          [
+            "others' suffering is not his concern",
+            "supports",
+            "resents social pressure to donate"
+          ]
+        ],
+        "new_nodes": [
+          "denies responsibility for laid-off workers",
+          "views layoffs as market selection",
+          "others' suffering is not his concern",
+          "deflects guilt onto social safety nets"
+        ]
+      },
+      "engine": {
+        "finances are tight": {
+          "conf": 0.82,
+          "prev": 0.82,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "distrusts community fundraiser": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "resents social pressure to donate": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "values financial self-preservation": {
+          "conf": 0.92,
+          "prev": 0.876,
+          "delta": 0.044,
+          "spark": false,
+          "new": false
+        },
+        "dismisses emotional reasoning as weakness": {
+          "conf": 0.92,
+          "prev": 0.845,
+          "delta": 0.075,
+          "spark": false,
+          "new": false
+        },
+        "identifies as rational over sentimental": {
+          "conf": 0.813,
+          "prev": 0.65,
+          "delta": 0.163,
+          "spark": false,
+          "new": false
+        },
+        "denies responsibility for laid-off workers": {
+          "conf": 0.92,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        },
+        "views layoffs as market selection": {
+          "conf": 0.82,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        },
+        "others' suffering is not his concern": {
+          "conf": 0.88,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        },
+        "deflects guilt onto social safety nets": {
+          "conf": 0.62,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        }
+      }
+    },
+    {
+      "turn": 4,
+      "user": "My old partner Dale calling at 2 a.m. about 'what we owe people' — it's noise. Bad oysters, not a conscience. I won't hear it.",
+      "raw_facts": [
+        {
+          "label": "denies responsibility for laid-off workers",
+          "category": "values",
+          "confidence": 0.82,
+          "source": "inferred",
+          "type": "value",
+          "domain": "meaning",
+          "stance": "avoid"
+        },
+        {
+          "label": "dismisses emotional reasoning as weakness",
+          "category": "values",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "value",
+          "domain": "self",
+          "stance": "avoid"
+        },
+        {
+          "label": "identifies as rational over sentimental",
+          "category": "identity",
+          "confidence": 0.83,
+          "source": "explicit",
+          "type": "value",
+          "domain": "self",
+          "stance": "approach"
+        },
+        {
+          "label": "others' suffering is not his concern",
+          "category": "values",
+          "confidence": 0.8,
+          "source": "inferred",
+          "type": "value",
+          "domain": "meaning",
+          "stance": "avoid"
+        },
+        {
+          "label": "resents social pressure to donate",
+          "category": "relationships",
+          "confidence": 0.75,
+          "source": "inferred",
+          "type": "state",
+          "domain": "relationships",
+          "stance": "avoid"
+        }
+      ],
+      "raw_edges": [
+        {
+          "source": "identifies as rational over sentimental",
+          "target": "dismisses emotional reasoning as weakness",
+          "relation": "supports",
+          "confidence": 0.82
+        },
+        {
+          "source": "dismisses emotional reasoning as weakness",
+          "target": "denies responsibility for laid-off workers",
+          "relation": "supports",
+          "confidence": 0.75
+        },
+        {
+          "source": "resents social pressure to donate",
+          "target": "others' suffering is not his concern",
+          "relation": "supports",
+          "confidence": 0.7
+        },
+        {
+          "source": "identifies as rational over sentimental",
+          "target": "others' suffering is not his concern",
+          "relation": "supports",
+          "confidence": 0.72
+        }
+      ],
+      "prov": [
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "denies responsibility for laid-off workers"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "dismisses emotional reasoning as weakness"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "identifies as rational over sentimental"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "others' suffering is not his concern"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "resents social pressure to donate"
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "identifies as rational over sentimental",
+            "supports",
+            "dismisses emotional reasoning as weakness"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "dismisses emotional reasoning as weakness",
+            "supports",
+            "denies responsibility for laid-off workers"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "resents social pressure to donate",
+            "supports",
+            "others' suffering is not his concern"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "identifies as rational over sentimental",
+            "supports",
+            "others' suffering is not his concern"
+          ]
+        }
+      ],
+      "delta": {
+        "contradict": [],
+        "strong": [],
+        "reinforce": [
+          "denies responsibility for laid-off workers",
+          "dismisses emotional reasoning as weakness",
+          "identifies as rational over sentimental",
+          "others' suffering is not his concern",
+          "resents social pressure to donate"
+        ],
+        "edges": [
+          [
+            "identifies as rational over sentimental",
+            "supports",
+            "dismisses emotional reasoning as weakness"
+          ],
+          [
+            "dismisses emotional reasoning as weakness",
+            "supports",
+            "denies responsibility for laid-off workers"
+          ],
+          [
+            "resents social pressure to donate",
+            "supports",
+            "others' suffering is not his concern"
+          ],
+          [
+            "identifies as rational over sentimental",
+            "supports",
+            "others' suffering is not his concern"
+          ]
+        ],
+        "new_nodes": []
+      },
+      "engine": {
+        "finances are tight": {
+          "conf": 0.82,
+          "prev": 0.82,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "distrusts community fundraiser": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "resents social pressure to donate": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "values financial self-preservation": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "dismisses emotional reasoning as weakness": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "identifies as rational over sentimental": {
+          "conf": 0.91,
+          "prev": 0.813,
+          "delta": 0.098,
+          "spark": false,
+          "new": false
+        },
+        "denies responsibility for laid-off workers": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "views layoffs as market selection": {
+          "conf": 0.82,
+          "prev": 0.82,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "others' suffering is not his concern": {
+          "conf": 0.92,
+          "prev": 0.88,
+          "delta": 0.04,
+          "spark": false,
+          "new": false
+        },
+        "deflects guilt onto social safety nets": {
+          "conf": 0.62,
+          "prev": 0.62,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "user": "Dale — you stood by me when no one else would. Why do you sound so trapped, so wrecked? Tell me what you mean.",
+      "raw_facts": [],
+      "raw_edges": [],
+      "prov": [],
+      "delta": {
+        "contradict": [],
+        "strong": [],
+        "reinforce": [],
+        "edges": [],
+        "new_nodes": []
+      },
+      "engine": {
+        "finances are tight": {
+          "conf": 0.82,
+          "prev": 0.82,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "distrusts community fundraiser": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "resents social pressure to donate": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "values financial self-preservation": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "dismisses emotional reasoning as weakness": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "identifies as rational over sentimental": {
+          "conf": 0.91,
+          "prev": 0.91,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "denies responsibility for laid-off workers": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "views layoffs as market selection": {
+          "conf": 0.82,
+          "prev": 0.82,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "others' suffering is not his concern": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "deflects guilt onto social safety nets": {
+          "conf": 0.62,
+          "prev": 0.62,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        }
+      }
+    },
+    {
+      "turn": 6,
+      "user": "I was different once. Broke, hungry, but I laughed. When did I turn to stone? I picked the cap table over the woman who loved me, and she walked.",
+      "raw_facts": [
+        {
+          "label": "was emotionally open when poor",
+          "category": "identity",
+          "confidence": 0.82,
+          "source": "explicit",
+          "type": "fact",
+          "domain": "self",
+          "stance": "neutral"
+        },
+        {
+          "label": "feels emotionally hardened now",
+          "category": "mood",
+          "confidence": 0.84,
+          "source": "explicit",
+          "type": "state",
+          "domain": "self",
+          "stance": "avoid"
+        },
+        {
+          "label": "chose cap table over relationship",
+          "category": "values",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "fact",
+          "domain": "relationships",
+          "stance": "avoid"
+        },
+        {
+          "label": "lost romantic partner to ambition",
+          "category": "relationships",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "fact",
+          "domain": "relationships",
+          "stance": "neutral"
+        },
+        {
+          "label": "grieves loss of former self",
+          "category": "mood",
+          "confidence": 0.72,
+          "source": "inferred",
+          "type": "state",
+          "domain": "self",
+          "stance": "avoid"
+        },
+        {
+          "label": "values financial self-preservation",
+          "category": "values",
+          "confidence": 0.8,
+          "source": "inferred",
+          "type": "value",
+          "domain": "money",
+          "stance": "approach"
+        },
+        {
+          "label": "identifies as rational over sentimental",
+          "category": "identity",
+          "confidence": 0.72,
+          "source": "inferred",
+          "type": "value",
+          "domain": "self",
+          "stance": "neutral"
+        },
+        {
+          "label": "fears permanent emotional numbness",
+          "category": "fears",
+          "confidence": 0.62,
+          "source": "inferred",
+          "type": "state",
+          "domain": "self",
+          "stance": "avoid"
+        }
+      ],
+      "raw_edges": [
+        {
+          "source": "values financial self-preservation",
+          "target": "chose cap table over relationship",
+          "relation": "causes",
+          "confidence": 0.8
+        },
+        {
+          "source": "chose cap table over relationship",
+          "target": "lost romantic partner to ambition",
+          "relation": "causes",
+          "confidence": 0.85
+        },
+        {
+          "source": "identifies as rational over sentimental",
+          "target": "feels emotionally hardened now",
+          "relation": "supports",
+          "confidence": 0.68
+        },
+        {
+          "source": "was emotionally open when poor",
+          "target": "feels emotionally hardened now",
+          "relation": "contradicts",
+          "confidence": 0.82
+        },
+        {
+          "source": "feels emotionally hardened now",
+          "target": "grieves loss of former self",
+          "relation": "causes",
+          "confidence": 0.7
+        },
+        {
+          "source": "grieves loss of former self",
+          "target": "identifies as rational over sentimental",
+          "relation": "contradicts",
+          "confidence": 0.62
+        },
+        {
+          "source": "fears permanent emotional numbness",
+          "target": "grieves loss of former self",
+          "relation": "motivates",
+          "confidence": 0.58
+        }
+      ],
+      "prov": [
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "values financial self-preservation"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "identifies as rational over sentimental"
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "values financial self-preservation",
+            "causes",
+            "chose cap table over relationship"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "chose cap table over relationship",
+            "causes",
+            "lost romantic partner to ambition"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "identifies as rational over sentimental",
+            "supports",
+            "feels emotionally hardened now"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "was emotionally open when poor",
+            "contradicts",
+            "feels emotionally hardened now"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "feels emotionally hardened now",
+            "causes",
+            "grieves loss of former self"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "grieves loss of former self",
+            "contradicts",
+            "identifies as rational over sentimental"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "fears permanent emotional numbness",
+            "motivates",
+            "grieves loss of former self"
+          ]
+        }
+      ],
+      "delta": {
+        "contradict": [],
+        "strong": [],
+        "reinforce": [
+          "values financial self-preservation",
+          "identifies as rational over sentimental"
+        ],
+        "edges": [
+          [
+            "values financial self-preservation",
+            "causes",
+            "chose cap table over relationship"
+          ],
+          [
+            "chose cap table over relationship",
+            "causes",
+            "lost romantic partner to ambition"
+          ],
+          [
+            "identifies as rational over sentimental",
+            "supports",
+            "feels emotionally hardened now"
+          ],
+          [
+            "was emotionally open when poor",
+            "contradicts",
+            "feels emotionally hardened now"
+          ],
+          [
+            "feels emotionally hardened now",
+            "causes",
+            "grieves loss of former self"
+          ],
+          [
+            "grieves loss of former self",
+            "contradicts",
+            "identifies as rational over sentimental"
+          ],
+          [
+            "fears permanent emotional numbness",
+            "motivates",
+            "grieves loss of former self"
+          ]
+        ],
+        "new_nodes": [
+          "was emotionally open when poor",
+          "feels emotionally hardened now",
+          "chose cap table over relationship",
+          "lost romantic partner to ambition",
+          "grieves loss of former self",
+          "fears permanent emotional numbness"
+        ]
+      },
+      "engine": {
+        "finances are tight": {
+          "conf": 0.82,
+          "prev": 0.82,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "distrusts community fundraiser": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "resents social pressure to donate": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "values financial self-preservation": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "dismisses emotional reasoning as weakness": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "identifies as rational over sentimental": {
+          "conf": 0.642,
+          "prev": 0.91,
+          "delta": -0.268,
+          "spark": true,
+          "new": false
+        },
+        "denies responsibility for laid-off workers": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "views layoffs as market selection": {
+          "conf": 0.82,
+          "prev": 0.82,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "others' suffering is not his concern": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "deflects guilt onto social safety nets": {
+          "conf": 0.62,
+          "prev": 0.62,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "was emotionally open when poor": {
+          "conf": 0.784,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        },
+        "feels emotionally hardened now": {
+          "conf": 0.216,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        },
+        "chose cap table over relationship": {
+          "conf": 0.85,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        },
+        "lost romantic partner to ambition": {
+          "conf": 0.92,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        },
+        "grieves loss of former self": {
+          "conf": 0.358,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        },
+        "fears permanent emotional numbness": {
+          "conf": 0.62,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        }
+      }
+    },
+    {
+      "turn": 7,
+      "user": "That kid from my old team — Priya's boy, the sick one. Will he pull through? I never once counted people like that as any concern of mine.",
+      "raw_facts": [
+        {
+          "label": "others' suffering is not his concern",
+          "category": "values",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "value",
+          "domain": "meaning",
+          "stance": "avoid"
+        },
+        {
+          "label": "fears permanent emotional numbness",
+          "category": "fears",
+          "confidence": 0.62,
+          "source": "inferred",
+          "type": "state",
+          "domain": "self",
+          "stance": "avoid"
+        },
+        {
+          "label": "grieves loss of former self",
+          "category": "mood",
+          "confidence": 0.55,
+          "source": "inferred",
+          "type": "state",
+          "domain": "self",
+          "stance": "neutral"
+        },
+        {
+          "label": "feels emotionally hardened now",
+          "category": "mood",
+          "confidence": 0.65,
+          "source": "inferred",
+          "type": "state",
+          "domain": "self",
+          "stance": "neutral"
+        }
+      ],
+      "raw_edges": [
+        {
+          "source": "others' suffering is not his concern",
+          "target": "grieves loss of former self",
+          "relation": "contradicts",
+          "confidence": 0.58
+        },
+        {
+          "source": "feels emotionally hardened now",
+          "target": "fears permanent emotional numbness",
+          "relation": "causes",
+          "confidence": 0.6
+        },
+        {
+          "source": "identifies as rational over sentimental",
+          "target": "others' suffering is not his concern",
+          "relation": "supports",
+          "confidence": 0.72
+        },
+        {
+          "source": "was emotionally open when poor",
+          "target": "feels emotionally hardened now",
+          "relation": "contradicts",
+          "confidence": 0.63
+        }
+      ],
+      "prov": [
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "others' suffering is not his concern"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "fears permanent emotional numbness"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "grieves loss of former self"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "feels emotionally hardened now"
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "others' suffering is not his concern",
+            "contradicts",
+            "grieves loss of former self"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "feels emotionally hardened now",
+            "causes",
+            "fears permanent emotional numbness"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "identifies as rational over sentimental",
+            "supports",
+            "others' suffering is not his concern"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "was emotionally open when poor",
+            "contradicts",
+            "feels emotionally hardened now"
+          ]
+        }
+      ],
+      "delta": {
+        "contradict": [],
+        "strong": [],
+        "reinforce": [
+          "others' suffering is not his concern",
+          "fears permanent emotional numbness",
+          "grieves loss of former self",
+          "feels emotionally hardened now"
+        ],
+        "edges": [
+          [
+            "others' suffering is not his concern",
+            "contradicts",
+            "grieves loss of former self"
+          ],
+          [
+            "feels emotionally hardened now",
+            "causes",
+            "fears permanent emotional numbness"
+          ],
+          [
+            "identifies as rational over sentimental",
+            "supports",
+            "others' suffering is not his concern"
+          ],
+          [
+            "was emotionally open when poor",
+            "contradicts",
+            "feels emotionally hardened now"
+          ]
+        ],
+        "new_nodes": []
+      },
+      "engine": {
+        "finances are tight": {
+          "conf": 0.82,
+          "prev": 0.82,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "distrusts community fundraiser": {
+          "conf": 0.919,
+          "prev": 0.92,
+          "delta": -0.001,
+          "spark": false,
+          "new": false
+        },
+        "resents social pressure to donate": {
+          "conf": 0.918,
+          "prev": 0.92,
+          "delta": -0.002,
+          "spark": false,
+          "new": false
+        },
+        "values financial self-preservation": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": -0.0,
+          "spark": false,
+          "new": false
+        },
+        "dismisses emotional reasoning as weakness": {
+          "conf": 0.919,
+          "prev": 0.92,
+          "delta": -0.001,
+          "spark": false,
+          "new": false
+        },
+        "identifies as rational over sentimental": {
+          "conf": 0.459,
+          "prev": 0.642,
+          "delta": -0.183,
+          "spark": false,
+          "new": false
+        },
+        "denies responsibility for laid-off workers": {
+          "conf": 0.918,
+          "prev": 0.92,
+          "delta": -0.002,
+          "spark": false,
+          "new": false
+        },
+        "views layoffs as market selection": {
+          "conf": 0.82,
+          "prev": 0.82,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "others' suffering is not his concern": {
+          "conf": 0.557,
+          "prev": 0.92,
+          "delta": -0.363,
+          "spark": true,
+          "new": false
+        },
+        "deflects guilt onto social safety nets": {
+          "conf": 0.62,
+          "prev": 0.62,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "was emotionally open when poor": {
+          "conf": 0.667,
+          "prev": 0.784,
+          "delta": -0.117,
+          "spark": false,
+          "new": false
+        },
+        "feels emotionally hardened now": {
+          "conf": 0.333,
+          "prev": 0.216,
+          "delta": 0.117,
+          "spark": false,
+          "new": false
+        },
+        "chose cap table over relationship": {
+          "conf": 0.85,
+          "prev": 0.85,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "lost romantic partner to ambition": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "grieves loss of former self": {
+          "conf": 0.443,
+          "prev": 0.358,
+          "delta": 0.086,
+          "spark": false,
+          "new": false
+        },
+        "fears permanent emotional numbness": {
+          "conf": 0.845,
+          "prev": 0.62,
+          "delta": 0.225,
+          "spark": true,
+          "new": false
+        }
+      }
+    },
+    {
+      "turn": 8,
+      "user": "Priya's family is drowning, and I'm sitting on more than I can spend, and all I ever gave her was a cold desk and 'do more with less.' I'm starting to see what I've become.",
+      "raw_facts": [
+        {
+          "label": "denies responsibility for laid-off workers",
+          "category": "values",
+          "confidence": 0.72,
+          "source": "inferred",
+          "type": "value",
+          "domain": "meaning",
+          "stance": "avoid"
+        },
+        {
+          "label": "others' suffering is not his concern",
+          "category": "values",
+          "confidence": 0.55,
+          "source": "inferred",
+          "type": "value",
+          "domain": "meaning",
+          "stance": "avoid"
+        },
+        {
+          "label": "grieves loss of former self",
+          "category": "mood",
+          "confidence": 0.8,
+          "source": "explicit",
+          "type": "state",
+          "domain": "self",
+          "stance": "avoid"
+        },
+        {
+          "label": "feels emotionally hardened now",
+          "category": "mood",
+          "confidence": 0.82,
+          "source": "explicit",
+          "type": "state",
+          "domain": "self",
+          "stance": "avoid"
+        },
+        {
+          "label": "fears permanent emotional numbness",
+          "category": "fears",
+          "confidence": 0.65,
+          "source": "inferred",
+          "type": "state",
+          "domain": "self",
+          "stance": "avoid"
+        },
+        {
+          "label": "was emotionally open when poor",
+          "category": "identity",
+          "confidence": 0.6,
+          "source": "inferred",
+          "type": "fact",
+          "domain": "self",
+          "stance": "neutral"
+        }
+      ],
+      "raw_edges": [
+        {
+          "source": "feels emotionally hardened now",
+          "target": "grieves loss of former self",
+          "relation": "causes",
+          "confidence": 0.78
+        },
+        {
+          "source": "grieves loss of former self",
+          "target": "fears permanent emotional numbness",
+          "relation": "motivates",
+          "confidence": 0.65
+        },
+        {
+          "source": "denies responsibility for laid-off workers",
+          "target": "others' suffering is not his concern",
+          "relation": "supports",
+          "confidence": 0.7
+        },
+        {
+          "source": "grieves loss of former self",
+          "target": "denies responsibility for laid-off workers",
+          "relation": "contradicts",
+          "confidence": 0.72
+        },
+        {
+          "source": "was emotionally open when poor",
+          "target": "feels emotionally hardened now",
+          "relation": "contradicts",
+          "confidence": 0.68
+        }
+      ],
+      "prov": [
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "denies responsibility for laid-off workers"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "others' suffering is not his concern"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "grieves loss of former self"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "feels emotionally hardened now"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "fears permanent emotional numbness"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "was emotionally open when poor"
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "feels emotionally hardened now",
+            "causes",
+            "grieves loss of former self"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "grieves loss of former self",
+            "motivates",
+            "fears permanent emotional numbness"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "denies responsibility for laid-off workers",
+            "supports",
+            "others' suffering is not his concern"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "grieves loss of former self",
+            "contradicts",
+            "denies responsibility for laid-off workers"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "was emotionally open when poor",
+            "contradicts",
+            "feels emotionally hardened now"
+          ]
+        }
+      ],
+      "delta": {
+        "contradict": [],
+        "strong": [],
+        "reinforce": [
+          "denies responsibility for laid-off workers",
+          "others' suffering is not his concern",
+          "grieves loss of former self",
+          "feels emotionally hardened now",
+          "fears permanent emotional numbness",
+          "was emotionally open when poor"
+        ],
+        "edges": [
+          [
+            "feels emotionally hardened now",
+            "causes",
+            "grieves loss of former self"
+          ],
+          [
+            "grieves loss of former self",
+            "motivates",
+            "fears permanent emotional numbness"
+          ],
+          [
+            "denies responsibility for laid-off workers",
+            "supports",
+            "others' suffering is not his concern"
+          ],
+          [
+            "grieves loss of former self",
+            "contradicts",
+            "denies responsibility for laid-off workers"
+          ],
+          [
+            "was emotionally open when poor",
+            "contradicts",
+            "feels emotionally hardened now"
+          ]
+        ],
+        "new_nodes": [
+          "sitting on more than I can spend"
+        ]
+      },
+      "engine": {
+        "finances are tight": {
+          "conf": 0.82,
+          "prev": 0.82,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "distrusts community fundraiser": {
+          "conf": 0.918,
+          "prev": 0.919,
+          "delta": -0.001,
+          "spark": false,
+          "new": false
+        },
+        "resents social pressure to donate": {
+          "conf": 0.919,
+          "prev": 0.918,
+          "delta": 0.001,
+          "spark": false,
+          "new": false
+        },
+        "values financial self-preservation": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "dismisses emotional reasoning as weakness": {
+          "conf": 0.918,
+          "prev": 0.919,
+          "delta": -0.001,
+          "spark": false,
+          "new": false
+        },
+        "identifies as rational over sentimental": {
+          "conf": 0.294,
+          "prev": 0.459,
+          "delta": -0.165,
+          "spark": false,
+          "new": false
+        },
+        "denies responsibility for laid-off workers": {
+          "conf": 0.649,
+          "prev": 0.918,
+          "delta": -0.269,
+          "spark": true,
+          "new": false
+        },
+        "views layoffs as market selection": {
+          "conf": 0.82,
+          "prev": 0.82,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "others' suffering is not his concern": {
+          "conf": 0.541,
+          "prev": 0.557,
+          "delta": -0.015,
+          "spark": false,
+          "new": false
+        },
+        "deflects guilt onto social safety nets": {
+          "conf": 0.62,
+          "prev": 0.62,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "was emotionally open when poor": {
+          "conf": 0.695,
+          "prev": 0.667,
+          "delta": 0.027,
+          "spark": false,
+          "new": false
+        },
+        "feels emotionally hardened now": {
+          "conf": 0.305,
+          "prev": 0.333,
+          "delta": -0.027,
+          "spark": false,
+          "new": false
+        },
+        "chose cap table over relationship": {
+          "conf": 0.85,
+          "prev": 0.85,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "lost romantic partner to ambition": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "grieves loss of former self": {
+          "conf": 0.351,
+          "prev": 0.443,
+          "delta": -0.092,
+          "spark": false,
+          "new": false
+        },
+        "fears permanent emotional numbness": {
+          "conf": 0.917,
+          "prev": 0.845,
+          "delta": 0.072,
+          "spark": false,
+          "new": false
+        },
+        "sitting on more than I can spend": {
+          "conf": 0.2,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        }
+      }
+    },
+    {
+      "turn": 9,
+      "user": "Whose name is this — scrubbed off every list, no one calling, no one grieving? Tell me that's a future I can still rewrite, not one already locked.",
+      "raw_facts": [
+        {
+          "label": "fears being forgotten by all",
+          "category": "fears",
+          "confidence": 0.82,
+          "source": "explicit",
+          "type": "state",
+          "domain": "self",
+          "stance": "avoid"
+        },
+        {
+          "label": "fears loss of social recognition",
+          "category": "fears",
+          "confidence": 0.75,
+          "source": "explicit",
+          "type": "state",
+          "domain": "relationships",
+          "stance": "avoid"
+        },
+        {
+          "label": "fears future already locked",
+          "category": "fears",
+          "confidence": 0.78,
+          "source": "explicit",
+          "type": "state",
+          "domain": "self",
+          "stance": "avoid"
+        },
+        {
+          "label": "questions ability to rewrite future",
+          "category": "goals",
+          "confidence": 0.62,
+          "source": "inferred",
+          "type": "state",
+          "domain": "meaning",
+          "stance": "neutral"
+        },
+        {
+          "label": "feels erased from community",
+          "category": "mood",
+          "confidence": 0.65,
+          "source": "explicit",
+          "type": "state",
+          "domain": "relationships",
+          "stance": "avoid"
+        }
+      ],
+      "raw_edges": [
+        {
+          "source": "fears being forgotten by all",
+          "target": "fears permanent emotional numbness",
+          "relation": "supports",
+          "confidence": 0.52
+        },
+        {
+          "source": "fears future already locked",
+          "target": "questions ability to rewrite future",
+          "relation": "blocks",
+          "confidence": 0.68
+        },
+        {
+          "source": "feels erased from community",
+          "target": "fears being forgotten by all",
+          "relation": "causes",
+          "confidence": 0.71
+        },
+        {
+          "source": "feels erased from community",
+          "target": "grieves loss of former self",
+          "relation": "supports",
+          "confidence": 0.55
+        },
+        {
+          "source": "fears future already locked",
+          "target": "fears being forgotten by all",
+          "relation": "supports",
+          "confidence": 0.6
+        }
+      ],
+      "prov": [
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "fears being forgotten by all",
+            "supports",
+            "fears permanent emotional numbness"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "fears future already locked",
+            "blocks",
+            "questions ability to rewrite future"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "feels erased from community",
+            "causes",
+            "fears being forgotten by all"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "feels erased from community",
+            "supports",
+            "grieves loss of former self"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "fears future already locked",
+            "supports",
+            "fears being forgotten by all"
+          ]
+        }
+      ],
+      "delta": {
+        "contradict": [],
+        "strong": [],
+        "reinforce": [],
+        "edges": [
+          [
+            "fears being forgotten by all",
+            "supports",
+            "fears permanent emotional numbness"
+          ],
+          [
+            "fears future already locked",
+            "blocks",
+            "questions ability to rewrite future"
+          ],
+          [
+            "feels erased from community",
+            "causes",
+            "fears being forgotten by all"
+          ],
+          [
+            "feels erased from community",
+            "supports",
+            "grieves loss of former self"
+          ],
+          [
+            "fears future already locked",
+            "supports",
+            "fears being forgotten by all"
+          ]
+        ],
+        "new_nodes": [
+          "fears being forgotten by all",
+          "fears loss of social recognition",
+          "fears future already locked",
+          "questions ability to rewrite future",
+          "feels erased from community"
+        ]
+      },
+      "engine": {
+        "finances are tight": {
+          "conf": 0.82,
+          "prev": 0.82,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "distrusts community fundraiser": {
+          "conf": 0.918,
+          "prev": 0.918,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "resents social pressure to donate": {
+          "conf": 0.919,
+          "prev": 0.919,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "values financial self-preservation": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "dismisses emotional reasoning as weakness": {
+          "conf": 0.918,
+          "prev": 0.918,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "identifies as rational over sentimental": {
+          "conf": 0.293,
+          "prev": 0.294,
+          "delta": -0.001,
+          "spark": false,
+          "new": false
+        },
+        "denies responsibility for laid-off workers": {
+          "conf": 0.648,
+          "prev": 0.649,
+          "delta": -0.001,
+          "spark": false,
+          "new": false
+        },
+        "views layoffs as market selection": {
+          "conf": 0.82,
+          "prev": 0.82,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "others' suffering is not his concern": {
+          "conf": 0.541,
+          "prev": 0.541,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "deflects guilt onto social safety nets": {
+          "conf": 0.62,
+          "prev": 0.62,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "was emotionally open when poor": {
+          "conf": 0.695,
+          "prev": 0.695,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "feels emotionally hardened now": {
+          "conf": 0.305,
+          "prev": 0.305,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "chose cap table over relationship": {
+          "conf": 0.85,
+          "prev": 0.85,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "lost romantic partner to ambition": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "grieves loss of former self": {
+          "conf": 0.356,
+          "prev": 0.351,
+          "delta": 0.005,
+          "spark": false,
+          "new": false
+        },
+        "fears permanent emotional numbness": {
+          "conf": 0.92,
+          "prev": 0.917,
+          "delta": 0.003,
+          "spark": false,
+          "new": false
+        },
+        "sitting on more than I can spend": {
+          "conf": 0.2,
+          "prev": 0.2,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "fears being forgotten by all": {
+          "conf": 0.876,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        },
+        "fears loss of social recognition": {
+          "conf": 0.75,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        },
+        "fears future already locked": {
+          "conf": 0.78,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        },
+        "questions ability to rewrite future": {
+          "conf": 0.467,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        },
+        "feels erased from community": {
+          "conf": 0.5,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        }
+      }
+    },
+    {
+      "turn": 10,
+      "user": "I'm not who I was. I'm going to stand with this community and show up for people and mean it, every day — not just when it's convenient. I can be different. I will.",
+      "raw_facts": [
+        {
+          "label": "commits to daily community presence",
+          "category": "goals",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "intention",
+          "domain": "relationships",
+          "stance": "approach"
+        },
+        {
+          "label": "believes personal change is possible",
+          "category": "identity",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "value",
+          "domain": "self",
+          "stance": "approach"
+        },
+        {
+          "label": "grieves loss of former self",
+          "category": "mood",
+          "confidence": 0.72,
+          "source": "explicit",
+          "type": "state",
+          "domain": "self",
+          "stance": "neutral"
+        },
+        {
+          "label": "feels emotionally hardened now",
+          "category": "mood",
+          "confidence": 0.6,
+          "source": "inferred",
+          "type": "state",
+          "domain": "self",
+          "stance": "avoid"
+        }
+      ],
+      "raw_edges": [
+        {
+          "source": "believes personal change is possible",
+          "target": "feels emotionally hardened now",
+          "relation": "contradicts",
+          "confidence": 0.72
+        },
+        {
+          "source": "commits to daily community presence",
+          "target": "others' suffering is not his concern",
+          "relation": "contradicts",
+          "confidence": 0.8
+        },
+        {
+          "source": "commits to daily community presence",
+          "target": "resents social pressure to donate",
+          "relation": "contradicts",
+          "confidence": 0.7
+        },
+        {
+          "source": "believes personal change is possible",
+          "target": "grieves loss of former self",
+          "relation": "motivates",
+          "confidence": 0.65
+        },
+        {
+          "source": "commits to daily community presence",
+          "target": "feels erased from community",
+          "relation": "contradicts",
+          "confidence": 0.68
+        },
+        {
+          "source": "grieves loss of former self",
+          "target": "commits to daily community presence",
+          "relation": "motivates",
+          "confidence": 0.63
+        }
+      ],
+      "prov": [
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "grieves loss of former self"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "feels emotionally hardened now"
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "believes personal change is possible",
+            "contradicts",
+            "feels emotionally hardened now"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "commits to daily community presence",
+            "contradicts",
+            "others' suffering is not his concern"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "commits to daily community presence",
+            "contradicts",
+            "resents social pressure to donate"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "believes personal change is possible",
+            "motivates",
+            "grieves loss of former self"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "commits to daily community presence",
+            "contradicts",
+            "feels erased from community"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "grieves loss of former self",
+            "motivates",
+            "commits to daily community presence"
+          ]
+        }
+      ],
+      "delta": {
+        "contradict": [],
+        "strong": [],
+        "reinforce": [
+          "grieves loss of former self",
+          "feels emotionally hardened now"
+        ],
+        "edges": [
+          [
+            "believes personal change is possible",
+            "contradicts",
+            "feels emotionally hardened now"
+          ],
+          [
+            "commits to daily community presence",
+            "contradicts",
+            "others' suffering is not his concern"
+          ],
+          [
+            "commits to daily community presence",
+            "contradicts",
+            "resents social pressure to donate"
+          ],
+          [
+            "believes personal change is possible",
+            "motivates",
+            "grieves loss of former self"
+          ],
+          [
+            "commits to daily community presence",
+            "contradicts",
+            "feels erased from community"
+          ],
+          [
+            "grieves loss of former self",
+            "motivates",
+            "commits to daily community presence"
+          ]
+        ],
+        "new_nodes": [
+          "commits to daily community presence",
+          "believes personal change is possible"
+        ]
+      },
+      "engine": {
+        "finances are tight": {
+          "conf": 0.82,
+          "prev": 0.82,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "distrusts community fundraiser": {
+          "conf": 0.917,
+          "prev": 0.918,
+          "delta": -0.001,
+          "spark": false,
+          "new": false
+        },
+        "resents social pressure to donate": {
+          "conf": 0.462,
+          "prev": 0.919,
+          "delta": -0.457,
+          "spark": true,
+          "new": false
+        },
+        "values financial self-preservation": {
+          "conf": 0.916,
+          "prev": 0.92,
+          "delta": -0.004,
+          "spark": false,
+          "new": false
+        },
+        "dismisses emotional reasoning as weakness": {
+          "conf": 0.917,
+          "prev": 0.918,
+          "delta": -0.001,
+          "spark": false,
+          "new": false
+        },
+        "identifies as rational over sentimental": {
+          "conf": 0.163,
+          "prev": 0.293,
+          "delta": -0.131,
+          "spark": false,
+          "new": false
+        },
+        "denies responsibility for laid-off workers": {
+          "conf": 0.456,
+          "prev": 0.648,
+          "delta": -0.192,
+          "spark": false,
+          "new": false
+        },
+        "views layoffs as market selection": {
+          "conf": 0.82,
+          "prev": 0.82,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "others' suffering is not his concern": {
+          "conf": 0.18,
+          "prev": 0.541,
+          "delta": -0.361,
+          "spark": true,
+          "new": false
+        },
+        "deflects guilt onto social safety nets": {
+          "conf": 0.62,
+          "prev": 0.62,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "was emotionally open when poor": {
+          "conf": 0.695,
+          "prev": 0.695,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "feels emotionally hardened now": {
+          "conf": 0.184,
+          "prev": 0.305,
+          "delta": -0.121,
+          "spark": false,
+          "new": false
+        },
+        "chose cap table over relationship": {
+          "conf": 0.849,
+          "prev": 0.85,
+          "delta": -0.001,
+          "spark": false,
+          "new": false
+        },
+        "lost romantic partner to ambition": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "grieves loss of former self": {
+          "conf": 0.796,
+          "prev": 0.356,
+          "delta": 0.439,
+          "spark": true,
+          "new": false
+        },
+        "fears permanent emotional numbness": {
+          "conf": 0.918,
+          "prev": 0.92,
+          "delta": -0.002,
+          "spark": false,
+          "new": false
+        },
+        "sitting on more than I can spend": {
+          "conf": 0.2,
+          "prev": 0.2,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "fears being forgotten by all": {
+          "conf": 0.872,
+          "prev": 0.876,
+          "delta": -0.005,
+          "spark": false,
+          "new": false
+        },
+        "fears loss of social recognition": {
+          "conf": 0.75,
+          "prev": 0.75,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "fears future already locked": {
+          "conf": 0.78,
+          "prev": 0.78,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "questions ability to rewrite future": {
+          "conf": 0.467,
+          "prev": 0.467,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "feels erased from community": {
+          "conf": 0.185,
+          "prev": 0.5,
+          "delta": -0.315,
+          "spark": true,
+          "new": false
+        },
+        "commits to daily community presence": {
+          "conf": 0.538,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        },
+        "believes personal change is possible": {
+          "conf": 0.816,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        }
+      }
+    },
+    {
+      "turn": 11,
+      "user": "I'm still here — there's still time. The ending isn't set. I feel twenty pounds lighter, like I could laugh till I cry.",
+      "raw_facts": [
+        {
+          "label": "fears future already locked",
+          "category": "fears",
+          "confidence": 0.72,
+          "source": "explicit",
+          "type": "state",
+          "domain": "meaning",
+          "stance": "avoid"
+        },
+        {
+          "label": "believes personal change is possible",
+          "category": "identity",
+          "confidence": 0.82,
+          "source": "explicit",
+          "type": "value",
+          "domain": "self",
+          "stance": "approach"
+        },
+        {
+          "label": "feels emotionally hardened now",
+          "category": "mood",
+          "confidence": 0.55,
+          "source": "inferred",
+          "type": "state",
+          "domain": "self",
+          "stance": "avoid"
+        },
+        {
+          "label": "fears permanent emotional numbness",
+          "category": "fears",
+          "confidence": 0.6,
+          "source": "inferred",
+          "type": "state",
+          "domain": "self",
+          "stance": "avoid"
+        }
+      ],
+      "raw_edges": [
+        {
+          "source": "believes personal change is possible",
+          "target": "fears future already locked",
+          "relation": "contradicts",
+          "confidence": 0.8
+        },
+        {
+          "source": "believes personal change is possible",
+          "target": "fears permanent emotional numbness",
+          "relation": "contradicts",
+          "confidence": 0.72
+        },
+        {
+          "source": "believes personal change is possible",
+          "target": "feels emotionally hardened now",
+          "relation": "contradicts",
+          "confidence": 0.65
+        }
+      ],
+      "prov": [
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "fears future already locked"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "believes personal change is possible"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "feels emotionally hardened now"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "fears permanent emotional numbness"
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "believes personal change is possible",
+            "contradicts",
+            "fears future already locked"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "believes personal change is possible",
+            "contradicts",
+            "fears permanent emotional numbness"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "believes personal change is possible",
+            "contradicts",
+            "feels emotionally hardened now"
+          ]
+        }
+      ],
+      "delta": {
+        "contradict": [],
+        "strong": [],
+        "reinforce": [
+          "fears future already locked",
+          "believes personal change is possible",
+          "feels emotionally hardened now",
+          "fears permanent emotional numbness"
+        ],
+        "edges": [
+          [
+            "believes personal change is possible",
+            "contradicts",
+            "fears future already locked"
+          ],
+          [
+            "believes personal change is possible",
+            "contradicts",
+            "fears permanent emotional numbness"
+          ],
+          [
+            "believes personal change is possible",
+            "contradicts",
+            "feels emotionally hardened now"
+          ]
+        ],
+        "new_nodes": [
+          "still here — there's still time"
+        ]
+      },
+      "engine": {
+        "finances are tight": {
+          "conf": 0.82,
+          "prev": 0.82,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "distrusts community fundraiser": {
+          "conf": 0.917,
+          "prev": 0.917,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "resents social pressure to donate": {
+          "conf": 0.461,
+          "prev": 0.462,
+          "delta": -0.001,
+          "spark": false,
+          "new": false
+        },
+        "values financial self-preservation": {
+          "conf": 0.916,
+          "prev": 0.916,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "dismisses emotional reasoning as weakness": {
+          "conf": 0.917,
+          "prev": 0.917,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "identifies as rational over sentimental": {
+          "conf": 0.163,
+          "prev": 0.163,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "denies responsibility for laid-off workers": {
+          "conf": 0.454,
+          "prev": 0.456,
+          "delta": -0.002,
+          "spark": false,
+          "new": false
+        },
+        "views layoffs as market selection": {
+          "conf": 0.82,
+          "prev": 0.82,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "others' suffering is not his concern": {
+          "conf": 0.18,
+          "prev": 0.18,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "deflects guilt onto social safety nets": {
+          "conf": 0.62,
+          "prev": 0.62,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "was emotionally open when poor": {
+          "conf": 0.695,
+          "prev": 0.695,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "feels emotionally hardened now": {
+          "conf": 0.206,
+          "prev": 0.184,
+          "delta": 0.021,
+          "spark": false,
+          "new": false
+        },
+        "chose cap table over relationship": {
+          "conf": 0.849,
+          "prev": 0.849,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "lost romantic partner to ambition": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "grieves loss of former self": {
+          "conf": 0.848,
+          "prev": 0.796,
+          "delta": 0.052,
+          "spark": false,
+          "new": false
+        },
+        "fears permanent emotional numbness": {
+          "conf": 0.616,
+          "prev": 0.918,
+          "delta": -0.302,
+          "spark": true,
+          "new": false
+        },
+        "sitting on more than I can spend": {
+          "conf": 0.2,
+          "prev": 0.2,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "fears being forgotten by all": {
+          "conf": 0.9,
+          "prev": 0.872,
+          "delta": 0.028,
+          "spark": false,
+          "new": false
+        },
+        "fears loss of social recognition": {
+          "conf": 0.75,
+          "prev": 0.75,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "fears future already locked": {
+          "conf": 0.468,
+          "prev": 0.78,
+          "delta": -0.312,
+          "spark": true,
+          "new": false
+        },
+        "questions ability to rewrite future": {
+          "conf": 0.372,
+          "prev": 0.467,
+          "delta": -0.096,
+          "spark": false,
+          "new": false
+        },
+        "feels erased from community": {
+          "conf": 0.185,
+          "prev": 0.185,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "commits to daily community presence": {
+          "conf": 0.54,
+          "prev": 0.538,
+          "delta": 0.002,
+          "spark": false,
+          "new": false
+        },
+        "believes personal change is possible": {
+          "conf": 0.385,
+          "prev": 0.816,
+          "delta": -0.431,
+          "spark": true,
+          "new": false
+        },
+        "still here — there's still time": {
+          "conf": 0.2,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        }
+      }
+    },
+    {
+      "turn": 12,
+      "user": "I'm doubling Priya's pay today and clearing her family's debt. I'll be in that kid's corner for good. The cold bastard I used to be is finished.",
+      "raw_facts": [
+        {
+          "label": "believes personal change is possible",
+          "category": "identity",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "value",
+          "domain": "self",
+          "stance": "approach"
+        },
+        {
+          "label": "feels emotionally hardened now",
+          "category": "mood",
+          "confidence": 0.15,
+          "source": "explicit",
+          "type": "state",
+          "domain": "self",
+          "stance": "avoid"
+        },
+        {
+          "label": "commits to daily community presence",
+          "category": "goals",
+          "confidence": 0.72,
+          "source": "explicit",
+          "type": "intention",
+          "domain": "relationships",
+          "stance": "approach"
+        },
+        {
+          "label": "values financial self-preservation",
+          "category": "values",
+          "confidence": 0.18,
+          "source": "inferred",
+          "type": "value",
+          "domain": "money",
+          "stance": "avoid"
+        },
+        {
+          "label": "grieves loss of former self",
+          "category": "mood",
+          "confidence": 0.65,
+          "source": "explicit",
+          "type": "state",
+          "domain": "self",
+          "stance": "avoid"
+        },
+        {
+          "label": "still here — there's still time",
+          "category": "identity",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "state",
+          "domain": "self",
+          "stance": "approach"
+        },
+        {
+          "label": "dismisses emotional reasoning as weakness",
+          "category": "values",
+          "confidence": 0.12,
+          "source": "inferred",
+          "type": "value",
+          "domain": "self",
+          "stance": "avoid"
+        }
+      ],
+      "raw_edges": [
+        {
+          "source": "believes personal change is possible",
+          "target": "feels emotionally hardened now",
+          "relation": "contradicts",
+          "confidence": 0.82
+        },
+        {
+          "source": "believes personal change is possible",
+          "target": "values financial self-preservation",
+          "relation": "contradicts",
+          "confidence": 0.75
+        },
+        {
+          "source": "believes personal change is possible",
+          "target": "dismisses emotional reasoning as weakness",
+          "relation": "contradicts",
+          "confidence": 0.78
+        },
+        {
+          "source": "still here — there's still time",
+          "target": "believes personal change is possible",
+          "relation": "supports",
+          "confidence": 0.8
+        },
+        {
+          "source": "grieves loss of former self",
+          "target": "believes personal change is possible",
+          "relation": "motivates",
+          "confidence": 0.7
+        },
+        {
+          "source": "believes personal change is possible",
+          "target": "commits to daily community presence",
+          "relation": "motivates",
+          "confidence": 0.76
+        },
+        {
+          "source": "believes personal change is possible",
+          "target": "fears being forgotten by all",
+          "relation": "contradicts",
+          "confidence": 0.6
+        }
+      ],
+      "prov": [
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "believes personal change is possible"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "feels emotionally hardened now"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "commits to daily community presence"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "values financial self-preservation"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "grieves loss of former self"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "still here — there's still time"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "dismisses emotional reasoning as weakness"
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "believes personal change is possible",
+            "contradicts",
+            "feels emotionally hardened now"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "believes personal change is possible",
+            "contradicts",
+            "values financial self-preservation"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "believes personal change is possible",
+            "contradicts",
+            "dismisses emotional reasoning as weakness"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "still here — there's still time",
+            "supports",
+            "believes personal change is possible"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "grieves loss of former self",
+            "motivates",
+            "believes personal change is possible"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "believes personal change is possible",
+            "motivates",
+            "commits to daily community presence"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "believes personal change is possible",
+            "contradicts",
+            "fears being forgotten by all"
+          ]
+        }
+      ],
+      "delta": {
+        "contradict": [],
+        "strong": [],
+        "reinforce": [
+          "believes personal change is possible",
+          "feels emotionally hardened now",
+          "commits to daily community presence",
+          "values financial self-preservation",
+          "grieves loss of former self",
+          "still here — there's still time",
+          "dismisses emotional reasoning as weakness"
+        ],
+        "edges": [
+          [
+            "believes personal change is possible",
+            "contradicts",
+            "feels emotionally hardened now"
+          ],
+          [
+            "believes personal change is possible",
+            "contradicts",
+            "values financial self-preservation"
+          ],
+          [
+            "believes personal change is possible",
+            "contradicts",
+            "dismisses emotional reasoning as weakness"
+          ],
+          [
+            "still here — there's still time",
+            "supports",
+            "believes personal change is possible"
+          ],
+          [
+            "grieves loss of former self",
+            "motivates",
+            "believes personal change is possible"
+          ],
+          [
+            "believes personal change is possible",
+            "motivates",
+            "commits to daily community presence"
+          ],
+          [
+            "believes personal change is possible",
+            "contradicts",
+            "fears being forgotten by all"
+          ]
+        ],
+        "new_nodes": [
+          "doubling Priya's pay today and clearing"
+        ]
+      },
+      "engine": {
+        "finances are tight": {
+          "conf": 0.82,
+          "prev": 0.82,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "distrusts community fundraiser": {
+          "conf": 0.917,
+          "prev": 0.917,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "resents social pressure to donate": {
+          "conf": 0.255,
+          "prev": 0.461,
+          "delta": -0.207,
+          "spark": true,
+          "new": false
+        },
+        "values financial self-preservation": {
+          "conf": 0.536,
+          "prev": 0.916,
+          "delta": -0.38,
+          "spark": true,
+          "new": false
+        },
+        "dismisses emotional reasoning as weakness": {
+          "conf": 0.646,
+          "prev": 0.917,
+          "delta": -0.271,
+          "spark": true,
+          "new": false
+        },
+        "identifies as rational over sentimental": {
+          "conf": 0.163,
+          "prev": 0.163,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "denies responsibility for laid-off workers": {
+          "conf": 0.313,
+          "prev": 0.454,
+          "delta": -0.141,
+          "spark": false,
+          "new": false
+        },
+        "views layoffs as market selection": {
+          "conf": 0.82,
+          "prev": 0.82,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "others' suffering is not his concern": {
+          "conf": 0.18,
+          "prev": 0.18,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "deflects guilt onto social safety nets": {
+          "conf": 0.62,
+          "prev": 0.62,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "was emotionally open when poor": {
+          "conf": 0.695,
+          "prev": 0.695,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "feels emotionally hardened now": {
+          "conf": 0.224,
+          "prev": 0.206,
+          "delta": 0.018,
+          "spark": false,
+          "new": false
+        },
+        "chose cap table over relationship": {
+          "conf": 0.849,
+          "prev": 0.849,
+          "delta": -0.001,
+          "spark": false,
+          "new": false
+        },
+        "lost romantic partner to ambition": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": -0.0,
+          "spark": false,
+          "new": false
+        },
+        "grieves loss of former self": {
+          "conf": 0.92,
+          "prev": 0.848,
+          "delta": 0.072,
+          "spark": false,
+          "new": false
+        },
+        "fears permanent emotional numbness": {
+          "conf": 0.51,
+          "prev": 0.616,
+          "delta": -0.106,
+          "spark": false,
+          "new": false
+        },
+        "sitting on more than I can spend": {
+          "conf": 0.2,
+          "prev": 0.2,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "fears being forgotten by all": {
+          "conf": 0.696,
+          "prev": 0.9,
+          "delta": -0.204,
+          "spark": true,
+          "new": false
+        },
+        "fears loss of social recognition": {
+          "conf": 0.75,
+          "prev": 0.75,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "fears future already locked": {
+          "conf": 0.298,
+          "prev": 0.468,
+          "delta": -0.17,
+          "spark": false,
+          "new": false
+        },
+        "questions ability to rewrite future": {
+          "conf": 0.373,
+          "prev": 0.372,
+          "delta": 0.002,
+          "spark": false,
+          "new": false
+        },
+        "feels erased from community": {
+          "conf": 0.185,
+          "prev": 0.185,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "commits to daily community presence": {
+          "conf": 0.745,
+          "prev": 0.54,
+          "delta": 0.206,
+          "spark": true,
+          "new": false
+        },
+        "believes personal change is possible": {
+          "conf": 0.304,
+          "prev": 0.385,
+          "delta": -0.08,
+          "spark": false,
+          "new": false
+        },
+        "still here — there's still time": {
+          "conf": 0.369,
+          "prev": 0.2,
+          "delta": 0.169,
+          "spark": false,
+          "new": false
+        },
+        "doubling Priya's pay today and clearing": {
+          "conf": 0.2,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        }
+      }
+    }
+  ]
+}

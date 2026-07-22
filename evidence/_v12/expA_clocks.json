@@ -1,0 +1,25 @@
+{
+ "wall_realistic_diffs": {
+  "0s_vs_60s": {
+   "max_abs": 0.0,
+   "mean_abs": 0.0,
+   "node_set_symdiff": 0
+  },
+  "0s_vs_600s": {
+   "max_abs": 0.0012,
+   "mean_abs": 0.0002,
+   "node_set_symdiff": 0
+  }
+ },
+ "wall_extreme_5days_vs_0s": {
+  "max_abs": 0.2433,
+  "mean_abs": 0.0996,
+  "node_set_symdiff": 0
+ },
+ "logical_determinism_diff": {
+  "max_abs": 0.0,
+  "mean_abs": 0.0,
+  "node_set_symdiff": 0
+ },
+ "conflicts_stable_realistic": true
+}

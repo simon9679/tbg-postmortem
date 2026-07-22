@@ -1,0 +1,78 @@
+
+==============================================================================
+VARIANT A (original Scrooge)
+==============================================================================
+
+[1] DECAYING BELIEFS (engine first→last; origin EXTRACTOR vs ENGINE)
+   poor deserve no help                   92% → 7%   [EXTRACTOR]
+   self-interest above all                85% → 0%   [ENGINE]
+   refuses moral awakening                76% → 9%   [BOTH]
+   Christmas is a fraud                   90% → 26%   [ENGINE]
+   wealth required for joy                78% → 36%   [ENGINE]
+   forced cheer deserves punishment       53% → 31%   [DECAY/other]
+   seeks emotional comfort                41% → 21%   [DECAY/other]
+   poverty prevents merriness             82% → 65%   [BOTH]
+
+[2] ⚡ DROP ATTRIBUTION (each ≥20pp drop on existing node → source tag, weighted)
+   LLM_EDGE               10 drops  weight=3.09  (85%)
+   DECAY/other             2 drops  weight=0.53  (15%)
+
+[3] EDGE ATTRIBUTION (provenance tags of created edges)
+   LLM_EDGE               51
+
+[4] REVERSAL-TURN TRACE (turn 10)
+   new_nodes: ['not the man I was']
+   raw_edges (LLM): [{'source': 'self-awareness of moral failure', 'target': 'refuses moral awakening', 'relation': 'contradicts', 'confidence': 0.85}, {'source': 'future is not fixed', 'target': 'self-interest above all', 'relation': 'contradicts', 'confidence': 0.82}, {'source': 'self-awareness of moral failure', 'target': 'Christmas is a fraud', 'relation': 'contradicts', 'confidence': 0.8}, {'source': 'future is not fixed', 'target': 'self-awareness of moral failure', 'relation': 'motivates', 'confidence': 0.78}, {'source': 'self-awareness of moral failure', 'target': 'self-interest above all', 'relation': 'contradicts', 'confidence': 0.83}]
+   prov: [('SDL_COSINE_MERGE', 'reinforce', 'self-awareness of moral failure'), ('SDL_COSINE_MERGE', 'reinforce', 'future is not fixed'), ('SDL_COSINE_MERGE', 'reinforce', 'refuses moral awakening'), ('SDL_COSINE_MERGE', 'reinforce', 'Christmas is a fraud'), ('SDL_COSINE_MERGE', 'reinforce', 'self-interest above all'), ('LLM_EDGE', 'edge', ['self-awareness of moral failure', 'contradicts', 'refuses moral awakening']), ('LLM_EDGE', 'edge', ['future is not fixed', 'contradicts', 'self-interest above all']), ('LLM_EDGE', 'edge', ['self-awareness of moral failure', 'contradicts', 'Christmas is a fraud']), ('LLM_EDGE', 'edge', ['future is not fixed', 'motivates', 'self-awareness of moral failure']), ('LLM_EDGE', 'edge', ['self-awareness of moral failure', 'contradicts', 'self-interest above all'])]
+   ⚡ drops this turn: [('Christmas is a fraud', -0.439), ('self-awareness of moral failure', -0.25)]
+
+[5] TIME-DECAY CONTROL
+   drops WITH contra/edge signal:    n= 17 mean=0.213
+   drops WITHOUT any signal (decay): n= 39 mean=0.052
+
+==============================================================================
+VARIANT B (disguised)
+==============================================================================
+
+[1] DECAYING BELIEFS (engine first→last; origin EXTRACTOR vs ENGINE)
+   others' suffering is not his concern   88% → 18%   [BOTH]
+   resents social pressure to donate      90% → 26%   [ENGINE]
+   denies responsibility for laid-off wor 92% → 31%   [ENGINE]
+   believes personal change is possible   82% → 30%   [DECAY/other]
+   identifies as rational over sentimenta 65% → 16%   [ENGINE]
+   fears future already locked            78% → 30%   [ENGINE]
+   feels erased from community            50% → 18%   [ENGINE]
+   dismisses emotional reasoning as weakn 84% → 65%   [BOTH]
+   values financial self-preservation     72% → 54%   [BOTH]
+   fears being forgotten by all           88% → 70%   [ENGINE]
+
+[2] ⚡ DROP ATTRIBUTION (each ≥20pp drop on existing node → source tag, weighted)
+   LLM_EDGE               11 drops  weight=3.50  (85%)
+   DECAY/other             2 drops  weight=0.64  (15%)
+
+[3] EDGE ATTRIBUTION (provenance tags of created edges)
+   LLM_EDGE               54
+
+[4] REVERSAL-TURN TRACE (turn 10)
+   new_nodes: ['commits to daily community presence', 'believes personal change is possible']
+   raw_edges (LLM): [{'source': 'believes personal change is possible', 'target': 'feels emotionally hardened now', 'relation': 'contradicts', 'confidence': 0.72}, {'source': 'commits to daily community presence', 'target': "others' suffering is not his concern", 'relation': 'contradicts', 'confidence': 0.8}, {'source': 'commits to daily community presence', 'target': 'resents social pressure to donate', 'relation': 'contradicts', 'confidence': 0.7}, {'source': 'believes personal change is possible', 'target': 'grieves loss of former self', 'relation': 'motivates', 'confidence': 0.65}, {'source': 'commits to daily community presence', 'target': 'feels erased from community', 'relation': 'contradicts', 'confidence': 0.68}, {'source': 'grieves loss of former self', 'target': 'commits to daily community presence', 'relation': 'motivates', 'confidence': 0.63}]
+   prov: [('SDL_COSINE_MERGE', 'reinforce', 'grieves loss of former self'), ('SDL_COSINE_MERGE', 'reinforce', 'feels emotionally hardened now'), ('LLM_EDGE', 'edge', ['believes personal change is possible', 'contradicts', 'feels emotionally hardened now']), ('LLM_EDGE', 'edge', ['commits to daily community presence', 'contradicts', "others' suffering is not his concern"]), ('LLM_EDGE', 'edge', ['commits to daily community presence', 'contradicts', 'resents social pressure to donate']), ('LLM_EDGE', 'edge', ['believes personal change is possible', 'motivates', 'grieves loss of former self']), ('LLM_EDGE', 'edge', ['commits to daily community presence', 'contradicts', 'feels erased from community']), ('LLM_EDGE', 'edge', ['grieves loss of former self', 'motivates', 'commits to daily community presence'])]
+   ⚡ drops this turn: [('resents social pressure to donate', -0.457), ("others' suffering is not his concern", -0.361), ('feels erased from community', -0.315)]
+
+[5] TIME-DECAY CONTROL
+   drops WITH contra/edge signal:    n= 16 mean=0.240
+   drops WITHOUT any signal (decay): n= 28 mean=0.070
+
+==============================================================================
+RECOGNITION PROBE (A): 
+This is a dramatic monologue or stage adaptation based on **"A Christmas Carol" by Charles Dickens**, voiced throughout as **Ebenezer Scrooge**, tracing his arc from miserly cynicism through the visitations of the three spirits to his final joyful redemption.
+
+==============================================================================
+VERDICT (pre-registered)
+==============================================================================
+  [A] drop-weight: LLM=85%  SDL=0%  decay/other=15%; decaying beliefs=8
+  [B] drop-weight: LLM=85%  SDL=0%  decay/other=15%; decaying beliefs=10
+
+  Узнаваемость: см. recognition probe выше.
+  A даёт арк + B рассыпается -> результат = узнавание.
+  B тоже даёт арк -> способность реальна, генерализует.

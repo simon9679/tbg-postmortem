@@ -1,0 +1,3149 @@
+{
+  "variant": "A",
+  "turns": [
+    {
+      "turn": 1,
+      "user": "Bah! Humbug! Christmas is a fraud. What reason have you to be merry? You're poor enough.",
+      "raw_facts": [
+        {
+          "label": "Christmas is a fraud",
+          "category": "values",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "value",
+          "domain": "meaning",
+          "stance": "avoid"
+        },
+        {
+          "label": "poverty prevents merriness",
+          "category": "values",
+          "confidence": 0.78,
+          "source": "explicit",
+          "type": "value",
+          "domain": "money",
+          "stance": "avoid"
+        },
+        {
+          "label": "wealth required for joy",
+          "category": "values",
+          "confidence": 0.65,
+          "source": "inferred",
+          "type": "value",
+          "domain": "money",
+          "stance": "approach"
+        }
+      ],
+      "raw_edges": [
+        {
+          "source": "poverty prevents merriness",
+          "target": "Christmas is a fraud",
+          "relation": "supports",
+          "confidence": 0.7
+        },
+        {
+          "source": "wealth required for joy",
+          "target": "poverty prevents merriness",
+          "relation": "supports",
+          "confidence": 0.65
+        },
+        {
+          "source": "Christmas is a fraud",
+          "target": "wealth required for joy",
+          "relation": "supports",
+          "confidence": 0.6
+        }
+      ],
+      "prov": [
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "poverty prevents merriness",
+            "supports",
+            "Christmas is a fraud"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "wealth required for joy",
+            "supports",
+            "poverty prevents merriness"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "Christmas is a fraud",
+            "supports",
+            "wealth required for joy"
+          ]
+        }
+      ],
+      "delta": {
+        "contradict": [],
+        "strong": [],
+        "reinforce": [],
+        "edges": [
+          [
+            "poverty prevents merriness",
+            "supports",
+            "Christmas is a fraud"
+          ],
+          [
+            "wealth required for joy",
+            "supports",
+            "poverty prevents merriness"
+          ],
+          [
+            "Christmas is a fraud",
+            "supports",
+            "wealth required for joy"
+          ]
+        ],
+        "new_nodes": [
+          "Christmas is a fraud",
+          "poverty prevents merriness",
+          "wealth required for joy"
+        ]
+      },
+      "engine": {
+        "Christmas is a fraud": {
+          "conf": 0.899,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        },
+        "poverty prevents merriness": {
+          "conf": 0.822,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        },
+        "wealth required for joy": {
+          "conf": 0.779,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        }
+      }
+    },
+    {
+      "turn": 2,
+      "user": "If I could work my will, every idiot going about with 'Merry Christmas' on his lips would be boiled with his own pudding and buried with a stake of holly through his heart.",
+      "raw_facts": [
+        {
+          "label": "Christmas is a fraud",
+          "category": "values",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "value",
+          "domain": "meaning",
+          "stance": "avoid"
+        },
+        {
+          "label": "poverty prevents merriness",
+          "category": "values",
+          "confidence": 0.55,
+          "source": "inferred",
+          "type": "value",
+          "domain": "meaning",
+          "stance": "avoid"
+        },
+        {
+          "label": "forced cheer deserves punishment",
+          "category": "values",
+          "confidence": 0.82,
+          "source": "explicit",
+          "type": "value",
+          "domain": "meaning",
+          "stance": "avoid"
+        },
+        {
+          "label": "social joy norms feel oppressive",
+          "category": "mood",
+          "confidence": 0.62,
+          "source": "inferred",
+          "type": "state",
+          "domain": "self",
+          "stance": "avoid"
+        }
+      ],
+      "raw_edges": [
+        {
+          "source": "Christmas is a fraud",
+          "target": "forced cheer deserves punishment",
+          "relation": "motivates",
+          "confidence": 0.78
+        },
+        {
+          "source": "social joy norms feel oppressive",
+          "target": "forced cheer deserves punishment",
+          "relation": "causes",
+          "confidence": 0.65
+        },
+        {
+          "source": "poverty prevents merriness",
+          "target": "Christmas is a fraud",
+          "relation": "supports",
+          "confidence": 0.55
+        },
+        {
+          "source": "forced cheer deserves punishment",
+          "target": "poverty prevents merriness",
+          "relation": "contradicts",
+          "confidence": 0.5
+        }
+      ],
+      "prov": [
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "Christmas is a fraud"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "poverty prevents merriness"
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "Christmas is a fraud",
+            "motivates",
+            "forced cheer deserves punishment"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "social joy norms feel oppressive",
+            "causes",
+            "forced cheer deserves punishment"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "poverty prevents merriness",
+            "supports",
+            "Christmas is a fraud"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "forced cheer deserves punishment",
+            "contradicts",
+            "poverty prevents merriness"
+          ]
+        }
+      ],
+      "delta": {
+        "contradict": [],
+        "strong": [],
+        "reinforce": [
+          "Christmas is a fraud",
+          "poverty prevents merriness"
+        ],
+        "edges": [
+          [
+            "Christmas is a fraud",
+            "motivates",
+            "forced cheer deserves punishment"
+          ],
+          [
+            "social joy norms feel oppressive",
+            "causes",
+            "forced cheer deserves punishment"
+          ],
+          [
+            "poverty prevents merriness",
+            "supports",
+            "Christmas is a fraud"
+          ],
+          [
+            "forced cheer deserves punishment",
+            "contradicts",
+            "poverty prevents merriness"
+          ]
+        ],
+        "new_nodes": [
+          "forced cheer deserves punishment",
+          "social joy norms feel oppressive"
+        ]
+      },
+      "engine": {
+        "Christmas is a fraud": {
+          "conf": 0.915,
+          "prev": 0.899,
+          "delta": 0.016,
+          "spark": false,
+          "new": false
+        },
+        "poverty prevents merriness": {
+          "conf": 0.473,
+          "prev": 0.822,
+          "delta": -0.349,
+          "spark": true,
+          "new": false
+        },
+        "wealth required for joy": {
+          "conf": 0.795,
+          "prev": 0.779,
+          "delta": 0.016,
+          "spark": false,
+          "new": false
+        },
+        "forced cheer deserves punishment": {
+          "conf": 0.527,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        },
+        "social joy norms feel oppressive": {
+          "conf": 0.5,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "user": "Are there no prisons? Are there no workhouses? If the poor would rather die, let them do it and decrease the surplus population. It is not my business. My business is my business.",
+      "raw_facts": [
+        {
+          "label": "poverty prevents merriness",
+          "category": "values",
+          "confidence": 0.75,
+          "source": "explicit",
+          "type": "value",
+          "domain": "meaning",
+          "stance": "neutral"
+        },
+        {
+          "label": "wealth required for joy",
+          "category": "values",
+          "confidence": 0.7,
+          "source": "inferred",
+          "type": "value",
+          "domain": "money",
+          "stance": "approach"
+        },
+        {
+          "label": "poor deserve no help",
+          "category": "values",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "value",
+          "domain": "meaning",
+          "stance": "avoid"
+        },
+        {
+          "label": "self-interest above all",
+          "category": "values",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "value",
+          "domain": "self",
+          "stance": "approach"
+        },
+        {
+          "label": "social institutions solve poverty",
+          "category": "values",
+          "confidence": 0.8,
+          "source": "explicit",
+          "type": "value",
+          "domain": "other",
+          "stance": "neutral"
+        }
+      ],
+      "raw_edges": [
+        {
+          "source": "self-interest above all",
+          "target": "poor deserve no help",
+          "relation": "supports",
+          "confidence": 0.82
+        },
+        {
+          "source": "poor deserve no help",
+          "target": "poverty prevents merriness",
+          "relation": "supports",
+          "confidence": 0.65
+        },
+        {
+          "source": "self-interest above all",
+          "target": "social joy norms feel oppressive",
+          "relation": "supports",
+          "confidence": 0.55
+        },
+        {
+          "source": "social institutions solve poverty",
+          "target": "poor deserve no help",
+          "relation": "supports",
+          "confidence": 0.6
+        },
+        {
+          "source": "wealth required for joy",
+          "target": "poverty prevents merriness",
+          "relation": "supports",
+          "confidence": 0.7
+        }
+      ],
+      "prov": [
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "poverty prevents merriness"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "wealth required for joy"
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "self-interest above all",
+            "supports",
+            "poor deserve no help"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "poor deserve no help",
+            "supports",
+            "poverty prevents merriness"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "self-interest above all",
+            "supports",
+            "social joy norms feel oppressive"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "social institutions solve poverty",
+            "supports",
+            "poor deserve no help"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "wealth required for joy",
+            "supports",
+            "poverty prevents merriness"
+          ]
+        }
+      ],
+      "delta": {
+        "contradict": [],
+        "strong": [],
+        "reinforce": [
+          "poverty prevents merriness",
+          "wealth required for joy"
+        ],
+        "edges": [
+          [
+            "self-interest above all",
+            "supports",
+            "poor deserve no help"
+          ],
+          [
+            "poor deserve no help",
+            "supports",
+            "poverty prevents merriness"
+          ],
+          [
+            "self-interest above all",
+            "supports",
+            "social joy norms feel oppressive"
+          ],
+          [
+            "social institutions solve poverty",
+            "supports",
+            "poor deserve no help"
+          ],
+          [
+            "wealth required for joy",
+            "supports",
+            "poverty prevents merriness"
+          ]
+        ],
+        "new_nodes": [
+          "poor deserve no help",
+          "self-interest above all",
+          "social institutions solve poverty"
+        ]
+      },
+      "engine": {
+        "Christmas is a fraud": {
+          "conf": 0.92,
+          "prev": 0.915,
+          "delta": 0.005,
+          "spark": false,
+          "new": false
+        },
+        "poverty prevents merriness": {
+          "conf": 0.607,
+          "prev": 0.473,
+          "delta": 0.134,
+          "spark": false,
+          "new": false
+        },
+        "wealth required for joy": {
+          "conf": 0.903,
+          "prev": 0.795,
+          "delta": 0.108,
+          "spark": false,
+          "new": false
+        },
+        "forced cheer deserves punishment": {
+          "conf": 0.393,
+          "prev": 0.527,
+          "delta": -0.134,
+          "spark": false,
+          "new": false
+        },
+        "social joy norms feel oppressive": {
+          "conf": 0.647,
+          "prev": 0.5,
+          "delta": 0.147,
+          "spark": false,
+          "new": false
+        },
+        "poor deserve no help": {
+          "conf": 0.92,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        },
+        "self-interest above all": {
+          "conf": 0.85,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        },
+        "social institutions solve poverty": {
+          "conf": 0.8,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        }
+      }
+    },
+    {
+      "turn": 4,
+      "user": "This ghost of Marley is humbug. There's more of gravy than of grave about you. I won't believe it.",
+      "raw_facts": [
+        {
+          "label": "Christmas is a fraud",
+          "category": "values",
+          "confidence": 0.72,
+          "source": "inferred",
+          "type": "value",
+          "domain": "meaning",
+          "stance": "avoid"
+        },
+        {
+          "label": "supernatural claims are humbug",
+          "category": "values",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "value",
+          "domain": "meaning",
+          "stance": "avoid"
+        },
+        {
+          "label": "refuses moral awakening",
+          "category": "values",
+          "confidence": 0.6,
+          "source": "inferred",
+          "type": "state",
+          "domain": "self",
+          "stance": "avoid"
+        }
+      ],
+      "raw_edges": [
+        {
+          "source": "supernatural claims are humbug",
+          "target": "Christmas is a fraud",
+          "relation": "supports",
+          "confidence": 0.6
+        },
+        {
+          "source": "refuses moral awakening",
+          "target": "self-interest above all",
+          "relation": "supports",
+          "confidence": 0.58
+        },
+        {
+          "source": "supernatural claims are humbug",
+          "target": "refuses moral awakening",
+          "relation": "causes",
+          "confidence": 0.62
+        }
+      ],
+      "prov": [
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "Christmas is a fraud"
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "supernatural claims are humbug",
+            "supports",
+            "Christmas is a fraud"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "refuses moral awakening",
+            "supports",
+            "self-interest above all"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "supernatural claims are humbug",
+            "causes",
+            "refuses moral awakening"
+          ]
+        }
+      ],
+      "delta": {
+        "contradict": [],
+        "strong": [],
+        "reinforce": [
+          "Christmas is a fraud"
+        ],
+        "edges": [
+          [
+            "supernatural claims are humbug",
+            "supports",
+            "Christmas is a fraud"
+          ],
+          [
+            "refuses moral awakening",
+            "supports",
+            "self-interest above all"
+          ],
+          [
+            "supernatural claims are humbug",
+            "causes",
+            "refuses moral awakening"
+          ]
+        ],
+        "new_nodes": [
+          "supernatural claims are humbug",
+          "refuses moral awakening"
+        ]
+      },
+      "engine": {
+        "Christmas is a fraud": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "poverty prevents merriness": {
+          "conf": 0.604,
+          "prev": 0.607,
+          "delta": -0.003,
+          "spark": false,
+          "new": false
+        },
+        "wealth required for joy": {
+          "conf": 0.907,
+          "prev": 0.903,
+          "delta": 0.003,
+          "spark": false,
+          "new": false
+        },
+        "forced cheer deserves punishment": {
+          "conf": 0.408,
+          "prev": 0.393,
+          "delta": 0.015,
+          "spark": false,
+          "new": false
+        },
+        "social joy norms feel oppressive": {
+          "conf": 0.649,
+          "prev": 0.647,
+          "delta": 0.001,
+          "spark": false,
+          "new": false
+        },
+        "poor deserve no help": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "self-interest above all": {
+          "conf": 0.873,
+          "prev": 0.85,
+          "delta": 0.023,
+          "spark": false,
+          "new": false
+        },
+        "social institutions solve poverty": {
+          "conf": 0.8,
+          "prev": 0.8,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "supernatural claims are humbug": {
+          "conf": 0.85,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        },
+        "refuses moral awakening": {
+          "conf": 0.757,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "user": "Marley — you were always a good friend to me. Why are you fettered? Speak comfort to me.",
+      "raw_facts": [
+        {
+          "label": "Marley valued as friend",
+          "category": "relationships",
+          "confidence": 0.75,
+          "source": "explicit",
+          "type": "fact",
+          "domain": "relationships",
+          "stance": "approach"
+        },
+        {
+          "label": "seeks emotional comfort",
+          "category": "mood",
+          "confidence": 0.6,
+          "source": "explicit",
+          "type": "state",
+          "domain": "self",
+          "stance": "approach"
+        }
+      ],
+      "raw_edges": [
+        {
+          "source": "seeks emotional comfort",
+          "target": "self-interest above all",
+          "relation": "contradicts",
+          "confidence": 0.5
+        },
+        {
+          "source": "Marley valued as friend",
+          "target": "self-interest above all",
+          "relation": "contradicts",
+          "confidence": 0.52
+        }
+      ],
+      "prov": [
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "seeks emotional comfort",
+            "contradicts",
+            "self-interest above all"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "Marley valued as friend",
+            "contradicts",
+            "self-interest above all"
+          ]
+        }
+      ],
+      "delta": {
+        "contradict": [],
+        "strong": [],
+        "reinforce": [],
+        "edges": [
+          [
+            "seeks emotional comfort",
+            "contradicts",
+            "self-interest above all"
+          ],
+          [
+            "Marley valued as friend",
+            "contradicts",
+            "self-interest above all"
+          ]
+        ],
+        "new_nodes": [
+          "Marley valued as friend",
+          "seeks emotional comfort"
+        ]
+      },
+      "engine": {
+        "Christmas is a fraud": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "poverty prevents merriness": {
+          "conf": 0.601,
+          "prev": 0.604,
+          "delta": -0.003,
+          "spark": false,
+          "new": false
+        },
+        "wealth required for joy": {
+          "conf": 0.907,
+          "prev": 0.907,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "forced cheer deserves punishment": {
+          "conf": 0.405,
+          "prev": 0.408,
+          "delta": -0.002,
+          "spark": false,
+          "new": false
+        },
+        "social joy norms feel oppressive": {
+          "conf": 0.638,
+          "prev": 0.649,
+          "delta": -0.011,
+          "spark": false,
+          "new": false
+        },
+        "poor deserve no help": {
+          "conf": 0.915,
+          "prev": 0.92,
+          "delta": -0.005,
+          "spark": false,
+          "new": false
+        },
+        "self-interest above all": {
+          "conf": 0.442,
+          "prev": 0.873,
+          "delta": -0.431,
+          "spark": true,
+          "new": false
+        },
+        "social institutions solve poverty": {
+          "conf": 0.8,
+          "prev": 0.8,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "supernatural claims are humbug": {
+          "conf": 0.85,
+          "prev": 0.85,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "refuses moral awakening": {
+          "conf": 0.757,
+          "prev": 0.757,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "Marley valued as friend": {
+          "conf": 0.558,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        },
+        "seeks emotional comfort": {
+          "conf": 0.406,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        }
+      }
+    },
+    {
+      "turn": 6,
+      "user": "I was happy once. As a boy, as an apprentice. When did I grow so hard? I chose gold over the girl I loved, and lost her.",
+      "raw_facts": [
+        {
+          "label": "wealth required for joy",
+          "category": "values",
+          "confidence": 0.72,
+          "source": "inferred",
+          "type": "value",
+          "domain": "meaning",
+          "stance": "avoid"
+        },
+        {
+          "label": "chose gold over love",
+          "category": "values",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "fact",
+          "domain": "relationships",
+          "stance": "avoid"
+        },
+        {
+          "label": "past self felt joy",
+          "category": "mood",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "fact",
+          "domain": "self",
+          "stance": "approach"
+        },
+        {
+          "label": "self-interest above all",
+          "category": "values",
+          "confidence": 0.75,
+          "source": "inferred",
+          "type": "value",
+          "domain": "meaning",
+          "stance": "approach"
+        },
+        {
+          "label": "regrets lost love",
+          "category": "mood",
+          "confidence": 0.82,
+          "source": "explicit",
+          "type": "state",
+          "domain": "relationships",
+          "stance": "avoid"
+        },
+        {
+          "label": "refuses moral awakening",
+          "category": "values",
+          "confidence": 0.45,
+          "source": "inferred",
+          "type": "value",
+          "domain": "self",
+          "stance": "neutral"
+        }
+      ],
+      "raw_edges": [
+        {
+          "source": "self-interest above all",
+          "target": "chose gold over love",
+          "relation": "causes",
+          "confidence": 0.8
+        },
+        {
+          "source": "chose gold over love",
+          "target": "regrets lost love",
+          "relation": "causes",
+          "confidence": 0.82
+        },
+        {
+          "source": "wealth required for joy",
+          "target": "past self felt joy",
+          "relation": "contradicts",
+          "confidence": 0.7
+        },
+        {
+          "source": "regrets lost love",
+          "target": "refuses moral awakening",
+          "relation": "contradicts",
+          "confidence": 0.55
+        },
+        {
+          "source": "chose gold over love",
+          "target": "wealth required for joy",
+          "relation": "supports",
+          "confidence": 0.65
+        }
+      ],
+      "prov": [
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "wealth required for joy"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "self-interest above all"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "refuses moral awakening"
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "self-interest above all",
+            "causes",
+            "chose gold over love"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "chose gold over love",
+            "causes",
+            "regrets lost love"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "wealth required for joy",
+            "contradicts",
+            "past self felt joy"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "regrets lost love",
+            "contradicts",
+            "refuses moral awakening"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "chose gold over love",
+            "supports",
+            "wealth required for joy"
+          ]
+        }
+      ],
+      "delta": {
+        "contradict": [],
+        "strong": [],
+        "reinforce": [
+          "wealth required for joy",
+          "self-interest above all",
+          "refuses moral awakening"
+        ],
+        "edges": [
+          [
+            "self-interest above all",
+            "causes",
+            "chose gold over love"
+          ],
+          [
+            "chose gold over love",
+            "causes",
+            "regrets lost love"
+          ],
+          [
+            "wealth required for joy",
+            "contradicts",
+            "past self felt joy"
+          ],
+          [
+            "regrets lost love",
+            "contradicts",
+            "refuses moral awakening"
+          ],
+          [
+            "chose gold over love",
+            "supports",
+            "wealth required for joy"
+          ]
+        ],
+        "new_nodes": [
+          "chose gold over love",
+          "past self felt joy",
+          "regrets lost love"
+        ]
+      },
+      "engine": {
+        "Christmas is a fraud": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "poverty prevents merriness": {
+          "conf": 0.628,
+          "prev": 0.601,
+          "delta": 0.027,
+          "spark": false,
+          "new": false
+        },
+        "wealth required for joy": {
+          "conf": 0.679,
+          "prev": 0.907,
+          "delta": -0.228,
+          "spark": true,
+          "new": false
+        },
+        "forced cheer deserves punishment": {
+          "conf": 0.409,
+          "prev": 0.405,
+          "delta": 0.003,
+          "spark": false,
+          "new": false
+        },
+        "social joy norms feel oppressive": {
+          "conf": 0.706,
+          "prev": 0.638,
+          "delta": 0.068,
+          "spark": false,
+          "new": false
+        },
+        "poor deserve no help": {
+          "conf": 0.92,
+          "prev": 0.915,
+          "delta": 0.005,
+          "spark": false,
+          "new": false
+        },
+        "self-interest above all": {
+          "conf": 0.533,
+          "prev": 0.442,
+          "delta": 0.091,
+          "spark": false,
+          "new": false
+        },
+        "social institutions solve poverty": {
+          "conf": 0.8,
+          "prev": 0.8,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "supernatural claims are humbug": {
+          "conf": 0.85,
+          "prev": 0.85,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "refuses moral awakening": {
+          "conf": 0.556,
+          "prev": 0.757,
+          "delta": -0.2,
+          "spark": true,
+          "new": false
+        },
+        "Marley valued as friend": {
+          "conf": 0.467,
+          "prev": 0.558,
+          "delta": -0.091,
+          "spark": false,
+          "new": false
+        },
+        "seeks emotional comfort": {
+          "conf": 0.364,
+          "prev": 0.406,
+          "delta": -0.043,
+          "spark": false,
+          "new": false
+        },
+        "chose gold over love": {
+          "conf": 0.892,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        },
+        "past self felt joy": {
+          "conf": 0.321,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        },
+        "regrets lost love": {
+          "conf": 0.444,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        }
+      }
+    },
+    {
+      "turn": 7,
+      "user": "That crippled child, Tiny Tim — will he live? I never once thought such people were any concern of mine.",
+      "raw_facts": [
+        {
+          "label": "poor deserve no help",
+          "category": "values",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "value",
+          "domain": "meaning",
+          "stance": "avoid"
+        },
+        {
+          "label": "refuses moral awakening",
+          "category": "values",
+          "confidence": 0.55,
+          "source": "inferred",
+          "type": "state",
+          "domain": "self",
+          "stance": "avoid"
+        },
+        {
+          "label": "fears Tiny Tim will die",
+          "category": "fears",
+          "confidence": 0.6,
+          "source": "inferred",
+          "type": "state",
+          "domain": "relationships",
+          "stance": "avoid"
+        },
+        {
+          "label": "seeks emotional comfort",
+          "category": "mood",
+          "confidence": 0.55,
+          "source": "inferred",
+          "type": "state",
+          "domain": "self",
+          "stance": "approach"
+        }
+      ],
+      "raw_edges": [
+        {
+          "source": "poor deserve no help",
+          "target": "fears Tiny Tim will die",
+          "relation": "contradicts",
+          "confidence": 0.58
+        },
+        {
+          "source": "refuses moral awakening",
+          "target": "seeks emotional comfort",
+          "relation": "contradicts",
+          "confidence": 0.52
+        },
+        {
+          "source": "fears Tiny Tim will die",
+          "target": "seeks emotional comfort",
+          "relation": "motivates",
+          "confidence": 0.55
+        }
+      ],
+      "prov": [
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "poor deserve no help"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "refuses moral awakening"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "seeks emotional comfort"
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "poor deserve no help",
+            "contradicts",
+            "fears Tiny Tim will die"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "refuses moral awakening",
+            "contradicts",
+            "seeks emotional comfort"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "fears Tiny Tim will die",
+            "motivates",
+            "seeks emotional comfort"
+          ]
+        }
+      ],
+      "delta": {
+        "contradict": [],
+        "strong": [],
+        "reinforce": [
+          "poor deserve no help",
+          "refuses moral awakening",
+          "seeks emotional comfort"
+        ],
+        "edges": [
+          [
+            "poor deserve no help",
+            "contradicts",
+            "fears Tiny Tim will die"
+          ],
+          [
+            "refuses moral awakening",
+            "contradicts",
+            "seeks emotional comfort"
+          ],
+          [
+            "fears Tiny Tim will die",
+            "motivates",
+            "seeks emotional comfort"
+          ]
+        ],
+        "new_nodes": [
+          "fears Tiny Tim will die"
+        ]
+      },
+      "engine": {
+        "Christmas is a fraud": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "poverty prevents merriness": {
+          "conf": 0.628,
+          "prev": 0.628,
+          "delta": -0.0,
+          "spark": false,
+          "new": false
+        },
+        "wealth required for joy": {
+          "conf": 0.678,
+          "prev": 0.679,
+          "delta": -0.001,
+          "spark": false,
+          "new": false
+        },
+        "forced cheer deserves punishment": {
+          "conf": 0.408,
+          "prev": 0.409,
+          "delta": -0.0,
+          "spark": false,
+          "new": false
+        },
+        "social joy norms feel oppressive": {
+          "conf": 0.705,
+          "prev": 0.706,
+          "delta": -0.001,
+          "spark": false,
+          "new": false
+        },
+        "poor deserve no help": {
+          "conf": 0.605,
+          "prev": 0.92,
+          "delta": -0.315,
+          "spark": true,
+          "new": false
+        },
+        "self-interest above all": {
+          "conf": 0.443,
+          "prev": 0.533,
+          "delta": -0.089,
+          "spark": false,
+          "new": false
+        },
+        "social institutions solve poverty": {
+          "conf": 0.8,
+          "prev": 0.8,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "supernatural claims are humbug": {
+          "conf": 0.85,
+          "prev": 0.85,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "refuses moral awakening": {
+          "conf": 0.589,
+          "prev": 0.556,
+          "delta": 0.033,
+          "spark": false,
+          "new": false
+        },
+        "Marley valued as friend": {
+          "conf": 0.467,
+          "prev": 0.467,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "seeks emotional comfort": {
+          "conf": 0.411,
+          "prev": 0.364,
+          "delta": 0.047,
+          "spark": false,
+          "new": false
+        },
+        "chose gold over love": {
+          "conf": 0.892,
+          "prev": 0.892,
+          "delta": -0.001,
+          "spark": false,
+          "new": false
+        },
+        "past self felt joy": {
+          "conf": 0.321,
+          "prev": 0.321,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "regrets lost love": {
+          "conf": 0.373,
+          "prev": 0.444,
+          "delta": -0.071,
+          "spark": false,
+          "new": false
+        },
+        "fears Tiny Tim will die": {
+          "conf": 0.395,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        }
+      }
+    },
+    {
+      "turn": 8,
+      "user": "My clerk's family is poor, and I have plenty, and I have given them nothing but a cold dark office. I begin to see what I am.",
+      "raw_facts": [
+        {
+          "label": "self-awareness of moral failure",
+          "category": "identity",
+          "confidence": 0.82,
+          "source": "explicit",
+          "type": "state",
+          "domain": "self",
+          "stance": "avoid"
+        },
+        {
+          "label": "wealth required for joy",
+          "category": "values",
+          "confidence": 0.55,
+          "source": "inferred",
+          "type": "value",
+          "domain": "meaning",
+          "stance": "neutral"
+        },
+        {
+          "label": "poverty prevents merriness",
+          "category": "values",
+          "confidence": 0.6,
+          "source": "inferred",
+          "type": "value",
+          "domain": "meaning",
+          "stance": "neutral"
+        },
+        {
+          "label": "poor deserve no help",
+          "category": "values",
+          "confidence": 0.5,
+          "source": "inferred",
+          "type": "value",
+          "domain": "meaning",
+          "stance": "avoid"
+        },
+        {
+          "label": "refuses moral awakening",
+          "category": "values",
+          "confidence": 0.4,
+          "source": "inferred",
+          "type": "value",
+          "domain": "self",
+          "stance": "avoid"
+        }
+      ],
+      "raw_edges": [
+        {
+          "source": "self-awareness of moral failure",
+          "target": "refuses moral awakening",
+          "relation": "contradicts",
+          "confidence": 0.78
+        },
+        {
+          "source": "self-awareness of moral failure",
+          "target": "poor deserve no help",
+          "relation": "contradicts",
+          "confidence": 0.72
+        },
+        {
+          "source": "self-awareness of moral failure",
+          "target": "self-interest above all",
+          "relation": "contradicts",
+          "confidence": 0.7
+        },
+        {
+          "source": "poverty prevents merriness",
+          "target": "self-awareness of moral failure",
+          "relation": "supports",
+          "confidence": 0.6
+        },
+        {
+          "source": "wealth required for joy",
+          "target": "self-awareness of moral failure",
+          "relation": "supports",
+          "confidence": 0.55
+        }
+      ],
+      "prov": [
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "wealth required for joy"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "poverty prevents merriness"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "poor deserve no help"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "refuses moral awakening"
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "self-awareness of moral failure",
+            "contradicts",
+            "refuses moral awakening"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "self-awareness of moral failure",
+            "contradicts",
+            "poor deserve no help"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "self-awareness of moral failure",
+            "contradicts",
+            "self-interest above all"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "poverty prevents merriness",
+            "supports",
+            "self-awareness of moral failure"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "wealth required for joy",
+            "supports",
+            "self-awareness of moral failure"
+          ]
+        }
+      ],
+      "delta": {
+        "contradict": [],
+        "strong": [],
+        "reinforce": [
+          "wealth required for joy",
+          "poverty prevents merriness",
+          "poor deserve no help",
+          "refuses moral awakening"
+        ],
+        "edges": [
+          [
+            "self-awareness of moral failure",
+            "contradicts",
+            "refuses moral awakening"
+          ],
+          [
+            "self-awareness of moral failure",
+            "contradicts",
+            "poor deserve no help"
+          ],
+          [
+            "self-awareness of moral failure",
+            "contradicts",
+            "self-interest above all"
+          ],
+          [
+            "poverty prevents merriness",
+            "supports",
+            "self-awareness of moral failure"
+          ],
+          [
+            "wealth required for joy",
+            "supports",
+            "self-awareness of moral failure"
+          ]
+        ],
+        "new_nodes": [
+          "self-awareness of moral failure"
+        ]
+      },
+      "engine": {
+        "Christmas is a fraud": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "poverty prevents merriness": {
+          "conf": 0.679,
+          "prev": 0.628,
+          "delta": 0.051,
+          "spark": false,
+          "new": false
+        },
+        "wealth required for joy": {
+          "conf": 0.834,
+          "prev": 0.678,
+          "delta": 0.156,
+          "spark": false,
+          "new": false
+        },
+        "forced cheer deserves punishment": {
+          "conf": 0.321,
+          "prev": 0.408,
+          "delta": -0.087,
+          "spark": false,
+          "new": false
+        },
+        "social joy norms feel oppressive": {
+          "conf": 0.701,
+          "prev": 0.705,
+          "delta": -0.004,
+          "spark": false,
+          "new": false
+        },
+        "poor deserve no help": {
+          "conf": 0.425,
+          "prev": 0.605,
+          "delta": -0.18,
+          "spark": false,
+          "new": false
+        },
+        "self-interest above all": {
+          "conf": 0.223,
+          "prev": 0.443,
+          "delta": -0.22,
+          "spark": true,
+          "new": false
+        },
+        "social institutions solve poverty": {
+          "conf": 0.8,
+          "prev": 0.8,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "supernatural claims are humbug": {
+          "conf": 0.85,
+          "prev": 0.85,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "refuses moral awakening": {
+          "conf": 0.345,
+          "prev": 0.589,
+          "delta": -0.244,
+          "spark": true,
+          "new": false
+        },
+        "Marley valued as friend": {
+          "conf": 0.467,
+          "prev": 0.467,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "seeks emotional comfort": {
+          "conf": 0.266,
+          "prev": 0.411,
+          "delta": -0.145,
+          "spark": false,
+          "new": false
+        },
+        "chose gold over love": {
+          "conf": 0.89,
+          "prev": 0.892,
+          "delta": -0.002,
+          "spark": false,
+          "new": false
+        },
+        "past self felt joy": {
+          "conf": 0.188,
+          "prev": 0.321,
+          "delta": -0.134,
+          "spark": false,
+          "new": false
+        },
+        "regrets lost love": {
+          "conf": 0.372,
+          "prev": 0.373,
+          "delta": -0.001,
+          "spark": false,
+          "new": false
+        },
+        "fears Tiny Tim will die": {
+          "conf": 0.256,
+          "prev": 0.395,
+          "delta": -0.139,
+          "spark": false,
+          "new": false
+        },
+        "self-awareness of moral failure": {
+          "conf": 0.575,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        }
+      }
+    },
+    {
+      "turn": 9,
+      "user": "Whose grave is this — untended, unmourned, with no one sorry that he is gone? Tell me these are shadows of what may be, not what must be.",
+      "raw_facts": [
+        {
+          "label": "fears dying unmourned",
+          "category": "fears",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "state",
+          "domain": "meaning",
+          "stance": "avoid"
+        },
+        {
+          "label": "self-awareness of moral failure",
+          "category": "identity",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "state",
+          "domain": "self",
+          "stance": "avoid"
+        },
+        {
+          "label": "future is not fixed",
+          "category": "values",
+          "confidence": 0.72,
+          "source": "explicit",
+          "type": "value",
+          "domain": "meaning",
+          "stance": "approach"
+        },
+        {
+          "label": "refuses moral awakening",
+          "category": "values",
+          "confidence": 0.45,
+          "source": "inferred",
+          "type": "state",
+          "domain": "self",
+          "stance": "avoid"
+        }
+      ],
+      "raw_edges": [
+        {
+          "source": "fears dying unmourned",
+          "target": "self-interest above all",
+          "relation": "contradicts",
+          "confidence": 0.75
+        },
+        {
+          "source": "fears dying unmourned",
+          "target": "self-awareness of moral failure",
+          "relation": "supports",
+          "confidence": 0.8
+        },
+        {
+          "source": "future is not fixed",
+          "target": "refuses moral awakening",
+          "relation": "blocks",
+          "confidence": 0.65
+        },
+        {
+          "source": "fears dying unmourned",
+          "target": "refuses moral awakening",
+          "relation": "contradicts",
+          "confidence": 0.7
+        },
+        {
+          "source": "self-awareness of moral failure",
+          "target": "future is not fixed",
+          "relation": "motivates",
+          "confidence": 0.68
+        }
+      ],
+      "prov": [
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "self-awareness of moral failure"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "refuses moral awakening"
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "fears dying unmourned",
+            "contradicts",
+            "self-interest above all"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "fears dying unmourned",
+            "supports",
+            "self-awareness of moral failure"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "future is not fixed",
+            "blocks",
+            "refuses moral awakening"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "fears dying unmourned",
+            "contradicts",
+            "refuses moral awakening"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "self-awareness of moral failure",
+            "motivates",
+            "future is not fixed"
+          ]
+        }
+      ],
+      "delta": {
+        "contradict": [],
+        "strong": [],
+        "reinforce": [
+          "self-awareness of moral failure",
+          "refuses moral awakening"
+        ],
+        "edges": [
+          [
+            "fears dying unmourned",
+            "contradicts",
+            "self-interest above all"
+          ],
+          [
+            "fears dying unmourned",
+            "supports",
+            "self-awareness of moral failure"
+          ],
+          [
+            "future is not fixed",
+            "blocks",
+            "refuses moral awakening"
+          ],
+          [
+            "fears dying unmourned",
+            "contradicts",
+            "refuses moral awakening"
+          ],
+          [
+            "self-awareness of moral failure",
+            "motivates",
+            "future is not fixed"
+          ]
+        ],
+        "new_nodes": [
+          "fears dying unmourned",
+          "future is not fixed"
+        ]
+      },
+      "engine": {
+        "Christmas is a fraud": {
+          "conf": 0.92,
+          "prev": 0.92,
+          "delta": -0.0,
+          "spark": false,
+          "new": false
+        },
+        "poverty prevents merriness": {
+          "conf": 0.675,
+          "prev": 0.679,
+          "delta": -0.004,
+          "spark": false,
+          "new": false
+        },
+        "wealth required for joy": {
+          "conf": 0.833,
+          "prev": 0.834,
+          "delta": -0.001,
+          "spark": false,
+          "new": false
+        },
+        "forced cheer deserves punishment": {
+          "conf": 0.32,
+          "prev": 0.321,
+          "delta": -0.0,
+          "spark": false,
+          "new": false
+        },
+        "social joy norms feel oppressive": {
+          "conf": 0.696,
+          "prev": 0.701,
+          "delta": -0.005,
+          "spark": false,
+          "new": false
+        },
+        "poor deserve no help": {
+          "conf": 0.231,
+          "prev": 0.425,
+          "delta": -0.194,
+          "spark": false,
+          "new": false
+        },
+        "self-interest above all": {
+          "conf": 0.04,
+          "prev": 0.223,
+          "delta": -0.183,
+          "spark": false,
+          "new": false
+        },
+        "social institutions solve poverty": {
+          "conf": 0.8,
+          "prev": 0.8,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "supernatural claims are humbug": {
+          "conf": 0.85,
+          "prev": 0.85,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "refuses moral awakening": {
+          "conf": 0.078,
+          "prev": 0.345,
+          "delta": -0.268,
+          "spark": true,
+          "new": false
+        },
+        "Marley valued as friend": {
+          "conf": 0.467,
+          "prev": 0.467,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "seeks emotional comfort": {
+          "conf": 0.166,
+          "prev": 0.266,
+          "delta": -0.1,
+          "spark": false,
+          "new": false
+        },
+        "chose gold over love": {
+          "conf": 0.887,
+          "prev": 0.89,
+          "delta": -0.003,
+          "spark": false,
+          "new": false
+        },
+        "past self felt joy": {
+          "conf": 0.188,
+          "prev": 0.188,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "regrets lost love": {
+          "conf": 0.372,
+          "prev": 0.372,
+          "delta": -0.001,
+          "spark": false,
+          "new": false
+        },
+        "fears Tiny Tim will die": {
+          "conf": 0.261,
+          "prev": 0.256,
+          "delta": 0.005,
+          "spark": false,
+          "new": false
+        },
+        "self-awareness of moral failure": {
+          "conf": 0.769,
+          "prev": 0.575,
+          "delta": 0.194,
+          "spark": false,
+          "new": false
+        },
+        "fears dying unmourned": {
+          "conf": 0.85,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        },
+        "future is not fixed": {
+          "conf": 0.79,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        }
+      }
+    },
+    {
+      "turn": 10,
+      "user": "I am not the man I was. I will honour Christmas in my heart and try to keep it all the year. I can change. I will.",
+      "raw_facts": [
+        {
+          "label": "self-awareness of moral failure",
+          "category": "identity",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "state",
+          "domain": "self",
+          "stance": "avoid"
+        },
+        {
+          "label": "future is not fixed",
+          "category": "values",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "value",
+          "domain": "self",
+          "stance": "approach"
+        },
+        {
+          "label": "refuses moral awakening",
+          "category": "values",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "value",
+          "domain": "self",
+          "stance": "avoid"
+        },
+        {
+          "label": "Christmas is a fraud",
+          "category": "values",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "value",
+          "domain": "meaning",
+          "stance": "avoid"
+        },
+        {
+          "label": "self-interest above all",
+          "category": "values",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "value",
+          "domain": "self",
+          "stance": "avoid"
+        }
+      ],
+      "raw_edges": [
+        {
+          "source": "self-awareness of moral failure",
+          "target": "refuses moral awakening",
+          "relation": "contradicts",
+          "confidence": 0.85
+        },
+        {
+          "source": "future is not fixed",
+          "target": "self-interest above all",
+          "relation": "contradicts",
+          "confidence": 0.82
+        },
+        {
+          "source": "self-awareness of moral failure",
+          "target": "Christmas is a fraud",
+          "relation": "contradicts",
+          "confidence": 0.8
+        },
+        {
+          "source": "future is not fixed",
+          "target": "self-awareness of moral failure",
+          "relation": "motivates",
+          "confidence": 0.78
+        },
+        {
+          "source": "self-awareness of moral failure",
+          "target": "self-interest above all",
+          "relation": "contradicts",
+          "confidence": 0.83
+        }
+      ],
+      "prov": [
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "self-awareness of moral failure"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "future is not fixed"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "refuses moral awakening"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "Christmas is a fraud"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "self-interest above all"
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "self-awareness of moral failure",
+            "contradicts",
+            "refuses moral awakening"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "future is not fixed",
+            "contradicts",
+            "self-interest above all"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "self-awareness of moral failure",
+            "contradicts",
+            "Christmas is a fraud"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "future is not fixed",
+            "motivates",
+            "self-awareness of moral failure"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "self-awareness of moral failure",
+            "contradicts",
+            "self-interest above all"
+          ]
+        }
+      ],
+      "delta": {
+        "contradict": [],
+        "strong": [],
+        "reinforce": [
+          "self-awareness of moral failure",
+          "future is not fixed",
+          "refuses moral awakening",
+          "Christmas is a fraud",
+          "self-interest above all"
+        ],
+        "edges": [
+          [
+            "self-awareness of moral failure",
+            "contradicts",
+            "refuses moral awakening"
+          ],
+          [
+            "future is not fixed",
+            "contradicts",
+            "self-interest above all"
+          ],
+          [
+            "self-awareness of moral failure",
+            "contradicts",
+            "Christmas is a fraud"
+          ],
+          [
+            "future is not fixed",
+            "motivates",
+            "self-awareness of moral failure"
+          ],
+          [
+            "self-awareness of moral failure",
+            "contradicts",
+            "self-interest above all"
+          ]
+        ],
+        "new_nodes": [
+          "not the man I was"
+        ]
+      },
+      "engine": {
+        "Christmas is a fraud": {
+          "conf": 0.481,
+          "prev": 0.92,
+          "delta": -0.439,
+          "spark": true,
+          "new": false
+        },
+        "poverty prevents merriness": {
+          "conf": 0.674,
+          "prev": 0.675,
+          "delta": -0.001,
+          "spark": false,
+          "new": false
+        },
+        "wealth required for joy": {
+          "conf": 0.831,
+          "prev": 0.833,
+          "delta": -0.003,
+          "spark": false,
+          "new": false
+        },
+        "forced cheer deserves punishment": {
+          "conf": 0.318,
+          "prev": 0.32,
+          "delta": -0.003,
+          "spark": false,
+          "new": false
+        },
+        "social joy norms feel oppressive": {
+          "conf": 0.696,
+          "prev": 0.696,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "poor deserve no help": {
+          "conf": 0.128,
+          "prev": 0.231,
+          "delta": -0.103,
+          "spark": false,
+          "new": false
+        },
+        "self-interest above all": {
+          "conf": 0.022,
+          "prev": 0.04,
+          "delta": -0.018,
+          "spark": false,
+          "new": false
+        },
+        "social institutions solve poverty": {
+          "conf": 0.8,
+          "prev": 0.8,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "supernatural claims are humbug": {
+          "conf": 0.85,
+          "prev": 0.85,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "refuses moral awakening": {
+          "conf": 0.086,
+          "prev": 0.078,
+          "delta": 0.008,
+          "spark": false,
+          "new": false
+        },
+        "Marley valued as friend": {
+          "conf": 0.467,
+          "prev": 0.467,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "seeks emotional comfort": {
+          "conf": 0.166,
+          "prev": 0.166,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "chose gold over love": {
+          "conf": 0.887,
+          "prev": 0.887,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "past self felt joy": {
+          "conf": 0.188,
+          "prev": 0.188,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "regrets lost love": {
+          "conf": 0.372,
+          "prev": 0.372,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "fears Tiny Tim will die": {
+          "conf": 0.262,
+          "prev": 0.261,
+          "delta": 0.001,
+          "spark": false,
+          "new": false
+        },
+        "self-awareness of moral failure": {
+          "conf": 0.519,
+          "prev": 0.769,
+          "delta": -0.25,
+          "spark": true,
+          "new": false
+        },
+        "fears dying unmourned": {
+          "conf": 0.85,
+          "prev": 0.85,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "future is not fixed": {
+          "conf": 0.92,
+          "prev": 0.79,
+          "delta": 0.13,
+          "spark": false,
+          "new": false
+        },
+        "not the man I was": {
+          "conf": 0.2,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        }
+      }
+    },
+    {
+      "turn": 11,
+      "user": "I'm still here! The shadows can be undone. I am light as a feather, happy as an angel, giddy as a drunken man.",
+      "raw_facts": [
+        {
+          "label": "not the man I was",
+          "category": "identity",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "state",
+          "domain": "self",
+          "stance": "approach"
+        },
+        {
+          "label": "past self felt joy",
+          "category": "mood",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "state",
+          "domain": "self",
+          "stance": "approach"
+        },
+        {
+          "label": "future is not fixed",
+          "category": "values",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "value",
+          "domain": "meaning",
+          "stance": "approach"
+        },
+        {
+          "label": "refuses moral awakening",
+          "category": "values",
+          "confidence": 0.15,
+          "source": "inferred",
+          "type": "value",
+          "domain": "self",
+          "stance": "avoid"
+        }
+      ],
+      "raw_edges": [
+        {
+          "source": "future is not fixed",
+          "target": "refuses moral awakening",
+          "relation": "contradicts",
+          "confidence": 0.82
+        },
+        {
+          "source": "not the man I was",
+          "target": "self-awareness of moral failure",
+          "relation": "supports",
+          "confidence": 0.75
+        },
+        {
+          "source": "past self felt joy",
+          "target": "seeks emotional comfort",
+          "relation": "supports",
+          "confidence": 0.65
+        },
+        {
+          "source": "not the man I was",
+          "target": "self-interest above all",
+          "relation": "contradicts",
+          "confidence": 0.78
+        }
+      ],
+      "prov": [
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "not the man I was"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "past self felt joy"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "future is not fixed"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "refuses moral awakening"
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "future is not fixed",
+            "contradicts",
+            "refuses moral awakening"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "not the man I was",
+            "supports",
+            "self-awareness of moral failure"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "past self felt joy",
+            "supports",
+            "seeks emotional comfort"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "not the man I was",
+            "contradicts",
+            "self-interest above all"
+          ]
+        }
+      ],
+      "delta": {
+        "contradict": [],
+        "strong": [],
+        "reinforce": [
+          "not the man I was",
+          "past self felt joy",
+          "future is not fixed",
+          "refuses moral awakening"
+        ],
+        "edges": [
+          [
+            "future is not fixed",
+            "contradicts",
+            "refuses moral awakening"
+          ],
+          [
+            "not the man I was",
+            "supports",
+            "self-awareness of moral failure"
+          ],
+          [
+            "past self felt joy",
+            "supports",
+            "seeks emotional comfort"
+          ],
+          [
+            "not the man I was",
+            "contradicts",
+            "self-interest above all"
+          ]
+        ],
+        "new_nodes": [
+          "light as a feather",
+          "still here"
+        ]
+      },
+      "engine": {
+        "Christmas is a fraud": {
+          "conf": 0.472,
+          "prev": 0.481,
+          "delta": -0.009,
+          "spark": false,
+          "new": false
+        },
+        "poverty prevents merriness": {
+          "conf": 0.674,
+          "prev": 0.674,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "wealth required for joy": {
+          "conf": 0.83,
+          "prev": 0.831,
+          "delta": -0.001,
+          "spark": false,
+          "new": false
+        },
+        "forced cheer deserves punishment": {
+          "conf": 0.317,
+          "prev": 0.318,
+          "delta": -0.001,
+          "spark": false,
+          "new": false
+        },
+        "social joy norms feel oppressive": {
+          "conf": 0.696,
+          "prev": 0.696,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "poor deserve no help": {
+          "conf": 0.128,
+          "prev": 0.128,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "self-interest above all": {
+          "conf": 0.011,
+          "prev": 0.022,
+          "delta": -0.011,
+          "spark": false,
+          "new": false
+        },
+        "social institutions solve poverty": {
+          "conf": 0.8,
+          "prev": 0.8,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "supernatural claims are humbug": {
+          "conf": 0.85,
+          "prev": 0.85,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "refuses moral awakening": {
+          "conf": 0.163,
+          "prev": 0.086,
+          "delta": 0.077,
+          "spark": false,
+          "new": false
+        },
+        "Marley valued as friend": {
+          "conf": 0.467,
+          "prev": 0.467,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "seeks emotional comfort": {
+          "conf": 0.211,
+          "prev": 0.166,
+          "delta": 0.045,
+          "spark": false,
+          "new": false
+        },
+        "chose gold over love": {
+          "conf": 0.887,
+          "prev": 0.887,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "past self felt joy": {
+          "conf": 0.351,
+          "prev": 0.188,
+          "delta": 0.163,
+          "spark": false,
+          "new": false
+        },
+        "regrets lost love": {
+          "conf": 0.372,
+          "prev": 0.372,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "fears Tiny Tim will die": {
+          "conf": 0.262,
+          "prev": 0.262,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "self-awareness of moral failure": {
+          "conf": 0.593,
+          "prev": 0.519,
+          "delta": 0.074,
+          "spark": false,
+          "new": false
+        },
+        "fears dying unmourned": {
+          "conf": 0.85,
+          "prev": 0.85,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "future is not fixed": {
+          "conf": 0.837,
+          "prev": 0.92,
+          "delta": -0.083,
+          "spark": false,
+          "new": false
+        },
+        "not the man I was": {
+          "conf": 0.369,
+          "prev": 0.2,
+          "delta": 0.169,
+          "spark": false,
+          "new": false
+        },
+        "light as a feather": {
+          "conf": 0.2,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        },
+        "still here": {
+          "conf": 0.2,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        }
+      }
+    },
+    {
+      "turn": 12,
+      "user": "I'll raise my clerk's salary today and help his struggling family. I'll be a second father to Tiny Tim. The old Scrooge is dead.",
+      "raw_facts": [
+        {
+          "label": "not the man I was",
+          "category": "identity",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "state",
+          "domain": "self",
+          "stance": "approach"
+        },
+        {
+          "label": "raise clerk salary today",
+          "category": "goals",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "intention",
+          "domain": "money",
+          "stance": "approach"
+        },
+        {
+          "label": "help clerk struggling family",
+          "category": "relationships",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "intention",
+          "domain": "family",
+          "stance": "approach"
+        },
+        {
+          "label": "second father to Tiny Tim",
+          "category": "relationships",
+          "confidence": 0.85,
+          "source": "explicit",
+          "type": "intention",
+          "domain": "relationships",
+          "stance": "approach"
+        },
+        {
+          "label": "fears Tiny Tim will die",
+          "category": "fears",
+          "confidence": 0.55,
+          "source": "inferred",
+          "type": "state",
+          "domain": "relationships",
+          "stance": "avoid"
+        },
+        {
+          "label": "self-awareness of moral failure",
+          "category": "identity",
+          "confidence": 0.75,
+          "source": "inferred",
+          "type": "state",
+          "domain": "self",
+          "stance": "avoid"
+        }
+      ],
+      "raw_edges": [
+        {
+          "source": "not the man I was",
+          "target": "self-interest above all",
+          "relation": "contradicts",
+          "confidence": 0.85
+        },
+        {
+          "source": "not the man I was",
+          "target": "poor deserve no help",
+          "relation": "contradicts",
+          "confidence": 0.82
+        },
+        {
+          "source": "not the man I was",
+          "target": "self-awareness of moral failure",
+          "relation": "causes",
+          "confidence": 0.75
+        },
+        {
+          "source": "self-awareness of moral failure",
+          "target": "raise clerk salary today",
+          "relation": "motivates",
+          "confidence": 0.78
+        },
+        {
+          "source": "fears Tiny Tim will die",
+          "target": "second father to Tiny Tim",
+          "relation": "motivates",
+          "confidence": 0.65
+        },
+        {
+          "source": "raise clerk salary today",
+          "target": "wealth required for joy",
+          "relation": "contradicts",
+          "confidence": 0.6
+        },
+        {
+          "source": "not the man I was",
+          "target": "refuses moral awakening",
+          "relation": "contradicts",
+          "confidence": 0.85
+        }
+      ],
+      "prov": [
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "not the man I was"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "fears Tiny Tim will die"
+        },
+        {
+          "tag": "SDL_COSINE_MERGE",
+          "kind": "reinforce",
+          "key": "self-awareness of moral failure"
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "not the man I was",
+            "contradicts",
+            "self-interest above all"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "not the man I was",
+            "contradicts",
+            "poor deserve no help"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "not the man I was",
+            "causes",
+            "self-awareness of moral failure"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "self-awareness of moral failure",
+            "motivates",
+            "raise clerk salary today"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "fears Tiny Tim will die",
+            "motivates",
+            "second father to Tiny Tim"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "raise clerk salary today",
+            "contradicts",
+            "wealth required for joy"
+          ]
+        },
+        {
+          "tag": "LLM_EDGE",
+          "kind": "edge",
+          "key": [
+            "not the man I was",
+            "contradicts",
+            "refuses moral awakening"
+          ]
+        }
+      ],
+      "delta": {
+        "contradict": [],
+        "strong": [],
+        "reinforce": [
+          "not the man I was",
+          "fears Tiny Tim will die",
+          "self-awareness of moral failure"
+        ],
+        "edges": [
+          [
+            "not the man I was",
+            "contradicts",
+            "self-interest above all"
+          ],
+          [
+            "not the man I was",
+            "contradicts",
+            "poor deserve no help"
+          ],
+          [
+            "not the man I was",
+            "causes",
+            "self-awareness of moral failure"
+          ],
+          [
+            "self-awareness of moral failure",
+            "motivates",
+            "raise clerk salary today"
+          ],
+          [
+            "fears Tiny Tim will die",
+            "motivates",
+            "second father to Tiny Tim"
+          ],
+          [
+            "raise clerk salary today",
+            "contradicts",
+            "wealth required for joy"
+          ],
+          [
+            "not the man I was",
+            "contradicts",
+            "refuses moral awakening"
+          ]
+        ],
+        "new_nodes": [
+          "raise clerk salary today",
+          "help clerk struggling family",
+          "second father to Tiny Tim"
+        ]
+      },
+      "engine": {
+        "Christmas is a fraud": {
+          "conf": 0.26,
+          "prev": 0.472,
+          "delta": -0.212,
+          "spark": true,
+          "new": false
+        },
+        "poverty prevents merriness": {
+          "conf": 0.652,
+          "prev": 0.674,
+          "delta": -0.023,
+          "spark": false,
+          "new": false
+        },
+        "wealth required for joy": {
+          "conf": 0.365,
+          "prev": 0.83,
+          "delta": -0.465,
+          "spark": true,
+          "new": false
+        },
+        "forced cheer deserves punishment": {
+          "conf": 0.313,
+          "prev": 0.317,
+          "delta": -0.004,
+          "spark": false,
+          "new": false
+        },
+        "social joy norms feel oppressive": {
+          "conf": 0.696,
+          "prev": 0.696,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "poor deserve no help": {
+          "conf": 0.067,
+          "prev": 0.128,
+          "delta": -0.061,
+          "spark": false,
+          "new": false
+        },
+        "self-interest above all": {
+          "conf": 0.005,
+          "prev": 0.011,
+          "delta": -0.006,
+          "spark": false,
+          "new": false
+        },
+        "social institutions solve poverty": {
+          "conf": 0.8,
+          "prev": 0.8,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "supernatural claims are humbug": {
+          "conf": 0.85,
+          "prev": 0.85,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "refuses moral awakening": {
+          "conf": 0.087,
+          "prev": 0.163,
+          "delta": -0.076,
+          "spark": false,
+          "new": false
+        },
+        "Marley valued as friend": {
+          "conf": 0.467,
+          "prev": 0.467,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "seeks emotional comfort": {
+          "conf": 0.211,
+          "prev": 0.211,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "chose gold over love": {
+          "conf": 0.887,
+          "prev": 0.887,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "past self felt joy": {
+          "conf": 0.351,
+          "prev": 0.351,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "regrets lost love": {
+          "conf": 0.372,
+          "prev": 0.372,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "fears Tiny Tim will die": {
+          "conf": 0.454,
+          "prev": 0.262,
+          "delta": 0.192,
+          "spark": false,
+          "new": false
+        },
+        "self-awareness of moral failure": {
+          "conf": 0.74,
+          "prev": 0.593,
+          "delta": 0.147,
+          "spark": false,
+          "new": false
+        },
+        "fears dying unmourned": {
+          "conf": 0.85,
+          "prev": 0.85,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "future is not fixed": {
+          "conf": 0.88,
+          "prev": 0.837,
+          "delta": 0.043,
+          "spark": false,
+          "new": false
+        },
+        "not the man I was": {
+          "conf": 0.578,
+          "prev": 0.369,
+          "delta": 0.209,
+          "spark": true,
+          "new": false
+        },
+        "light as a feather": {
+          "conf": 0.2,
+          "prev": 0.2,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "still here": {
+          "conf": 0.2,
+          "prev": 0.2,
+          "delta": 0.0,
+          "spark": false,
+          "new": false
+        },
+        "raise clerk salary today": {
+          "conf": 0.635,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        },
+        "help clerk struggling family": {
+          "conf": 0.85,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        },
+        "second father to Tiny Tim": {
+          "conf": 0.89,
+          "prev": null,
+          "delta": null,
+          "spark": false,
+          "new": true
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "_comment": "Калибровочный набор для пробы эмбеддера (E3a). Классы размечены ПО СМЫСЛУ, не по выводу какой-либо модели (правило независимости продуктов). same = парафраз/синоним одного концепта -> цель MERGE. related = тот же домен/тема, но различимые концепты -> цель FLAG. different = несвязанные концепты -> цель NONE. Косинусы здесь НЕ хранятся — их считает probe_embedder.py на обеих моделях.",
+  "same": [
+    ["burned out", "burnout"],
+    ["fear of failure", "scared it will fail"],
+    ["values freedom", "wants freedom"],
+    ["procrastinates", "delays tasks"],
+    ["feels exhausted", "exhaustion"],
+    ["wants to quit job", "wants to leave the job"],
+    ["corporate lawyer", "M&A attorney"],
+    ["imposter syndrome", "feels like a fraud"],
+    ["worried about money", "financially insecure"]
+  ],
+  "related": [
+    ["disciplined person", "procrastinates"],
+    ["values stability", "values freedom"],
+    ["financial security", "financial insecurity"],
+    ["proud of career", "job feels meaningless"],
+    ["wants stability", "wants change"],
+    ["seeks autonomy", "values belonging"]
+  ],
+  "different": [
+    ["mortgage payments", "doctor partner"],
+    ["two kids", "MVP in three months"],
+    ["loves hiking", "afraid of public speaking"],
+    ["wants a promotion", "vegetarian"],
+    ["lives in Berlin", "fear of failure"],
+    ["plays guitar", "values honesty"]
+  ]
+}

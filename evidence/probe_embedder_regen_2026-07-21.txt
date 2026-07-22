@@ -1,0 +1,58 @@
+Загружено пар: 21 (same=9, related=6, different=6)
+
+Загрузка модели 1/2: all-MiniLM-L6-v2 ...
+Загрузка модели 2/2: intfloat/multilingual-e5-small (может скачиваться с HF ~120МБ) ...
+
+=== ПОПАРНО (MiniLM | e5) ===
+класс        mini     e5  пара
+----------------------------------------------------------------------
+same        0.782  0.928  'burned out' <-> 'burnout'
+same        0.612  0.904  'fear of failure' <-> 'scared it will fail'
+same        0.653  0.896  'values freedom' <-> 'wants freedom'
+same        0.565  0.862  'procrastinates' <-> 'delays tasks'
+same        0.748  0.934  'feels exhausted' <-> 'exhaustion'
+same        0.847  0.955  'wants to quit job' <-> 'wants to leave the job'
+same        0.697  0.872  'corporate lawyer' <-> 'M&A attorney'
+same        0.253  0.848  'imposter syndrome' <-> 'feels like a fraud'
+same        0.574  0.899  'worried about money' <-> 'financially insecure'
+related     0.268  0.836  'disciplined person' <-> 'procrastinates'
+related     0.477  0.895  'values stability' <-> 'values freedom'
+related     0.794  0.942  'financial security' <-> 'financial insecurity'
+related     0.403  0.804  'proud of career' <-> 'job feels meaningless'
+related     0.432  0.916  'wants stability' <-> 'wants change'
+related     0.230  0.797  'seeks autonomy' <-> 'values belonging'
+different   0.079  0.774  'mortgage payments' <-> 'doctor partner'
+different   0.084  0.799  'two kids' <-> 'MVP in three months'
+different   0.034  0.775  'loves hiking' <-> 'afraid of public speaking'
+different   0.106  0.809  'wants a promotion' <-> 'vegetarian'
+different  -0.028  0.769  'lives in Berlin' <-> 'fear of failure'
+different   0.043  0.759  'plays guitar' <-> 'values honesty'
+
+=== MiniLM (all-MiniLM-L6-v2) ===
+класс        n     min    mean     max
+----------------------------------------
+same         9   0.253   0.637   0.847
+related      6   0.230   0.434   0.794
+different    6  -0.028   0.053   0.106
+
+margin1 (граница MERGE, min(same)-max(related))    = -0.540  ПЕРЕКРЫТИЕ классов
+margin2 (граница FLAG,  min(related)-max(different)) = +0.125  OK разделяет
+
+=== e5-small (intfloat/multilingual-e5-small, prefix='query: ') ===
+класс        n     min    mean     max
+----------------------------------------
+same         9   0.848   0.900   0.955
+related      6   0.797   0.865   0.942
+different    6   0.759   0.781   0.809
+
+margin1 (граница MERGE, min(same)-max(related))    = -0.095  ПЕРЕКРЫТИЕ классов
+margin2 (граница FLAG,  min(related)-max(different)) = -0.012  ПЕРЕКРЫТИЕ классов
+
+=== ПРЕДЛОЖЕННЫЕ ПОРОГИ ДЛЯ e5 ===
+MERGE_e5 = 0.895   (середина между max(related)=0.942 и min(same)=0.848)
+FLAG_e5  = 0.803   (середина между max(different)=0.809 и min(related)=0.797)
+  ВНИМАНИЕ: margin1<=0 — same и related перекрываются, MERGE_e5 не чистый.
+  ВНИМАНИЕ: margin2<=0 — related и different перекрываются, FLAG_e5 не чистый.
+
+(Текущие пороги MiniLM в проде: MERGE=0.82, FLAG=0.72.)
+Прод-код не трогался. Это только оффлайн-замер.
