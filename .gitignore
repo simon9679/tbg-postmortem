@@ -1,0 +1,61 @@
+# ── secrets (NEVER commit) ─────────────────────────────
+.env
+.env.*
+# local Claude Code settings (may contain API keys / local permissions)
+.claude/
+
+# ── python ─────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+build/
+dist/
+*.egg-info/
+
+# ── data stores / vector dbs ───────────────────────────
+qdrant_data/
+postgres_data/
+redis_data/
+*.sqlite
+*.db
+demo_tbg.db
+
+# ── benchmark / experiment caches & outputs (scratch) ──
+drift_cache/
+compare_cache/
+tools/*_cache.json
+tools/frozen_cache.json
+tools/routing_runs*.json
+tools/drift_report_*.json
+tools/*_out.json
+tools/probe_resolver_out.json
+drift_official_report.json
+concept_drift_runs.json
+mem_bench_*.json
+driftbench_v2_submission.json
+multi_run_results.json
+axis_log.jsonl
+
+# ── logs / one-off dumps ───────────────────────────────
+*.log
+output.txt
+pressure_matrix_*.txt
+pressure_matrix_log_*.jsonl
+*_out.txt
+session_summary.md
+
+# ── added for publication hygiene (2026-07-21) ─────────
+# secret env file WITHOUT leading dot (.env pattern above misses it); keep env.example
+env
+/env
+# old full-code backup snapshot
+1.zip
+# heavy benchmark data (keep the scripts, drop the bulk data / PII state)
+tools/locomo*.json
+tools/pcb_*.json
+tools/pcb_*.jsonl
+tools/pcb_*.txt
+tools/pcb_audit.jsonl
+tools/tech_battery_cache.json

@@ -1,0 +1,7 @@
+{
+ "gate_graphs_collision_pct": 0.0,
+ "demo_base_edges": 12,
+ "demo_fixed_edges": 12,
+ "edge_set_identical_by_label": true,
+ "conflicts_identical_by_label": true
+}
