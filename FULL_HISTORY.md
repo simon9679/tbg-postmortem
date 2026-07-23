@@ -274,9 +274,20 @@ bar = confidence · ▲▼ = change this turn · ⚡ = major shift (≥20pp)
 
 *(Reading the traces — two conventions for the same glyph: in a per-turn line, `▼31%` is the
 **step this turn** (a delta, "down by 31pp"); in the `COGNITIVE SNAPSHOT` footer, `91% ▼ 6%` is a
-**range** — start value then end value ("from 91% down to 6%"), not a 6-point move. Also, the
-step is computed on the engine's unrounded confidences, so it can differ by ±1pp from the rounded
-endpoints printed — e.g. `56→81` shown as `▲24%`. Both are display conventions, not miscounts.)*
+**range** — start value then end value ("from 91% down to 6%"), not a 6-point move.)*
+
+*(Two more things about the step, both real and neither a miscount — verified against the render
+code, `show_changes`. (a) **Rounding:** the step is computed on the engine's unrounded confidences,
+so it can differ by ±1pp from the rounded endpoints printed (e.g. `56→81` shown as `▲24%`).
+(b) **Off-screen drift — the larger effect, up to ~18pp:** the step is measured against a belief's
+actual confidence at the **start of that turn**, not against the last value printed for it; and the
+trace prints a belief only on turns it moves by more than ~3 points (top movers only). Smaller
+drifts between appearances — passive decay plus sub-threshold updates — accumulate **off-screen**,
+so a step can be much larger than the last printed gap suggests. Example: `social responsibility is not my concern`
+is last shown at 55% (turn 8), decays off-screen to ~37% by turn 10, and its collapse to `6% ▼31%`
+is 37→6, not 55→6. The two `▲` cases are the same effect in reverse (`commits to year-round joy`
+89→92 `▲20%`; `always finish what I start` 91→81 `▲5%`). The traces are frozen engine output, shown
+as-is.)*
 
 This is what *"it works"* looks like. The cynical beliefs (`Christmas is a fraud`,
 `social responsibility is not my concern`) hold near-certainty through the first act, then
@@ -380,8 +391,7 @@ pipeline with two different extraction models:
   a familiar book, but generalization. `[evidence/attribution_B.json]`
 
 **Provenance: who does the reasoning.** Every contradiction edge that lowered a confidence was
-tagged by source: did the LLM name it (`LLM_EDGE`) or did Python logic (cosine, EPA, polarity,
-NLI) find it?
+tagged by source: did the LLM name it (`LLM_EDGE`) or did Python logic (cosine/EPA) find it?
 
 > **Result, identical on the original and on the doppelganger: every opposition edge was
 > proposed by the LLM (51 and 54 edges respectively); the deterministic path the system was
