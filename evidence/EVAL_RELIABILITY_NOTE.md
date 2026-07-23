@@ -68,9 +68,11 @@ and re-answers — isolating render format as a variable. Dumps: `_rankoff/`, `g
 **Consequence — the decisive result:**
 - A single re-ingest swung capability subsets by **−0.40 (conflict) and +0.15 (user_model)**
   — **in both directions**, far beyond judge (0.10) or answerer (0.05) noise.
-- **Format contribution = 0.00:** toggling the render format on the *same* re-ingested graph
-  left conflict at 0.45 → 0.45. The swing is the **graph produced by re-extraction**, not the
-  answerer, not the judge, not the presentation. (This also exonerates rank-based rendering.)
+- **Format contribution to the conflict collapse = 0.00:** toggling the render format on the
+  *same* re-ingested graph left conflict at 0.45 → 0.45. (Format is not globally inert — on the
+  same graph it moved *temporal* 0.35 → 0.20; the claim is specifically about the conflict swing.)
+  The conflict swing is the **graph produced by re-extraction**, not the answerer, not the judge,
+  not the presentation. (This also exonerates rank-based rendering for conflict.)
 - **4 of the 5** collapsed conflict items recover on the v1.0 graph (Layer 2); the fifth flips
   under answerer noise on identical input. All 5 stay collapsed under a format change on the
   v1.1 graph (Layer 3) — a clean triangulation.

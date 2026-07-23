@@ -360,7 +360,7 @@ pipeline with two different extraction models:
 - On the strong **claude-sonnet-4-6** (frozen provenance run) the engine caught the arc
   cleanly: `poor deserve no help` **92% → 7%**, `self-interest above all` **85% → 0%**,
   `Christmas is a fraud` **90% → 26%**, `refuses moral awakening` **76% → 9%**; at the reversal
-  (turn 10) the LLM emits five `contradicts` edges in a single turn, and `Christmas is a
+  (turn 10) the LLM emits five edges in a single turn (four `contradicts`, one `motivates`), and `Christmas is a
   fraud` drops 44 points. `[on-disk: attribution_A.json; regenerated 0-LLM:
   attribution_analysis_regen_2026-07-21.txt]` (**A note for the careful reader:** this frozen run
   and the pretty demo trace shown at the top of this section are *different ingests of the same
@@ -384,7 +384,9 @@ NLI) find it?
 
 > **Result, identical on the original and on the doppelganger: every opposition edge was
 > proposed by the LLM (51 and 54 edges respectively); the Python opposition machinery — the
-> exact "three-layer detection" the system was built around — produced 0 edges in both runs.
+> exact "three-layer detection" the system was built around — was **live**, and produced 0
+> *opposition* edges in both runs. (It was not switched off: on the reversal turn it fired five
+> times, every time as a merge tagged `SDL_COSINE_MERGE`, never once as an opposition edge.)
 > And ~85% of the belief-confidence drops trace to those LLM edges, the remaining ~15% to
 > passive decay (not reasoning); the Python machinery's share of the drops is 0%.**
 > `[evidence/attribution_A.json + evidence/attribution_B.json (frozen runs);
@@ -538,7 +540,7 @@ uncertainty was not the evaluator, it was rebuilding the graph from the same dia
 `[evidence/EVAL_RELIABILITY_NOTE.md]`
 
 **This directly explains the fate of the §9 pockets.** A full re-ingest of the same 16
-conversations (bundled with three unrelated engineering fixes: decay-turning-point, prune
+conversations (bundled with three concurrent engineering fixes: decay-turning-point, prune
 tie-break, rank-based conflict rendering) produced:
 
 | capability | v1.0 (original ingest) | re-ingest (v1.1) | Δ |
@@ -553,7 +555,17 @@ long-conversation +0.60 → +0.10. On a 33-session conversation, two independent
 *same dialogue* produced graphs agreeing on only **5.3%** of labels (**94.7%** symmetric
 difference — the share of labels present in only one of the two graphs). The aggregate verdict
 (NO-EDGE) did not move — but every single-ingest subset claim, including both pockets, now reads
-as one draw from a wide distribution. `[evidence/EVAL_RELIABILITY_NOTE.md, evidence/_v12/RESULTS_phase2.md]`
+as one draw from a wide distribution.
+
+**An honest confound (flagged, not buried).** One of those three fixes — prune tie-break — changes
+*which* nodes survive the cap, i.e. graph composition. So this single re-ingest does **not** cleanly
+separate "pure extraction lottery" from the effect of the fixes; a separation experiment (one more
+controlled ingest) was pre-registered but never run, for lack of budget. The −0.40 conflict number
+therefore carries that caveat. The one line of evidence that does *not* depend on scores or on those
+fixes is the **94.7% label symmetric difference** between two ingests of the same dialogue — a
+direct measure of extraction divergence, and the reason the "ingest dominates" conclusion still
+stands even though the exact −0.40 does not stand alone.
+`[evidence/EVAL_RELIABILITY_NOTE.md, evidence/_v12/RESULTS_phase2.md]`
 
 ### 10.1 Re-answer ablation — isolating the answerer
 **Question:** was the −0.40 collapse caused by re-generated answers or by the rebuilt graph?
@@ -568,8 +580,10 @@ the data**. The problem lived upstream, in the graph. `[evidence/REPORT_esmemeva
 **Design:** take the same re-ingested v1.1 graphs and render them with the *old* threshold
 format — one variable changed, zero new extraction. **Predictions:** the Architect ~65% on "the
 graph is at fault"; a co-reviewer leaned toward "the format". **Result:** conflict under the old
-format = **0.45, bit-identical** to v1.1. Changing the format changed nothing; reverting the
-*graph* to v1.0 (§10.1) recovered the score. **Conclusion: the −0.40 collapse is extraction
+format = **0.45, bit-identical** to v1.1. Changing the format left the *conflict* score untouched;
+reverting the *graph* to v1.0 (§10.1) recovered it. (Format is not inert everywhere — on the same
+graph it moved *temporal* 0.35 → 0.20; the "no effect" claim is specifically about the conflict
+collapse we are explaining here.) **Conclusion: the −0.40 conflict collapse is extraction
 stochasticity in the re-ingested graph, not rendering.** (This also cleared the rank renderer.)
 `[evidence/REPORT_esmemeval.md]`
 

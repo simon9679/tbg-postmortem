@@ -73,6 +73,6 @@ VERDICT (pre-registered)
   [A] drop-weight: LLM=85%  SDL=0%  decay/other=15%; decaying beliefs=8
   [B] drop-weight: LLM=85%  SDL=0%  decay/other=15%; decaying beliefs=10
 
-  Узнаваемость: см. recognition probe выше.
-  A даёт арк + B рассыпается -> результат = узнавание.
-  B тоже даёт арк -> способность реальна, генерализует.
+  Recognition: see the recognition probe above.
+  A yields the arc + B falls apart -> result = recognition.
+  B also yields the arc -> the ability is real, it generalizes.

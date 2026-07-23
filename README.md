@@ -65,6 +65,11 @@ were proposed by the model and 0% by my deterministic graph — and those edges 
 of every confidence drop** (the rest is passive decay). That gap — a convincing demo vs what
 measurement actually showed — is the whole story.
 
+Important nuance (it rebuts the obvious objection): the deterministic layer wasn't switched off. It
+was **live** — on the reversal turn its cosine layer fired five times, every time as a harmless
+merge (`SDL_COSINE_MERGE` in the provenance trace), never once as an opposition edge. It ran, and
+its contribution to opposition was zero. Reproduces offline: `python tools/attribution_run.py --analyze`.
+
 *(The trace above and the provenance numbers are two separate ingests of the same dialogue, so
 their exact figures and even the belief labels differ — see [FULL_HISTORY.md](FULL_HISTORY.md)
 §5. That they differ is itself the finding: with no canonical concept identity, every ingest
