@@ -934,7 +934,7 @@ config / orphan); reproducible, LLM-free re-aggregation of every headline number
 artifacts. These transfer to any future memory-benchmark work.
 
 **Technical.** Mathematically consistent, sign-verified confidence dynamics (253/0);
-constant-cost memory at oracle-level quality (§15); a semantically clean extraction contract
+constant-cost memory at oracle-level quality (§15, n=1); a semantically clean extraction contract
 (0/191, narrow).
 
 **Artifacts.** Nearly every number is reproducible from frozen on-disk artifacts (QA dumps,
@@ -957,16 +957,24 @@ source; the conflict and long-conversation edges were single draws, not stable e
 semantics are done by the LLM, not the deterministic graph; and several plausible refinements
 (AMF, history-cap, clocks) are mechanically inert rather than under-tuned.
 
-**A closing reframe (with hindsight from the concurrent work above).** The concurrent Nous architecture (Singh 2026)
-sidesteps the §4 wall entirely by changing the *unit of storage*: from free-text propositions to
-categorical entity–attribute distributions, where opposition is **structural** — competing values
-share one normalized distribution, which *is* the Bayesian denominator — rather than something to
-detect with cosine/EPA/NLI. Seen that way, §4's wall was never in the math or the model; it was in
-the choice of storage unit. A workaround exists — but it makes the system a *different* one (you no
-longer store `Christmas is a fraud`, you store `(user, attitude_toward_christmas) → {fraud: 0.9,
-joy: 0.1}`), not a better TBG. And it most likely *relocates* the identity problem rather than
-removing it: from proposition text to attribute *names*, whose stability under re-ingest is, as far
-as I can tell, not yet measured anywhere.
+**A closing reframe (with hindsight from the concurrent work above).** The Nous architecture
+(Singh 2026) does not hit the §4 wall at all, because it changes the *unit of storage*: from
+free-text propositions to categorical entity–attribute distributions, where opposition is
+**structural** — competing values share one normalized distribution, which *is* the Bayesian
+denominator — rather than something to detect with cosine/EPA/NLI. Seen that way, §4's wall was not
+in the math or the model; it was in the choice of storage unit. But this is an inference about
+representations, not a demonstrated result: that system was evaluated on factual QA, where an
+attribute has one true value at a time, and was never run on the opinion and value material where
+this project failed — its author names exactly that as future work. And the change is not free in
+the direction that mattered here. A categorical posterior is **unimodal**: mass concentrates on one
+value, which suits `employer` and suits **ambivalence** poorly, where "for" and "against" are held
+at once — a first-class object in this project (separate pos/neg evidence streams, Priester–Petty)
+and an acknowledged limitation in that one, whose planned fix is a set-valued dimension. So a
+workaround to §4 exists, but it yields a *different* system rather than a better TBG (you no longer
+store `Christmas is a fraud`, you store `(user, attitude_toward_christmas) → {fraud: 0.9,
+joy: 0.1}`), and it most likely *relocates* the identity problem rather than removing it: from
+proposition text to attribute *names*, whose stability under re-ingest I did not find measured in
+that paper.
 
 ---
 
@@ -982,7 +990,8 @@ guessing from a pretty demo:
   off-the-shelf embedder cannot resolve it, but a small model fine-tuned on a large in-domain
   dialogue corpus might — giving the deterministic core a *canonical* notion of concept identity,
   and turning "rented intelligence" into an owned, cheap extractor. This needs a labeled corpus
-  and compute I did not have.
+  and compute I did not have. (See the closing reframe in §20 for a *different* answer to the same
+  problem — changing the storage unit rather than the extractor, at a cost to ambivalence.)
 - **Run the one regime that should favour it (§15).** The place a constant-cost belief memory
   should beat retrieval — very long, multi-session dialogues that overflow the context window —
   was never run (thousands of calls, out of budget). On the short material tested, the belief
