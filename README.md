@@ -77,8 +77,8 @@ invents its own vocabulary.)*
 
 ## Key findings
 
-- **ES-MemEval (primary benchmark):** TBG was statistically indistinguishable from a plain
-  prompt state-tracker and *behind* lexical BM25 retrieval in aggregate — **NO-EDGE**.
+- **ES-MemEval (primary benchmark):** TBG was effectively tied with a plain prompt state-tracker
+  (within measurement noise) and *behind* lexical BM25 retrieval in aggregate — **NO-EDGE**.
 - **Both headline wins evaporated on re-extraction.** A conflict-detection edge (+0.40) and a
   long-conversation edge (+0.60) collapsed to ~0 when the belief graph was rebuilt from the
   *same* dialogue — they were single draws from a noisy process, not stable effects.

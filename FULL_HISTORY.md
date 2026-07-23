@@ -43,8 +43,8 @@ about a changing user better than conventional retrieval.*
 **The hypothesis did not hold.** Four independent, pre-registered product evaluations against
 strong baselines produced no reproducible win:
 
-1. **ES-MemEval** (the primary benchmark) — TBG was statistically indistinguishable from a
-   plain prompt state-tracker, and significantly *behind* lexical BM25 retrieval in aggregate.
+1. **ES-MemEval** (the primary benchmark) — TBG was effectively tied with a plain prompt
+   state-tracker (within measurement noise), and clearly *behind* lexical BM25 retrieval in aggregate.
 2. **Gate E2** (a belief-state block appended to retrieval) — parity; the answering model
    almost never relied on the block on its own.
 3. **Blind human ranking** of belief dynamics — a domain-naive reviewer matched the system's
@@ -507,9 +507,14 @@ would not be citable otherwise. `[evidence/BENCH_RESULTS.md]`
 product**: TBG ties the cheapest useful baseline and loses to retrieval.
 `[evidence/REPORT_esmemeval.md, evidence/BENCH_RESULTS.md]`
 
-**On RAG.** The ES-MemEval paper claims retrieval underperforms on evolving state. **It did not
-replicate**: lexical BM25 with a strong answerer dominated the aggregate. Caveat: this is
-*lexical* BM25, not embedding retrieval — "beats BM25-RAG" ≠ "beats RAG in general".
+**On RAG — scoping, not a non-replication.** The ES-MemEval paper's claim is narrower than
+"retrieval loses": they report that *dense* retrieval (bge-m3, top-4 from a FAISS index) trails
+*full-history* access on temporal / evolving-state tracking. **My setup does not test that
+claim.** I compared *lexical* BM25 against a prompt state-tracker and the belief graph, and BM25
+led the aggregate with a strong answerer. That is a different experiment — different retriever
+(lexical vs dense), different comparison (vs a tracker/graph, not vs full-history). "Beats lexical
+BM25 here" says nothing about their dense-retrieval-vs-full-history finding; I am not contradicting
+their result, only reporting a different configuration.
 
 **Single-ingest pockets (important — and important to caveat correctly, see §10).** On the
 first ingest TBG showed two bright, individually significant wins over the tracker:
@@ -913,12 +918,34 @@ pipeline.
 
 ---
 
+## 19.1 Concurrent and related work
+
+Two independent 2026 preprints sit closest to this project, and I found them after the fact:
+
+- **Singh, *When Does Belief-Based Agent Memory Help?*** (arXiv:2606.22030) **independently reached
+  a similar conclusion by a different route** — not a replication of this work. On LoCoMo, Bayesian
+  belief updating gives little over naive last-write-wins, because standard conversational
+  benchmarks rarely present contradictory or differently-reliable evidence; Singh also reports a
+  ~27.5-point gap between strict token-F1 and an LLM-judge on identical outputs, echoing the
+  judge-leniency measured here (§10.3). Different architecture (categorical entity–attribute
+  distributions), different benchmark, convergent shape of answer.
+- **BeliefShift** (Myakala et al., arXiv:2603.23848) is the nearest-neighbour benchmark — temporal
+  belief consistency and opinion drift across sessions. It reports the same shape from the
+  *benchmark* side: retrieval improves revision-tracking but barely moves drift-resistance, i.e.
+  the drift failure is not a retrieval problem.
+
+That two solo/independent efforts and a benchmark land on convergent conclusions by different
+routes is itself a small data point: the belief-specific *mechanism* is being reinvented in
+several places, while the *measurement* of whether it helps is the scarce part.
+
+---
+
 ## 20. Final assessment
 
 The project set out to build a cognitive engine that models a person's evolving beliefs better
 than conventional memory. That was not achieved. Four independent, pre-registered evaluations
-produced, respectively: a statistical tie with the cheapest useful baseline and a significant
-loss to retrieval; parity; a below-chance blind match; and an invalidated dataset. None was
+produced, respectively: a tie (within measurement noise) with the cheapest useful baseline and a
+clear loss to lexical retrieval; parity; a below-chance blind match; and an invalidated dataset. None was
 reversed by ablation; several were actively investigated and confirmed mechanically.
 
 What the project produced instead is a concrete, evidenced answer to *why* a belief graph of
@@ -926,6 +953,17 @@ this construction does not beat retrieval: extraction variance dominates every o
 source; the conflict and long-conversation edges were single draws, not stable effects; the
 semantics are done by the LLM, not the deterministic graph; and several plausible refinements
 (AMF, history-cap, clocks) are mechanically inert rather than under-tuned.
+
+**A closing reframe (with hindsight from §19.1).** The concurrent Nous architecture (Singh 2026)
+sidesteps the §4 wall entirely by changing the *unit of storage*: from free-text propositions to
+categorical entity–attribute distributions, where opposition is **structural** — competing values
+share one normalized distribution, which *is* the Bayesian denominator — rather than something to
+detect with cosine/EPA/NLI. Seen that way, §4's wall was never in the math or the model; it was in
+the choice of storage unit. A workaround exists — but it makes the system a *different* one (you no
+longer store `Christmas is a fraud`, you store `(user, attitude_toward_christmas) → {fraud: 0.9,
+joy: 0.1}`), not a better TBG. And it most likely *relocates* the identity problem rather than
+removing it: from proposition text to attribute *names*, whose stability under re-ingest is, as far
+as I can tell, not yet measured anywhere.
 
 ---
 
