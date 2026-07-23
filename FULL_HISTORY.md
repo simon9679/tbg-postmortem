@@ -63,7 +63,7 @@ a different, and more useful, result:
   re-extraction** — they were single draws from a noisy process, not stable effects.
 - **Most of the "intelligence" was performed by the LLM, not the deterministic Python:**
   provenance tracing showed **85%** of confidence drops came from contradiction edges the LLM
-  itself proposed; the local Python opposition machinery (cosine, EPA, NLI) produced **0**.
+  itself proposed; the local Python opposition machinery (cosine, EPA, NLI) was live and produced **0**.
 - Several "sophisticated" mechanisms (AMF, history-cap, logical clocks) contributed nothing —
   for **mechanical** reasons, not bad luck.
 - What **held up** under repeated attack: deterministic replay, sign-consistent confidence
@@ -934,7 +934,7 @@ config / orphan); reproducible, LLM-free re-aggregation of every headline number
 artifacts. These transfer to any future memory-benchmark work.
 
 **Technical.** Mathematically consistent, sign-verified confidence dynamics (253/0);
-constant-cost memory at oracle-level quality (§15, n=1); a semantically clean extraction contract
+constant-cost memory at oracle-level quality (§15, n=1 dialogue); a semantically clean extraction contract
 (0/191, narrow).
 
 **Artifacts.** Nearly every number is reproducible from frozen on-disk artifacts (QA dumps,
@@ -1086,7 +1086,7 @@ If the architecture claims new reasoning abilities, determine where the new info
 originates: in the base LLM, in the architecture, or in deterministic processing of the LLM's
 finished conclusions. Without this it is easy to mistake the model's abilities for the system's.
 *(Here: the provenance trace — 85% of confidence drops from edges named by the LLM; the system's
-own Python opposition detection produced 0 edges; a doppelganger control ruled out "the model
+own Python opposition detection was live and produced 0 edges; a doppelganger control ruled out "the model
 just remembers the book".)*
 
 **7. Test the product, not the mechanism.**
