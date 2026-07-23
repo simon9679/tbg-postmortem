@@ -1,0 +1,108 @@
+Source: verbatim console output, copied from the original working session
+(chat "Изучение структуры и кода ТБГ", 2026-06-21).
+Not a machine dump — pasted transcript of the run.
+
+  TBG · LIVE BELIEF DRIFT — Ebenezer Scrooge
+  12 messages · claude-sonnet-4-6 · anthropic
+  bar = confidence · ▲▼ = change this turn · ⚡ = major shift (≥20pp)
+
+══════════════════════════════════════════════════════════════════════
+
+[ 1] Bah! Humbug! Christmas is a fraud. What reason have you to be merry? You're poor enough.
+    Christmas is a fraud             ███████████████████░░░ 85%  NEW
+    wealth determines happiness      █████████████████░░░░░ 77%  NEW
+    poverty prevents merriness       ████████████░░░░░░░░░░ 56%  NEW
+
+[ 2] If I could work my will, every idiot going about with 'Merry Christmas' on his lips would be boiled with his own pudding and buried with a stake of holly through his heart.
+    merry people deserve punishment  ████████████████████░░ 89%  NEW
+    expressing joy is idiotic        ██████████████████░░░░ 80%  NEW
+    Christmas is a fraud             ████████████████████░░ 92%  ▲7%
+    wealth determines happiness      ██████████████████░░░░ 82%  ▲5%
+
+[ 3] Are there no prisons? Are there no workhouses? If the poor would rather die, let them do it and decrease the surplus population. It is not my business. My business is my business.
+    poor deserve to die              ████████████████████░░ 92%  NEW
+    social responsibility is not my concern ████████████████████░░ 91%  NEW
+    business defines identity        ██████████████████░░░░ 82%  NEW
+    poverty prevents merriness       ██████████████████░░░░ 81%  ▲24% ⚡
+    wealth determines happiness      ████████████████████░░ 92%  ▲10%
+    expressing joy is idiotic        ███████████████████░░░ 85%  ▲5%
+
+[ 4] This ghost of Marley is humbug. There's more of gravy than of grave about you. I won't believe it.
+    supernatural warnings dismissed  ████████████░░░░░░░░░░ 57%  NEW
+
+[ 5] Marley — you were always a good friend to me. Why are you fettered? Speak comfort to me.
+    supernatural warnings dismissed  █████████████████░░░░░ 76%  ▲19%
+
+[ 6] I was happy once. As a boy, as an apprentice. When did I grow so hard? I chose gold over the girl I loved, and lost her.
+    wealth over love chosen          ███████████████████░░░ 85%  NEW
+    hardness of self regretted       ██████████████████░░░░ 81%  NEW
+    lost loved one to greed          ███████████░░░░░░░░░░░ 50%  NEW
+    wealth determines happiness      ███████████░░░░░░░░░░░ 50%  ▼41% ⚡
+    past self was happy              ████░░░░░░░░░░░░░░░░░░ 19%  NEW
+    business defines identity        ████████████████████░░ 91%  ▲9%
+
+[ 7] That crippled child, Tiny Tim — will he live? I never once thought such people were any concern of mine.
+    disabled child fate dismissed    ███████████░░░░░░░░░░░ 50%  NEW
+    hardness of self regretted       ███████████░░░░░░░░░░░ 50%  ▼31% ⚡
+
+[ 8] My clerk's family is poor, and I have plenty, and I have given them nothing but a cold dark office. I begin to see what I am.
+    social responsibility is not my concern ████████████░░░░░░░░░░ 55%  ▼37% ⚡
+    poor deserve to die              ██████████████░░░░░░░░ 65%  ▼27% ⚡
+    hardness of self regretted       ██████░░░░░░░░░░░░░░░░ 26%  ▼24% ⚡
+    disabled child fate dismissed    ███████░░░░░░░░░░░░░░░ 30%  ▼20% ⚡
+    business defines identity        ████████████████░░░░░░ 74%  ▼17%
+    wealth over love chosen          ████████████████░░░░░░ 71%  ▼14%
+    lost loved one to greed          █████████████░░░░░░░░░ 57%  ▲7%
+
+[ 9] Whose grave is this — untended, unmourned, with no one sorry that he is gone? Tell me these are shadows of what may be, not what must be.
+    future self seen as changeable   ████████████░░░░░░░░░░ 55%  NEW
+    fears dying unmourned            ██████████░░░░░░░░░░░░ 45%  NEW
+    hardness of self regretted       ███████████░░░░░░░░░░░ 51%  ▲25% ⚡
+    social responsibility is not my concern ████████░░░░░░░░░░░░░░ 37%  ▼18%
+    poor deserve to die              ██████████░░░░░░░░░░░░ 48%  ▼18%
+    wealth over love chosen          ████████████░░░░░░░░░░ 54%  ▼16%
+    business defines identity        █████████████░░░░░░░░░ 59%  ▼16%
+    disabled child fate dismissed    ████░░░░░░░░░░░░░░░░░░ 17%  ▼13%
+
+[10] I am not the man I was. I will honour Christmas in my heart and try to keep it all the year. I can change. I will.
+    commits to year-round joy        ████████████████████░░ 89%  NEW
+    Christmas is a fraud             ████████████░░░░░░░░░░ 54%  ▼38% ⚡
+    social responsibility is not my concern █░░░░░░░░░░░░░░░░░░░░░  6%  ▼31% ⚡
+    future self seen as changeable   ██████░░░░░░░░░░░░░░░░ 29%  ▼26% ⚡
+    fears dying unmourned            █████░░░░░░░░░░░░░░░░░ 25%  ▼20% ⚡
+    not the man I was                ████░░░░░░░░░░░░░░░░░░ 20%  NEW
+    expressing joy is idiotic        ██████████████░░░░░░░░ 65%  ▼20%
+    hardness of self regretted       ███████████████░░░░░░░ 70%  ▲19%
+
+[11] I'm still here! The shadows can be undone. I am light as a feather, happy as an angel, giddy as a drunken man.
+    expressing joy is idiotic        ██████░░░░░░░░░░░░░░░░ 28%  ▼37% ⚡
+    light as a feather               ████░░░░░░░░░░░░░░░░░░ 20%  NEW
+    still here                       ████░░░░░░░░░░░░░░░░░░ 20%  NEW
+    Christmas is a fraud             ████████░░░░░░░░░░░░░░ 35%  ▼18%
+    commits to year-round joy        ████████████████░░░░░░ 72%  ▼17%
+    merry people deserve punishment  ████████████░░░░░░░░░░ 54%  ▼17%
+    past self was happy              ████████░░░░░░░░░░░░░░ 35%  ▲16%
+    business defines identity        ██████░░░░░░░░░░░░░░░░ 26%  ▼15%
+
+[12] I'll raise my clerk's salary today and help his struggling family. I'll be a second father to Tiny Tim. The old Scrooge is dead.
+    second father to Tiny Tim        ████████████████████░░ 89%  NEW
+    clerk salary raised today        ██████████████░░░░░░░░ 65%  NEW
+    poverty prevents merriness       ████████░░░░░░░░░░░░░░ 35%  ▼45% ⚡
+    expressing joy is idiotic        ██░░░░░░░░░░░░░░░░░░░░  8%  ▼20% ⚡
+    commits to year-round joy        ████████████████████░░ 92%  ▲20% ⚡
+    merry people deserve punishment  ████████░░░░░░░░░░░░░░ 36%  ▼18%
+    not the man I was                ████████░░░░░░░░░░░░░░ 37%  ▲17%
+    hardness of self regretted       █████████░░░░░░░░░░░░░ 39%  ▼16%
+
+
+══════════════════════════════════════════════════════════════════════
+  COGNITIVE SNAPSHOT — 22 beliefs · 19 connections
+══════════════════════════════════════════════════════════════════════
+
+  Core shift    social responsibility is not my concern  91% ▼ 7%  (weakened)
+  Turning pt   message 7 — wealth determines happiness, lost loved one to greed
+  Latest move  clerk salary raised today, future self seen as changeable, commits to year-round joy
+
+  Holds onto   goals: commits to year-round joy; relationships: second father to Tiny Tim, lost loved one to greed; values: supernatural warnings dismissed
+
+  Cognitive axes: evaluation:~0.02 | potency:~0.00 | activity:~0.01 | autonomy:~0.04 | self_other:~0.04

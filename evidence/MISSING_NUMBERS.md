@@ -44,7 +44,7 @@
 - claim: на claude-sonnet-4-6 движок поймал всю дугу Скруджа
 - number: `Christmas is a fraud` **92%→54%→35%**; `social responsibility is not my concern` **91%→6%**; `commits to year-round joy` **→92%**; turning point на ходе 7; **19 связей** (vs 5 на gpt-oss)
 - source: чат «Изучение структуры и кода ТБГ» (2026-06-21)
-- on-disk artifact: none (на диске только headline «85% edges from LLM, 0 from Python»)
+- on-disk artifact: `evidence/scrooge_sonnet_trace_2026-06-21.txt` — verbatim console output; this is the run these six numbers are from
 - how measured: прогон test_scrooge_drift.py на sonnet-4-6; confidence по ходам из вывода движка
 
 **2.2 gpt-oss: два противоречивых прогона (живой анекдот про n=1)**
