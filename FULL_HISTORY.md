@@ -193,10 +193,11 @@ extraction pipeline** (see §17 for each one's status). The wall is about *our u
 not about the tools themselves — a different architecture, or a purpose-trained model (below),
 could well succeed where an off-the-shelf component did not.
 
-**Consequence.** Opposition detection was delegated entirely to LLM extraction; Python kept
-only graph structure and update mechanics. This decision explains most of what follows,
-including the final finding that 100% of contradiction edges (and ~85% of belief-confidence
-drops) come from the LLM (§5).
+**Consequence.** Opposition detection was delegated to LLM extraction. The deterministic
+cosine/EPA layer stayed in the pipeline and kept running — but nothing downstream depended on it
+finding an opposition, and in the frozen provenance runs it found none (§5). This decision explains
+most of what follows, including the final finding that 100% of contradiction edges (and ~85% of
+belief-confidence drops) come from the LLM (§5).
 
 A way around the wall exists, but it is not a better off-the-shelf embedder — it is training
 your own. The conclusion we reached: a **small model (a mini-LLM) fine-tuned on a large corpus
@@ -503,7 +504,7 @@ would not be citable otherwise. `[evidence/BENCH_RESULTS.md]`
 | **E TBG** | 0.35 | 0.85 | 0.85 | **0.68** |
 
 **E − D = +0.13** (within judge_noise → indistinguishable from the prompt-tracker). **E − C =
-−0.35** (significant → TBG is behind BM25-RAG in aggregate). By G4 this is **NO-EDGE, not a
+−0.35** (well beyond judge_noise → TBG is clearly behind BM25-RAG in aggregate). By G4 this is **NO-EDGE, not a
 product**: TBG ties the cheapest useful baseline and loses to retrieval.
 `[evidence/REPORT_esmemeval.md, evidence/BENCH_RESULTS.md]`
 
@@ -517,7 +518,7 @@ BM25 here" says nothing about their dense-retrieval-vs-full-history finding; I a
 their result, only reporting a different configuration.
 
 **Single-ingest pockets (important — and important to caveat correctly, see §10).** On the
-first ingest TBG showed two bright, individually significant wins over the tracker:
+first ingest TBG showed two bright, individually large wins over the tracker:
 **conflict E−D = +0.40** (item-level 5 wins / 0 losses / 15 ties — never lost a conflict item)
 and **long conversations E−D = +0.60** (the gap grows with length: short +0.23 → mid −0.03 →
 long +0.60). Qualitatively TBG won on "does the user feel / how has X evolved" and lost on
@@ -1060,7 +1061,9 @@ the compared architectures, no superiority claim can be made. *(Here: re-ingest 
 A memory pipeline has at least three independent sources of variation: extraction (ingest),
 answerer, judge. *(Here: ≈0.40 / ≈0.05 / ≈0.10 — ingest dominated by 4–8×.)* **Honest limit:** the
 0.40 figure is a single measured swing across n = 2 controlled re-ingests, not a distribution — it
-should be read as "large," not as a precise σ. It does not stand alone, though: an independent
+should be read as "large," not as a precise σ. It is also confounded: that re-ingest was bundled
+with three engineering fixes, one of which changed graph composition, so the 0.40 does not cleanly
+separate extraction lottery from the fixes. It does not stand alone, though: an independent
 second line of evidence — **94.7% symmetric label difference** between two ingests of the same
 33-session dialogue, a different metric entirely from score spread — points to the same conclusion
 that extraction is the dominant instability. Report the caveat; do not let it retire the finding.

@@ -61,7 +61,9 @@ the compared architectures, no superiority claim can be made. *(There: re-ingest
 A memory pipeline has at least three independent sources of variation: extraction (ingest),
 answerer, judge. *(There: ≈0.40 / ≈0.05 / ≈0.10 — ingest dominated by 4–8×.)* **Honest limit:**
 the 0.40 figure is a single measured swing across n = 2 controlled re-ingests, not a distribution
-— read it as "large," not as a precise σ. It does not stand alone: an independent second line of
+— read it as "large," not as a precise σ. It is also confounded: that re-ingest was bundled with
+three engineering fixes, one of which changed graph composition, so the 0.40 does not cleanly
+separate extraction lottery from the fixes. It does not stand alone: an independent second line of
 evidence — **94.7% symmetric label difference** between two ingests of the same 33-session
 dialogue, a different metric entirely from score spread — points to the same conclusion. Report
 the caveat; do not let it retire the finding.
