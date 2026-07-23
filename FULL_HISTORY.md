@@ -63,7 +63,7 @@ a different, and more useful, result:
   re-extraction** — they were single draws from a noisy process, not stable effects.
 - **Most of the "intelligence" was performed by the LLM, not the deterministic Python:**
   provenance tracing showed **85%** of confidence drops came from contradiction edges the LLM
-  itself proposed; the local Python opposition machinery (cosine, EPA, NLI) was live and produced **0**.
+  itself proposed; the deterministic opposition path (cosine/EPA) was live and produced **0** — the NLI component had already been removed (§4).
 - Several "sophisticated" mechanisms (AMF, history-cap, logical clocks) contributed nothing —
   for **mechanical** reasons, not bad luck.
 - What **held up** under repeated attack: deterministic replay, sign-consistent confidence
@@ -384,8 +384,8 @@ tagged by source: did the LLM name it (`LLM_EDGE`) or did Python logic (cosine, 
 NLI) find it?
 
 > **Result, identical on the original and on the doppelganger: every opposition edge was
-> proposed by the LLM (51 and 54 edges respectively); the Python opposition machinery — the
-> exact "three-layer detection" the system was built around — was **live**, and produced 0
+> proposed by the LLM (51 and 54 edges respectively); the deterministic path the system was
+> built around (cosine/EPA; NLI already removed, §4) — was **live**, and produced 0
 > *opposition* edges in both runs. (It was not switched off: on the reversal turn it fired five
 > times, every time as a merge tagged `SDL_COSINE_MERGE`, never once as an opposition edge.)
 > And ~85% of the belief-confidence drops trace to those LLM edges, the remaining ~15% to
@@ -1089,7 +1089,7 @@ If the architecture claims new reasoning abilities, determine where the new info
 originates: in the base LLM, in the architecture, or in deterministic processing of the LLM's
 finished conclusions. Without this it is easy to mistake the model's abilities for the system's.
 *(Here: the provenance trace — 85% of confidence drops from edges named by the LLM; the system's
-own Python opposition detection was live and produced 0 edges; a doppelganger control ruled out "the model
+own deterministic opposition detection was live and produced 0 edges; a doppelganger control ruled out "the model
 just remembers the book".)*
 
 **7. Test the product, not the mechanism.**

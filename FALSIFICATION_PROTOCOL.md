@@ -89,7 +89,7 @@ If the architecture claims new reasoning abilities, determine where the new info
 originates: in the base LLM, in the architecture, or in deterministic processing of the LLM's
 finished conclusions. Without this it is easy to mistake the model's abilities for the system's.
 *(There: the provenance trace — 85% of confidence drops from edges named by the LLM; the system's
-own Python opposition detection produced 0 edges; a doppelganger control ruled out "the model
+own deterministic opposition detection was live and produced 0 edges; a doppelganger control ruled out "the model
 just remembers the book".)*
 
 **7. Test the product, not the mechanism.**
