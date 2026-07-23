@@ -287,7 +287,7 @@ bar = confidence · ▲▼ = change this turn · ⚡ = major shift (≥20pp)
 
 *(One caveat on reconstructing a step from the printed numbers: this is an **abridged excerpt**, not
 raw output. All 12 turns are shown, but rows within turns are trimmed — the engine printed **62
-update rows**, this excerpt prints 37, and the trimmed rows include **three `⚡` major-shift rows**
+update rows**, this excerpt prints 34, and the trimmed rows include **three `⚡` major-shift rows**
 (turn 8 `disabled child fate dismissed 30% ▼20%`; turn 10 `future self seen as changeable 29% ▼26%`
 and `fears dying unmourned 25% ▼20%`). So each `▲/▼N%` is the engine's real per-turn delta, but you
 often **cannot** reconstruct it from the printed values, because intervening rows were cut — e.g.
@@ -295,7 +295,9 @@ often **cannot** reconstruct it from the printed values, because intervening row
 with the movement between them not shown. (A separate, tiny effect: the step is on unrounded
 confidences, so it can differ ±1pp from the rounded endpoints — `56→81` shown as `▲24%`.) The
 **verbatim** console output is in `evidence/scrooge_sonnet_trace_2026-06-21.txt`; the reproducible
-85/0 provenance is the frozen `attribution_*.json` (`python tools/attribution_run.py --analyze`).)*
+85/0 provenance is the frozen `attribution_*.json` (`python tools/attribution_run.py --analyze`). The
+snapshot footer also names two beliefs (`lost loved one to greed`, `clerk salary raised today`) whose
+per-turn rows were trimmed from this excerpt.)*
 
 This is what *"it works"* looks like. The cynical beliefs (`Christmas is a fraud`,
 `social responsibility is not my concern`) hold near-certainty through the first act, then
@@ -303,7 +305,7 @@ This is what *"it works"* looks like. The cynical beliefs (`Christmas is a fraud
 10 (the vow to change). New beliefs are born where the text introduces them; the largest
 cascade the engine flags (message 7 in the snapshot) sits right on the memory of lost love and
 the guilt that follows it (turns 6–7). Under the hood, not heuristics but canonical math: log-odds
-updates, De Finetti coherence, Osgood EPA axes, a Cromwell ceiling of 0.92. **At this stage I
+updates, De Finetti coherence, a Cromwell ceiling of 0.92. **At this stage I
 was sure it worked.** The engine seemed to genuinely model how a person changes their mind.
 
 ### The same engine, a free model — the warning I brushed off
