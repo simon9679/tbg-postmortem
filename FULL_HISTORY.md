@@ -900,6 +900,31 @@ confidence up"). `[evidence/REPORT_esmemeval.md sign-diagnostic]`
 
 ---
 
+## Concurrent and related work
+
+**Concurrent independent work.** An independent preprint (Pranav Singh, *When Does Belief-Based
+Agent Memory Help?*, arXiv:2606.22030v2, July 2026 — v1 carried a different title) reaches a partly
+convergent conclusion from a different benchmark and a different architecture. On LoCoMo its
+Bayesian belief update is tied by naive last-write-wins, which the author attributes to standard
+conversational QA rarely presenting the contradictory, differently-reliable evidence the mechanism
+is built for. Unlike this project, that paper then identifies a condition under which the mechanism
+does pay off — a per-observation reliability signal estimated from epistemic markers in language —
+and reports a large advantage once it is supplied. It separately documents a 27.5-point gap between
+strict token-F1 and a generous LLM judge on identical outputs; that is a metric-definition gap
+rather than the per-arm judge-versus-human bias measured in §10.3, but both caution against
+single-metric leaderboards on this kind of benchmark. Two independent efforts on different material
+found belief machinery inert where it was expected to help; only one of them also found the
+condition under which it isn't.
+
+**Nearest benchmark neighbour.** BeliefShift (Myakala et al., arXiv:2603.23848) approaches belief
+dynamics from the other side: it measures whether an LLM itself tracks a user's changing beliefs
+across sessions, where this project measured the state representation a memory system builds from
+them. Its finding that retrieval improves revision tracking but barely moves drift resistance is
+the closest external echo of §13 here, where a computed belief-state block appended to retrieval
+was cited as a sufficient source in 0 of 60 answers.
+
+---
+
 ## 19. Durable contributions
 
 **Methodological.** A three-layer noise decomposition for memory benchmarks (judge / answerer /
@@ -918,28 +943,6 @@ pipeline.
 
 ---
 
-## 19.1 Concurrent and related work
-
-Two independent 2026 preprints sit closest to this project, and I found them after the fact:
-
-- **Singh, *When Does Belief-Based Agent Memory Help?*** (arXiv:2606.22030) **independently reached
-  a similar conclusion by a different route** — not a replication of this work. On LoCoMo, Bayesian
-  belief updating gives little over naive last-write-wins, because standard conversational
-  benchmarks rarely present contradictory or differently-reliable evidence; Singh also reports a
-  ~27.5-point gap between strict token-F1 and an LLM-judge on identical outputs, echoing the
-  judge-leniency measured here (§10.3). Different architecture (categorical entity–attribute
-  distributions), different benchmark, convergent shape of answer.
-- **BeliefShift** (Myakala et al., arXiv:2603.23848) is the nearest-neighbour benchmark — temporal
-  belief consistency and opinion drift across sessions. It reports the same shape from the
-  *benchmark* side: retrieval improves revision-tracking but barely moves drift-resistance, i.e.
-  the drift failure is not a retrieval problem.
-
-That two solo/independent efforts and a benchmark land on convergent conclusions by different
-routes is itself a small data point: the belief-specific *mechanism* is being reinvented in
-several places, while the *measurement* of whether it helps is the scarce part.
-
----
-
 ## 20. Final assessment
 
 The project set out to build a cognitive engine that models a person's evolving beliefs better
@@ -954,7 +957,7 @@ source; the conflict and long-conversation edges were single draws, not stable e
 semantics are done by the LLM, not the deterministic graph; and several plausible refinements
 (AMF, history-cap, clocks) are mechanically inert rather than under-tuned.
 
-**A closing reframe (with hindsight from §19.1).** The concurrent Nous architecture (Singh 2026)
+**A closing reframe (with hindsight from the concurrent work above).** The concurrent Nous architecture (Singh 2026)
 sidesteps the §4 wall entirely by changing the *unit of storage*: from free-text propositions to
 categorical entity–attribute distributions, where opposition is **structural** — competing values
 share one normalized distribution, which *is* the Bayesian denominator — rather than something to
