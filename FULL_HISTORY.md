@@ -57,18 +57,19 @@ a different, and more useful, result:
 
 - **Evaluation variance on this kind of benchmark is dominated by extraction (ingest), not by
   the judge or the answering model:** extraction noise ≈ **±0.40** (on a 0–2 scale — a single
-  measured swing across n = 2 re-ingests, read as "large," not a precise σ; see §10), roughly
+  measured swing across n = 2 re-ingests bundled with three engineering fixes, one of which changed
+  graph composition — read as "large," not a precise σ; see §10), roughly
   **4–8×** larger than judge noise (**≈0.10**) or answerer noise (**≈0.05**).
 - **Both headline positives (+0.40 on conflict, +0.60 on long conversations) evaporated on
   re-extraction** — they were single draws from a noisy process, not stable effects.
 - **Most of the "intelligence" was performed by the LLM, not the deterministic Python:**
   provenance tracing showed **85%** of confidence drops came from contradiction edges the LLM
-  itself proposed; the deterministic opposition path (cosine/EPA) was live and produced **0** — the NLI component had already been removed (§4).
+  itself proposed; the deterministic opposition path (cosine) was live and produced **0** — EPA and NLI were not wired into the shipped pipeline (§4).
 - Several "sophisticated" mechanisms (AMF, history-cap, logical clocks) contributed nothing —
   for **mechanical** reasons, not bad luck.
 - What **held up** under repeated attack: deterministic replay, sign-consistent confidence
   updates (253 contradiction events, 0 sign errors), a semantically clean extraction contract
-  (0/191 labeled errors), constant-cost memory at oracle-level quality, and — most durably —
+  (0/191 labeled errors), constant-cost memory at oracle-level quality (§15, n=1 dialogue), and — most durably —
   **the evaluation protocol itself** (§21).
 
 **Conclusion.** TBG should not be called a cognitive engine that improves reasoning. More
@@ -194,8 +195,9 @@ not about the tools themselves — a different architecture, or a purpose-traine
 could well succeed where an off-the-shelf component did not.
 
 **Consequence.** Opposition detection was delegated to LLM extraction. The deterministic
-cosine/EPA layer stayed in the pipeline and kept running — but nothing downstream depended on it
-finding an opposition, and in the frozen provenance runs it found none (§5). This decision explains
+cosine step stayed in the pipeline and kept running (its `SDL_COSINE_MERGE` merges fire in the
+frozen provenance run) — but nothing downstream depended on it finding an opposition, and it found
+none (§5); EPA and NLI were not wired into the shipped pipeline at all (§4). This decision explains
 most of what follows, including the final finding that 100% of contradiction edges (and ~85% of
 belief-confidence drops) come from the LLM (§5).
 
@@ -389,11 +391,11 @@ pipeline with two different extraction models:
   a familiar book, but generalization. `[evidence/attribution_B.json]`
 
 **Provenance: who does the reasoning.** Every contradiction edge that lowered a confidence was
-tagged by source: did the LLM name it (`LLM_EDGE`) or did Python logic (cosine/EPA) find it?
+tagged by source: did the LLM name it (`LLM_EDGE`) or did Python logic (cosine) find it?
 
 > **Result, identical on the original and on the doppelganger: every opposition edge was
 > proposed by the LLM (51 and 54 edges respectively); the deterministic path the system was
-> built around (cosine/EPA; NLI already removed, §4) — was **live**, and produced 0
+> built around (cosine; EPA and NLI not wired, §4) — was **live**, and produced 0
 > *opposition* edges in both runs. (It was not switched off: on the reversal turn it fired five
 > times, every time as a merge tagged `SDL_COSINE_MERGE`, never once as an opposition edge.)
 > And ~85% of the belief-confidence drops trace to those LLM edges, the remaining ~15% to

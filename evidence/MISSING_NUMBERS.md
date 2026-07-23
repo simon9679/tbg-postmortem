@@ -63,9 +63,9 @@
 
 **2.4 Attribution: 85% drops от LLM-рёбер**
 - claim: вся семантика — от LLM, Python-машинерия дала 0 рёбер
-- number: **85%** belief-drops traced to LLM-emitted contradiction edges; SDL/NLI/HER opposition machinery — **0 edges** (оба варианта теста)
+- number: **85%** belief-drops traced to LLM-emitted contradiction edges; the deterministic opposition machinery (SDL cosine) — **0 edges** (both test variants). *(Session-era note said «SDL/NLI/HER»; per §4/§5 the live path was cosine only — NLI/EPA/HER were not wired in the shipped pipeline.)*
 - source: чат «Изучение структуры и кода ТБГ» (2026-06-21); summary подтверждён в «ласт тбг»
-- on-disk artifact: headline «85/0» на диске есть (tbg_post_ru_full.md §11.2), сырые числа — только чат
+- on-disk artifact: **yes** — the raw 85/0 numbers now regenerate 0-LLM into `attribution_analysis_regen_2026-07-21.txt` via `python tools/attribution_run.py --analyze` (from `attribution_A.json` / `attribution_B.json`).
 - how measured: frozen-extraction provenance-анализ: attribution каждого belief-drop к источнику (LLM-edge vs Python-machinery); de Finetti нормализация — несущий механизм
 
 ---
