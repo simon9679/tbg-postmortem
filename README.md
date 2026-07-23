@@ -156,7 +156,7 @@ Nearly every number in `FULL_HISTORY.md` reproduces from frozen artifacts withou
 the LLM pipeline. For example, the headline provenance result regenerates with **no LLM calls**:
 
 ```
-py -3 tools/attribution_run.py --analyze    # recomputes the 85/0 split from evidence/attribution_{A,B}.json
+python tools/attribution_run.py --analyze    # recomputes the 85/0 split from evidence/attribution_{A,B}.json
 ```
 
 Live runs need an LLM provider key in the environment (see `env.example`); every environment
