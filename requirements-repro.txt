@@ -1,0 +1,5 @@
+# Minimal deps for the 0-LLM reproduction of every frozen number.
+# Full stack (DB, API, embeddings) lives in requirements.txt and is NOT needed here.
+pydantic==2.9.0
+numpy==1.26.0
+httpx==0.27.0

@@ -153,12 +153,19 @@ test_*.py                                     engine regression + drift tests (r
 ```
 
 The **`ballast`** branch holds the later *productization* attempt (an anti-sycophancy belief
-anchor + policy layer) — a cleaned fork of this engine.
+anchor + policy layer) — a cleaned fork of this engine. It is public deliberately: the
+commercial track is closed, so there is nothing left to hold back.
 
 ## Reproduce
 
 Nearly every number in `FULL_HISTORY.md` reproduces from frozen artifacts without re-running
 the LLM pipeline. For example, the headline provenance result regenerates with **no LLM calls**:
+
+Offline reproduction needs three packages, not the full stack:
+
+```
+pip install -r requirements-repro.txt
+```
 
 ```
 python tools/attribution_run.py --analyze    # recomputes the 85/0 split from evidence/attribution_{A,B}.json
@@ -192,10 +199,6 @@ experiments (entirely optional). GitHub Sponsors / Ko-fi are unavailable to reci
 Ukraine, so the frictionless channel is crypto — send from any wallet or exchange:
 
 - ₿ **USDT (TRC-20):** `TWS9EdrEx8A34bnAdDrDznywigWdNfJgt3`
-
-<!-- optional card channel (Ukrainian donation page, pay by card in any currency):
-☕ https://donatello.to/<YOUR-NAME>
--->
 
 A tip from a curious reader just means the work was useful to someone — which, for a repo like
 this, is the real signal.

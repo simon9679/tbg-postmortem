@@ -19,9 +19,10 @@ import statistics
 import sys
 import numpy as np
 from datetime import datetime, timedelta, timezone
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, TYPE_CHECKING
 
-from asyncpg import Pool
+if TYPE_CHECKING:  # asyncpg is needed only for the live DB path, not for offline replay
+    from asyncpg import Pool
 
 from tbg_schema import UserTBG, BeliefNode, BeliefEdge, TBGDelta, ConfidenceSnapshot, TurningPoint
 from tbg_axes import get_belief_axes
@@ -212,7 +213,7 @@ def _add_edge_dedup(tbg: UserTBG, edge: BeliefEdge) -> None:
 
 
 class TBGEngine:
-    def __init__(self, db_pool: Pool):
+    def __init__(self, db_pool: "Pool"):
         self.db = db_pool
 
     # -------------------------------------------------------------------------
