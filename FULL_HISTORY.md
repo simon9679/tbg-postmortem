@@ -1150,7 +1150,7 @@ A single lucky run proves nothing: an effect that vanishes after re-ingest is no
 the architecture but one realization of a random process. *(Here: conflict +0.40 → 0.00; long
 +0.60 → +0.10; 94.7% label mismatch between two graphs of the same dialogue.)*
 
-**Applied to itself, with one exception.** In the source project this rule killed every positive
+**Applied to itself, with one exception.** In this project this rule killed every positive
 it was pointed at — but it was never pointed at the one positive that survived (constant-cost
 memory, §15), for budget. That result is reported as unverified rather than as passed, and its
 margin turns out to be one item on a six-item axis, at or below the resolution of the instrument.
