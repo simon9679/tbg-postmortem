@@ -88,9 +88,10 @@ invents its own vocabulary.)*
 - **Most of the "reasoning" was the LLM's, not the graph's.** Provenance tracing: **85%** of
   belief-confidence drops came from contradiction edges the LLM itself proposed; the
   deterministic Python opposition machinery produced **0**.
-- **What held up under attack:** constant-cost memory at oracle-equivalent quality; a
-  sign-consistent, semantically clean extraction contract; and — most durably — the
-  **evaluation protocol** itself.
+- **What survived, with one asterisk:** a sign-consistent, semantically clean extraction
+  contract and — most durably — the **evaluation protocol** itself. Constant-cost memory at
+  oracle-equivalent quality (§15) is the one positive that was *never* put through the
+  protocol's own re-ingest check (n=1, budget) — listed as unverified, not as survived.
 
 ## The transferable result: a falsification protocol for memory systems
 

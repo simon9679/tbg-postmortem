@@ -69,7 +69,7 @@ a different, and more useful, result:
   for **mechanical** reasons, not bad luck.
 - What **held up** under repeated attack: deterministic replay, sign-consistent confidence
   updates (253 contradiction events, 0 sign errors), a semantically clean extraction contract
-  (0/191 labeled errors), constant-cost memory at oracle-level quality (§15, n=1 dialogue), and — most durably —
+  (0/191 labeled errors), constant-cost memory at oracle-level quality (§15, n=1 dialogue — rule 3 not applied), and — most durably —
   **the evaluation protocol itself** (§21).
 
 **Conclusion.** TBG should not be called a cognitive engine that improves reasoning. More
@@ -831,7 +831,10 @@ not an intelligence one.
 
 **Limitations:** n = 1 dialogue, one model family — these are signals, not statistics; the
 regime that should favor TBG most (very long, multi-session dialogues that overflow context) was
-**not run** (thousands of calls, out of budget).
+**not run** (thousands of calls, out of budget). **And, stated plainly: rule 3 of the protocol
+(§21) — any positive effect must survive a re-ingest — was never applied to this result.** Every
+other positive in this project was killed by that check; this one was not put through it, for
+budget. It should be read as an unverified positive, not as one that passed.
 
 ---
 
