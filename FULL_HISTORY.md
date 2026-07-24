@@ -67,7 +67,7 @@ a different, and more useful, result:
   itself proposed; the deterministic opposition path (cosine) was live and produced **0** — EPA and NLI were not wired into the shipped pipeline (§4).
 - Several "sophisticated" mechanisms (AMF, history-cap, logical clocks) contributed nothing —
   for **mechanical** reasons, not bad luck.
-- What **held up** under repeated attack: deterministic replay, sign-consistent confidence
+- What **survived**, with one asterisk: deterministic replay, sign-consistent confidence
   updates (253 contradiction events, 0 sign errors), a semantically clean extraction contract
   (0/191 labeled errors), constant-cost memory at oracle-level quality (§15, n=1 dialogue — rule 3 not applied), and — most durably —
   **the evaluation protocol itself** (§21).
@@ -837,6 +837,23 @@ regime that should favor TBG most (very long, multi-session dialogues that overf
 other positive in this project was killed by that check; this one was not put through it, for
 budget. It should be read as an unverified positive, not as one that passed.
 
+**Resolution of the instrument (recomputed from the frozen table above, 0 LLM calls).** The three
+axes do not carry equal information. `fact` does not discriminate at all — every arm, including
+the unbounded oracle, scores 67%, a scoring ceiling rather than a memory limit. `precision` is
+saturated at 100% across all four arms. The only axis that separates anything is `belief`, and it
+is **six exact-match questions**: TBG's 100% is 6/6 and bounded_llm's 83% is 5/6, so the entire
+margin is **one question**. The step size of the instrument on the one axis that matters is
+therefore 16.7 percentage points, while ingest variance measured elsewhere in this project runs
+to roughly 20 points on a comparable scale (§10). The claimed effect is not larger than the cost
+of a single belief item flipping on re-extraction. (All four rows of the table reconstruct exactly
+from COMBINED = 0.3·fact + 0.3·precision + 0.4·belief, so this is checkable without running
+anything.)
+
+**Consequence.** Rule 3 (§21) was never applied here, and on this evidence applying it would not
+settle much: a one-item margin on a six-item axis sits at or below the resolution of the
+measurement. Read §15 as an unverified positive at the edge of what this benchmark can detect —
+not as a result that passed.
+
 ---
 
 ## 16. The "classification >> generation" principle and its limits
@@ -960,7 +977,8 @@ config / orphan); reproducible, LLM-free re-aggregation of every headline number
 artifacts. These transfer to any future memory-benchmark work.
 
 **Technical.** Mathematically consistent, sign-verified confidence dynamics (253/0);
-constant-cost memory at oracle-level quality (§15, n=1 dialogue); a semantically clean extraction contract
+constant-cost memory at oracle-level quality (§15 — n=1 dialogue, rule 3 never applied, and the
+margin is one item on a six-item axis; read as unverified); a semantically clean extraction contract
 (0/191, narrow).
 
 **Artifacts.** Nearly every number is reproducible from frozen on-disk artifacts (QA dumps,
@@ -1097,6 +1115,12 @@ that extraction is the dominant instability. Report the caveat; do not let it re
 A single lucky run proves nothing: an effect that vanishes after re-ingest is not a property of
 the architecture but one realization of a random process. *(Here: conflict +0.40 → 0.00; long
 +0.60 → +0.10; 94.7% label mismatch between two graphs of the same dialogue.)*
+
+**Applied to itself, with one exception.** In the source project this rule killed every positive
+it was pointed at — but it was never pointed at the one positive that survived (constant-cost
+memory, §15), for budget. That result is reported as unverified rather than as passed, and its
+margin turns out to be one item on a six-item axis, at or below the resolution of the instrument.
+A protocol that exempts a result should name which one, and say what the exemption cost.
 
 **4. Do not trust an LLM judge without a blind human relabel.**
 The judge carries a systematic style premium larger than its random noise — and it silently
