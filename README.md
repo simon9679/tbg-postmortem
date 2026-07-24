@@ -10,10 +10,16 @@
 
 ## What is this?
 
-**TBG** is a deterministic belief-memory layer for LLMs. Instead of storing *facts* (what the
-user said), it tracks *how a user's beliefs change over time* — confidence per belief,
-supporting/contradicting evidence, contradictions, trajectories, and turning points. Built
-solo over ~3 months (2026).
+**TBG** is a belief-memory layer for LLMs with a **deterministic core**: an LLM extracts belief
+deltas from each turn, and a Python engine applies them with fixed arithmetic — same deltas in,
+same graph out, with wall-clock decay contributing at most 0.0012 confidence drift on replay at
+realistic inter-turn gaps (§14). Instead of storing *facts* (what the user said), it tracks *how
+a user's beliefs change over time* — confidence per belief, supporting/contradicting evidence,
+contradictions, trajectories, and turning points. Built solo over ~3 months (2026).
+
+The determinism stops at the engine boundary. The extraction step does not repeat: two ingests of
+the same dialogue agree on 5.3% of labels. Measuring what that costs downstream is what this
+postmortem is about (§10).
 
 ## What was I trying to prove?
 
@@ -141,9 +147,10 @@ point of publishing a negative result with the code attached.
 
 ```
 tbg_engine / tbg_extractor / tbg_schema     the belief-graph engine (deterministic core)
-tbg_axes / tbg_nli / fact_engine / ...       legacy extraction/resolution — present but NOT wired
-                                             into the shipped pipeline (failed the concept-identity
-                                             wall; see FULL_HISTORY §4 / §17)
+tbg_axes / tbg_nli / fact_engine / ...       still imported by the core, but NOT wired as
+                                             opposition detectors — each failed the
+                                             concept-identity wall (see FULL_HISTORY §4 / §17)
+ising_prototype / tbg_dynamic_core           abandoned experiments — imported by nothing
 api.py, mode_/dissonance_/intervention_      cognitive layer — present, but wired only into a
                                              standalone api.py, never into the product/demo/gate
                                              pipeline (see FULL_HISTORY §6)
