@@ -618,10 +618,11 @@ stochasticity in the re-ingested graph, not rendering.** (This also cleared the 
 The ES-MemEval judge is itself an LLM. A stratified sample of 20 (question, gold, arm-answer)
 triples was hand-scored 0/1/2 **blind** to the judge's score and to the arm, weighted toward
 the decisive arms (RAG/tracker/TBG) and toward items the judge scored 2.
-`[aggregation script: evidence/k20_aggregate.py (0 LLM). The raw hand-relabel file embeds verbatim
-ES-MemEval QA text, so it is withheld to avoid re-hosting the benchmark's contents (the dataset
-is CC-BY-4.0; this is caution, not a license bar); the aggregated per-arm biases are in
-evidence/EVAL_RELIABILITY_NOTE.md.]`
+`[aggregation script: evidence/k20_aggregate.py (0 LLM). Two inputs — the raw hand-relabel file
+(k20_manual_review_ru.md) and the per-item selection (_k20_selected.json) — both embed verbatim
+ES-MemEval QA text, so both are withheld to avoid re-hosting the benchmark's contents (the dataset
+is CC-BY-4.0; this is caution, not a license bar); run without them the script prints which file
+is missing and exits 0. The aggregated per-arm biases are in evidence/EVAL_RELIABILITY_NOTE.md.]`
 
 - Raw disagreement 4/20 = 0.20; **judge_noise = 0.10**.
 - Per-arm leniency bias (judge above human): **RAG +0.33**, tracker +0.25, **TBG +0.17**,

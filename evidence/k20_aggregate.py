@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 K=20 judge validation — aggregation. Zero LLM calls. Read-only.
-Run AFTER k20_manual_review.md is filled with МОЯ ОЦЕНКА values.
+Run AFTER k20_manual_review_ru.md is filled with МОЯ ОЦЕНКА values.
 
 Computes:
   1. judge_noise  = disagreement rate (fraction manual != auto) AND mean |auto-manual|/2.
@@ -10,8 +10,19 @@ Computes:
   3. survival     = which final aggregate gaps still exceed the MEASURED judge_noise,
                     incl. a rag-bias-adjusted E-C.
 """
-import json, re
+import json, os, re, sys
 from collections import defaultdict
+
+MANUAL_PATH = "k20_manual_review_ru.md"
+SELECTED_PATH = "_k20_selected.json"
+
+
+def _require(path, why):
+    """Exit 0 with an explanation (not a traceback) when a deliberately
+    withheld input is absent. See FULL_HISTORY.md §10.3."""
+    if not os.path.exists(path):
+        print(why)
+        sys.exit(0)
 
 # Final aggregate numbers from the full n=60 run (REPORT_esmemeval.md), for survival check.
 FINAL = {"tbg": 0.68, "tracker": 0.55, "rag": 1.03,
@@ -20,7 +31,7 @@ DISP2ARM = {"a trunc": "trunc", "b summ": "summary", "c rag(bm25)": "rag",
             "d tracker": "tracker", "e tbg": "tbg"}
 
 
-def parse_manual(path="k20_manual_review_ru.md"):
+def parse_manual(path=MANUAL_PATH):
     txt = open(path, encoding="utf-8").read()
     blocks = re.split(r"^\[(\d+)\] ", txt, flags=re.M)[1:]  # [n, body, n, body, ...]
     out = []
@@ -36,8 +47,16 @@ def parse_manual(path="k20_manual_review_ru.md"):
 
 
 def main():
+    _require(MANUAL_PATH,
+             "k20_manual_review_ru.md not found — the K=20 blind-relabel file embeds verbatim\n"
+             "ES-MemEval QA text and is deliberately withheld (FULL_HISTORY.md §10.3).\n"
+             "The aggregated per-arm judge biases are in evidence/EVAL_RELIABILITY_NOTE.md.")
+    _require(SELECTED_PATH,
+             "_k20_selected.json not found — the K=20 selection embeds verbatim\n"
+             "ES-MemEval QA text and is deliberately withheld (FULL_HISTORY.md §10.3).\n"
+             "The aggregated per-arm judge biases are in evidence/EVAL_RELIABILITY_NOTE.md.")
     manual = parse_manual()
-    sel = json.load(open("_k20_selected.json", encoding="utf-8"))
+    sel = json.load(open(SELECTED_PATH, encoding="utf-8"))
     # align by order (both are the 20 selected, same order as written)
     if len(manual) != len(sel):
         print(f"WARN: {len(manual)} blocks vs {len(sel)} selected");
