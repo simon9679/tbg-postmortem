@@ -54,10 +54,11 @@ import os
 import re
 import uuid
 from datetime import datetime, timezone
-from typing import List, Optional, Dict
+from typing import List, Optional, Dict, TYPE_CHECKING
 
 import numpy as np
-from asyncpg import Pool
+if TYPE_CHECKING:  # asyncpg is needed only for the live DB path, not for offline replay
+    from asyncpg import Pool
 
 logger = logging.getLogger(__name__)
 
@@ -166,7 +167,7 @@ class FactEngine:
     Audit history included. Hybrid BM25+semantic retrieval.
     """
 
-    def __init__(self, db_pool: Pool):
+    def __init__(self, db_pool: "Pool"):
         self.db = db_pool
 
     @staticmethod
@@ -175,7 +176,7 @@ class FactEngine:
         await register_vector(conn)
 
     @staticmethod
-    async def register(pool: Pool):
+    async def register(pool: "Pool"):
         from pgvector.asyncpg import register_vector
         async with pool.acquire() as conn:
             await register_vector(conn)
