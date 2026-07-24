@@ -966,6 +966,40 @@ them. Its finding that retrieval improves revision tracking but barely moves dri
 the closest external echo of §13 here, where a computed belief-state block appended to retrieval
 was cited as a sufficient source in 0 of 60 answers.
 
+**Run-to-run instability is not specific to this project.** Piccioli et al. (arXiv:2607.03325,
+Appendix H) re-ran an LLM extraction pipeline twice over 50 Italian tax-court judgments under
+identical settings — same prompts, same model version, temperature 0, fixed random seed — and the
+output did not reproduce. Run-to-run F1 was 78.3% on issue segmentation and 73.2% on citations;
+two runs of the same model agreed with each other less than two human experts did (88.1% and
+97.1% respectively). Their conclusion is the one reached independently here: part of any measured
+model-versus-human gap is the model's own stochasticity, and single-run scores are unsafe. They
+establish no mechanism for it, and neither do we. Their citation figure is conservative by their
+own account, measured before their hallucination filter. Their metric is set F1 over aligned
+items and ours is symmetric difference over free-form labels, so the numbers are not comparable —
+only the direction is.
+
+**The same paper independently supports the diagnosis in §4.** Their hallucination rate splits
+sharply by whether a reference type has a canonical identifier: 4.7% for legislation and case law,
+which resolve to URN-NIR/ECLI/CELEX through a deterministic parser, against 69% for general legal
+principles, which have no such identifier and which the model fills with whatever seems to fit.
+Their remedy was a hand-built closed vocabulary of 182 canonical principles with allowed
+variations. That is, arrived at independently, the failure mode of §4 and the fix considered in
+§17: what makes extraction irreproducible is the absence of a concept canon, not the absence of a
+better model.
+
+**Nearest neighbour by task.** Dasgupta, Spadea and Seneviratne (arXiv:2607.00003, LLM-Text2KG'26
+at ESWC 2026) build personal knowledge graphs from multi-turn dialogue and evaluate both
+extraction fidelity and downstream utility — structurally the shape of §15. They report no
+repeated runs, so they do not overlap with §10. Their §5.1 is relevant for a different reason: the
+model with the best extraction F1 did not yield the best downstream result (a 1B extractor beat a
+12B one), and larger downstream models degraded on LLM-extracted graphs. Upstream extraction
+quality does not predict downstream usefulness — the observation behind rule 7 of §21.
+
+**Two framings.** ATOM (arXiv:2510.22590) and adjacent work on knowledge materialization and
+context compaction treat run-to-run instability as a problem to engineer away. This project treats
+it as the object of measurement. Both are needed; only the second tells you what a benchmark
+number is worth.
+
 ---
 
 ## 19. Durable contributions
